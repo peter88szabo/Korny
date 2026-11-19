@@ -7,6 +7,7 @@ backbone and its existing dispersion switches are retained. Training never
 reads the Behemoth water/ammonia references or the fixed reaction panel.
 """
 import hashlib
+import argparse
 from io import BytesIO
 import json
 from pathlib import Path
@@ -113,7 +114,7 @@ def curvature_rows(base, head):
     return np.array(rows), provenance
 
 
-def residuals(w, gradients, hessians, curv, prior):
+def residuals(w, gradients, hessians, curv, prior, clusters=None):
     """Evaluate joint residuals and their exact parameter Jacobian.
 
     The eigenvalue derivative is each mode's projection of the Hessian
@@ -137,6 +138,10 @@ def residuals(w, gradients, hessians, curv, prior):
     scale = 2.*np.sqrt(len(curv))
     resid.extend(((curv[:, :-1]@w-curv[:, -1])/scale, w/prior))
     jac.extend((curv[:, :-1]/scale, np.diag(1/prior)))
+    if clusters is not None:
+        scale = .035*np.sqrt(len(clusters))
+        resid.append((clusters[:, :-1]@w-clusters[:, -1])/scale)
+        jac.append(clusters[:, :-1]/scale)
     return np.concatenate(resid), np.vstack(jac)
 
 
@@ -154,6 +159,9 @@ def summarize(points, w):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--water-clusters", action="store_true")
+    args = parser.parse_args()
     started = monotonic()
     backbone = OUT/json.loads((OUT/"results.json").read_text())["checkpoint"]
     base, head = ForceField.load(backbone), Valence()
@@ -162,14 +170,22 @@ def main():
     train = [data[name] for name,p in labels.items() if p["split"]=="train"]
     g, h = [item[0] for item in train], [item[1:] for item in train]
     curv, sources = curvature_rows(base, head)
+    cluster_rows = {}
+    cluster_info = {}
+    if args.water_clusters:
+        from experiments.reactivity.cluster_forces import projected_rows
+        datafile = POINTS.parents[1]/"QCell/qcell_ions_water.h5"
+        cluster_rows, cluster_ids, angles = projected_rows(base,head,datafile)
+        cluster_info = dict(source=str(datafile.name),structure_ids=cluster_ids,
+                            angle_percentiles_deg=angles)
     # Independent weak Gaussian priors on bond slopes, bond curvature, angular
     # slopes, bending stiffness, substitution and collective angular stiffness.
     prior = np.r_[np.tile([1.5,8.],len(head.pairs)),np.tile([2.,6.,2.,3.],len(head.centers))]
     zero = head.weights.copy()
     def fun(w):
-        return residuals(w,g,h,curv,prior)[0]
+        return residuals(w,g,h,curv,prior,cluster_rows.get("train"))[0]
     def jac(w):
-        return residuals(w,g,h,curv,prior)[1]
+        return residuals(w,g,h,curv,prior,cluster_rows.get("train"))[1]
     result = least_squares(fun, zero, jac=jac, ftol=1e-7, max_nfev=180)
     if not result.success:
         raise RuntimeError(result.message)
@@ -187,7 +203,15 @@ def main():
                   training_cost_before=float(.5*np.sum(fun(zero)**2)),training_cost_after=float(result.cost),
                   reference_geometry_scores_before=summarize(data,zero),
                   reference_geometry_scores_after=summarize(data,result.x))
-    (OUT/"stationary_fit.json").write_text(json.dumps(scores,indent=2)+"\n")
+    if args.water_clusters:
+        previous = ForceField.load(OUT/json.loads((OUT/"stationary_fit.json").read_text())["checkpoint"])
+        for part,rows in cluster_rows.items():
+            cluster_info[part+"_projected_force_rmse_eV_A"] = {
+                label:float(np.sqrt(np.mean((rows[:, :-1]@w-rows[:, -1])**2)))
+                for label,w in (("previous",previous.valence.weights),("refit",head.weights))}
+        scores["clusters"] = cluster_info
+    out = "cluster_fit.json" if args.water_clusters else "stationary_fit.json"
+    (OUT/out).write_text(json.dumps(scores,indent=2)+"\n")
     print(name, "time",round(scores["fit_seconds"],1),"seconds",flush=True)
     print("Independent ethanol, at reference geometry",scores["reference_geometry_scores_before"].get("ethanol"),
           scores["reference_geometry_scores_after"].get("ethanol"))

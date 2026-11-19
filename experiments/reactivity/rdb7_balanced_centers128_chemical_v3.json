@@ -1,0 +1,2606 @@
+{
+  "checkpoint": "rdb7-f648919471a98b1e.npz",
+  "backbone": "matern-15d11dacaf49a610.npz",
+  "source": "10.1038/s41597-022-01529-6",
+  "excluded": {
+    "unverified_log": 1,
+    "incomplete_reaction": 1,
+    "fixed_or_larger_validation_formula": 2278
+  },
+  "available": {
+    "train": 5158,
+    "development": 2614,
+    "test": 1875
+  },
+  "sample": {
+    "RDB7_train": 4000,
+    "RDB7_dev": 150,
+    "RDB7_test": 400,
+    "BH9_TRIP50_train": 159,
+    "BH9_TRIP50_development": 50,
+    "BH9_TRIP50_test": 65
+  },
+  "curve": [
+    {
+      "total_RDB7_to_BH9_weight": 0.0,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 12.260487484057347,
+            "rmsd_kcal_mol": 15.906322584712765
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 10.277711752375957,
+            "rmsd_kcal_mol": 14.407464060306324
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 29.78350922393119,
+            "rmsd_kcal_mol": 42.630072217146115
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 51.84773748390293,
+            "rmsd_kcal_mol": 73.00276718192232
+          }
+        }
+      },
+      "ethanol": {
+        "bond_mae_A": 0.0354320515112095,
+        "angle_mae_deg": 2.0934725093014777,
+        "mae_cm1": 75.86169883615568
+      },
+      "selection_loss": 1.7266338905779997
+    },
+    {
+      "total_RDB7_to_BH9_weight": 0.1,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 13.339767330530522,
+            "rmsd_kcal_mol": 20.434628160401314
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 10.702422880402235,
+            "rmsd_kcal_mol": 16.204649367257954
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 19.319410264778416,
+            "rmsd_kcal_mol": 25.73958761907262
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 27.759988421073533,
+            "rmsd_kcal_mol": 41.65606382901534
+          }
+        }
+      },
+      "ethanol": {
+        "bond_mae_A": 0.025850069997162772,
+        "angle_mae_deg": 6.080961846470043,
+        "mae_cm1": 138.25764199077165
+      },
+      "selection_loss": 1.595746001444501
+    },
+    {
+      "total_RDB7_to_BH9_weight": 0.3,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 13.087356420499509,
+            "rmsd_kcal_mol": 21.615980649324847
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 11.805524518697377,
+            "rmsd_kcal_mol": 17.122058974984267
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 16.993484608800465,
+            "rmsd_kcal_mol": 22.945672583115616
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 24.87733043599526,
+            "rmsd_kcal_mol": 37.77532854454731
+          }
+        }
+      },
+      "ethanol": {
+        "bond_mae_A": 0.07884295408730227,
+        "angle_mae_deg": 10.532441678754935,
+        "mae_cm1": 318.28001690287994
+      },
+      "selection_loss": 2.3976102873689893
+    },
+    {
+      "total_RDB7_to_BH9_weight": 1.0,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 13.066213088103956,
+            "rmsd_kcal_mol": 21.798532931625328
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 12.5110476576965,
+            "rmsd_kcal_mol": 17.678692285004157
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 15.426114888357075,
+            "rmsd_kcal_mol": 21.106550929676622
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 22.43134168053408,
+            "rmsd_kcal_mol": 35.01141419397255
+          }
+        }
+      },
+      "ethanol": {
+        "bond_mae_A": 0.07532682564829483,
+        "angle_mae_deg": 8.713451981283159,
+        "mae_cm1": 385.6991081957215
+      },
+      "selection_loss": 2.4341040096776423
+    },
+    {
+      "total_RDB7_to_BH9_weight": 3.0,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 13.179038978625044,
+            "rmsd_kcal_mol": 21.251567455822368
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 12.521366560819146,
+            "rmsd_kcal_mol": 17.66428592245157
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 14.564479981900629,
+            "rmsd_kcal_mol": 20.10264419518818
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 21.00454599049972,
+            "rmsd_kcal_mol": 33.61647733666427
+          }
+        }
+      },
+      "ethanol": {
+        "bond_mae_A": 0.0811056915496243,
+        "angle_mae_deg": 8.377517295114014,
+        "mae_cm1": 456.28699879810057
+      },
+      "selection_loss": 2.593588992979827
+    },
+    {
+      "total_RDB7_to_BH9_weight": 25.157232704402517,
+      "ridge": 0.3,
+      "development": {
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 20.354393025053188,
+            "rmsd_kcal_mol": 36.14473866572823
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 15.980114476208216,
+            "rmsd_kcal_mol": 25.210686819422214
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 14.989074881570078,
+            "rmsd_kcal_mol": 19.973284818972317
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 20.110821935010595,
+            "rmsd_kcal_mol": 32.21430517019305
+          }
+        }
+      },
+      "ethanol": {
+        "failure": "Relaxation failed: Desired error not necessarily achieved due to precision loss., |g|max=0.0019417965847331317"
+      },
+      "selection_loss": null
+    }
+  ],
+  "seconds": 79.69284056800097,
+  "test_ids": [
+    "RDB7/rxn006171",
+    "RDB7/rxn000490",
+    "RDB7/rxn009344",
+    "RDB7/rxn006863",
+    "RDB7/rxn004869",
+    "RDB7/rxn011321",
+    "RDB7/rxn004117",
+    "RDB7/rxn008387",
+    "RDB7/rxn011155",
+    "RDB7/rxn008326",
+    "RDB7/rxn008595",
+    "RDB7/rxn011113",
+    "RDB7/rxn003362",
+    "RDB7/rxn008394",
+    "RDB7/rxn007095",
+    "RDB7/rxn008004",
+    "RDB7/rxn004871",
+    "RDB7/rxn009637",
+    "RDB7/rxn001279",
+    "RDB7/rxn004778",
+    "RDB7/rxn010180",
+    "RDB7/rxn002255",
+    "RDB7/rxn003165",
+    "RDB7/rxn011264",
+    "RDB7/rxn009576",
+    "RDB7/rxn002275",
+    "RDB7/rxn006451",
+    "RDB7/rxn011442",
+    "RDB7/rxn006871",
+    "RDB7/rxn001297",
+    "RDB7/rxn001750",
+    "RDB7/rxn008601",
+    "RDB7/rxn008389",
+    "RDB7/rxn000810",
+    "RDB7/rxn009564",
+    "RDB7/rxn011333",
+    "RDB7/rxn006539",
+    "RDB7/rxn007562",
+    "RDB7/rxn000862",
+    "RDB7/rxn007507",
+    "RDB7/rxn004746",
+    "RDB7/rxn009268",
+    "RDB7/rxn004172",
+    "RDB7/rxn007508",
+    "RDB7/rxn006547",
+    "RDB7/rxn007543",
+    "RDB7/rxn005205",
+    "RDB7/rxn004783",
+    "RDB7/rxn002152",
+    "RDB7/rxn007409",
+    "RDB7/rxn004868",
+    "RDB7/rxn008392",
+    "RDB7/rxn005252",
+    "RDB7/rxn005158",
+    "RDB7/rxn011207",
+    "RDB7/rxn005248",
+    "RDB7/rxn007536",
+    "RDB7/rxn001971",
+    "RDB7/rxn001173",
+    "RDB7/rxn006832",
+    "RDB7/rxn008003",
+    "RDB7/rxn001959",
+    "RDB7/rxn010313",
+    "RDB7/rxn011925",
+    "RDB7/rxn010324",
+    "RDB7/rxn009228",
+    "RDB7/rxn002425",
+    "RDB7/rxn006553",
+    "RDB7/rxn006814",
+    "RDB7/rxn007109",
+    "RDB7/rxn005326",
+    "RDB7/rxn007261",
+    "RDB7/rxn004322",
+    "RDB7/rxn009558",
+    "RDB7/rxn003711",
+    "RDB7/rxn005610",
+    "RDB7/rxn008598",
+    "RDB7/rxn002341",
+    "RDB7/rxn006568",
+    "RDB7/rxn010441",
+    "RDB7/rxn003980",
+    "RDB7/rxn004294",
+    "RDB7/rxn004627",
+    "RDB7/rxn010890",
+    "RDB7/rxn007200",
+    "RDB7/rxn006170",
+    "RDB7/rxn005279",
+    "RDB7/rxn008591",
+    "RDB7/rxn005161",
+    "RDB7/rxn008483",
+    "RDB7/rxn004367",
+    "RDB7/rxn010574",
+    "RDB7/rxn002959",
+    "RDB7/rxn009917",
+    "RDB7/rxn011353",
+    "RDB7/rxn001715",
+    "RDB7/rxn008603",
+    "RDB7/rxn008600",
+    "RDB7/rxn006162",
+    "RDB7/rxn010975",
+    "RDB7/rxn011203",
+    "RDB7/rxn009566",
+    "RDB7/rxn001056",
+    "RDB7/rxn003333",
+    "RDB7/rxn001747",
+    "RDB7/rxn001005",
+    "RDB7/rxn009620",
+    "RDB7/rxn007053",
+    "RDB7/rxn007560",
+    "RDB7/rxn010938",
+    "RDB7/rxn009584",
+    "RDB7/rxn007599",
+    "RDB7/rxn005647",
+    "RDB7/rxn002460",
+    "RDB7/rxn003507",
+    "RDB7/rxn000507",
+    "RDB7/rxn001426",
+    "RDB7/rxn001439",
+    "RDB7/rxn006352",
+    "RDB7/rxn009526",
+    "RDB7/rxn003595",
+    "RDB7/rxn009621",
+    "RDB7/rxn011397",
+    "RDB7/rxn004343",
+    "RDB7/rxn002954",
+    "RDB7/rxn007939",
+    "RDB7/rxn000152",
+    "RDB7/rxn003713",
+    "RDB7/rxn004373",
+    "RDB7/rxn003354",
+    "RDB7/rxn007880",
+    "RDB7/rxn006214",
+    "RDB7/rxn010939",
+    "RDB7/rxn006395",
+    "RDB7/rxn006834",
+    "RDB7/rxn009264",
+    "RDB7/rxn010085",
+    "RDB7/rxn003372",
+    "RDB7/rxn006440",
+    "RDB7/rxn010798",
+    "RDB7/rxn009532",
+    "RDB7/rxn007992",
+    "RDB7/rxn006494",
+    "RDB7/rxn007248",
+    "RDB7/rxn008385",
+    "RDB7/rxn011926",
+    "RDB7/rxn006813",
+    "RDB7/rxn011647",
+    "RDB7/rxn010639",
+    "RDB7/rxn002087",
+    "RDB7/rxn000116",
+    "RDB7/rxn006434",
+    "RDB7/rxn002052",
+    "RDB7/rxn002091",
+    "RDB7/rxn007528",
+    "RDB7/rxn003710",
+    "RDB7/rxn008384",
+    "RDB7/rxn011545",
+    "RDB7/rxn004972",
+    "RDB7/rxn009638",
+    "RDB7/rxn008327",
+    "RDB7/rxn010647",
+    "RDB7/rxn006409",
+    "RDB7/rxn011449",
+    "RDB7/rxn001296",
+    "RDB7/rxn009627",
+    "RDB7/rxn011122",
+    "RDB7/rxn011649",
+    "RDB7/rxn010914",
+    "RDB7/rxn000700",
+    "RDB7/rxn004936",
+    "RDB7/rxn000682",
+    "RDB7/rxn011793",
+    "RDB7/rxn003979",
+    "RDB7/rxn011451",
+    "RDB7/rxn000681",
+    "RDB7/rxn011703",
+    "RDB7/rxn005995",
+    "RDB7/rxn005418",
+    "RDB7/rxn011312",
+    "RDB7/rxn011771",
+    "RDB7/rxn011782",
+    "RDB7/rxn002376",
+    "RDB7/rxn010649",
+    "RDB7/rxn000117",
+    "RDB7/rxn000689",
+    "RDB7/rxn007196",
+    "RDB7/rxn005652",
+    "RDB7/rxn010177",
+    "RDB7/rxn009527",
+    "RDB7/rxn003876",
+    "RDB7/rxn003781",
+    "RDB7/rxn007509",
+    "RDB7/rxn000841",
+    "RDB7/rxn011320",
+    "RDB7/rxn003384",
+    "RDB7/rxn003520",
+    "RDB7/rxn010802",
+    "RDB7/rxn006219",
+    "RDB7/rxn006351",
+    "RDB7/rxn010792",
+    "RDB7/rxn002268",
+    "RDB7/rxn010583",
+    "RDB7/rxn007112",
+    "RDB7/rxn004937",
+    "RDB7/rxn005320",
+    "RDB7/rxn011109",
+    "RDB7/rxn003933",
+    "RDB7/rxn009643",
+    "RDB7/rxn005325",
+    "RDB7/rxn010635",
+    "RDB7/rxn011786",
+    "RDB7/rxn009533",
+    "RDB7/rxn005201",
+    "RDB7/rxn006830",
+    "RDB7/rxn010895",
+    "RDB7/rxn009721",
+    "RDB7/rxn001024",
+    "RDB7/rxn010336",
+    "RDB7/rxn003881",
+    "RDB7/rxn011159",
+    "RDB7/rxn005277",
+    "RDB7/rxn010352",
+    "RDB7/rxn007641",
+    "RDB7/rxn010934",
+    "RDB7/rxn005032",
+    "RDB7/rxn011331",
+    "RDB7/rxn009221",
+    "RDB7/rxn000811",
+    "RDB7/rxn001434",
+    "RDB7/rxn009964",
+    "RDB7/rxn005328",
+    "RDB7/rxn006831",
+    "RDB7/rxn006133",
+    "RDB7/rxn003785",
+    "RDB7/rxn010349",
+    "RDB7/rxn006535",
+    "RDB7/rxn007253",
+    "RDB7/rxn000170",
+    "RDB7/rxn008334",
+    "RDB7/rxn002423",
+    "RDB7/rxn002987",
+    "RDB7/rxn005254",
+    "RDB7/rxn011778",
+    "RDB7/rxn006222",
+    "RDB7/rxn007997",
+    "RDB7/rxn000012",
+    "RDB7/rxn006165",
+    "RDB7/rxn009568",
+    "RDB7/rxn010308",
+    "RDB7/rxn004086",
+    "RDB7/rxn006973",
+    "RDB7/rxn004090",
+    "RDB7/rxn003038",
+    "RDB7/rxn006492",
+    "RDB7/rxn007180",
+    "RDB7/rxn001721",
+    "RDB7/rxn009649",
+    "RDB7/rxn000688",
+    "RDB7/rxn007533",
+    "RDB7/rxn002456",
+    "RDB7/rxn006810",
+    "RDB7/rxn005016",
+    "RDB7/rxn001976",
+    "RDB7/rxn006446",
+    "RDB7/rxn006282",
+    "RDB7/rxn007951",
+    "RDB7/rxn003689",
+    "RDB7/rxn003885",
+    "RDB7/rxn010644",
+    "RDB7/rxn003574",
+    "RDB7/rxn005107",
+    "RDB7/rxn009225",
+    "RDB7/rxn001161",
+    "RDB7/rxn006806",
+    "RDB7/rxn008386",
+    "RDB7/rxn005283",
+    "RDB7/rxn010301",
+    "RDB7/rxn003342",
+    "RDB7/rxn003692",
+    "RDB7/rxn011729",
+    "RDB7/rxn006423",
+    "RDB7/rxn006708",
+    "RDB7/rxn001295",
+    "RDB7/rxn011702",
+    "RDB7/rxn011435",
+    "RDB7/rxn009741",
+    "RDB7/rxn001435",
+    "RDB7/rxn004745",
+    "RDB7/rxn008339",
+    "RDB7/rxn004419",
+    "RDB7/rxn011911",
+    "RDB7/rxn009349",
+    "RDB7/rxn006010",
+    "RDB7/rxn011699",
+    "RDB7/rxn001899",
+    "RDB7/rxn010916",
+    "RDB7/rxn006349",
+    "RDB7/rxn008321",
+    "RDB7/rxn010979",
+    "RDB7/rxn005654",
+    "RDB7/rxn011215",
+    "RDB7/rxn002379",
+    "RDB7/rxn010828",
+    "RDB7/rxn000510",
+    "RDB7/rxn002157",
+    "RDB7/rxn004293",
+    "RDB7/rxn008489",
+    "RDB7/rxn004606",
+    "RDB7/rxn002189",
+    "RDB7/rxn009727",
+    "RDB7/rxn006213",
+    "RDB7/rxn006656",
+    "RDB7/rxn006816",
+    "RDB7/rxn011352",
+    "RDB7/rxn009224",
+    "RDB7/rxn003887",
+    "RDB7/rxn003977",
+    "RDB7/rxn009345",
+    "RDB7/rxn006704",
+    "RDB7/rxn002429",
+    "RDB7/rxn006443",
+    "RDB7/rxn002618",
+    "RDB7/rxn006865",
+    "RDB7/rxn009354",
+    "RDB7/rxn006347",
+    "RDB7/rxn001730",
+    "RDB7/rxn011166",
+    "RDB7/rxn011922",
+    "RDB7/rxn001749",
+    "RDB7/rxn009926",
+    "RDB7/rxn002377",
+    "RDB7/rxn005033",
+    "RDB7/rxn004978",
+    "RDB7/rxn002721",
+    "RDB7/rxn009853",
+    "RDB7/rxn011773",
+    "RDB7/rxn009626",
+    "RDB7/rxn010357",
+    "RDB7/rxn007626",
+    "RDB7/rxn005256",
+    "RDB7/rxn009569",
+    "RDB7/rxn010923",
+    "RDB7/rxn005204",
+    "RDB7/rxn000392",
+    "RDB7/rxn007531",
+    "RDB7/rxn011733",
+    "RDB7/rxn011244",
+    "RDB7/rxn001748",
+    "RDB7/rxn002257",
+    "RDB7/rxn002608",
+    "RDB7/rxn001431",
+    "RDB7/rxn007838",
+    "RDB7/rxn005657",
+    "RDB7/rxn002274",
+    "RDB7/rxn003359",
+    "RDB7/rxn002375",
+    "RDB7/rxn009648",
+    "RDB7/rxn005102",
+    "RDB7/rxn007534",
+    "RDB7/rxn011783",
+    "RDB7/rxn009265",
+    "RDB7/rxn000171",
+    "RDB7/rxn001007",
+    "RDB7/rxn009634",
+    "RDB7/rxn011377",
+    "RDB7/rxn010837",
+    "RDB7/rxn001423",
+    "RDB7/rxn000506",
+    "RDB7/rxn011128",
+    "RDB7/rxn001057",
+    "RDB7/rxn008574",
+    "RDB7/rxn009628",
+    "RDB7/rxn001172",
+    "RDB7/rxn004864",
+    "RDB7/rxn001141",
+    "RDB7/rxn002426",
+    "RDB7/rxn010889",
+    "RDB7/rxn003924",
+    "RDB7/rxn000491",
+    "RDB7/rxn005515",
+    "RDB7/rxn006533",
+    "RDB7/rxn010343",
+    "RDB7/rxn010342",
+    "RDB7/rxn008572",
+    "RDB7/rxn000813",
+    "RDB7/rxn002984",
+    "RDB7/rxn001727",
+    "RDB7/rxn002098",
+    "RDB7/rxn006407",
+    "RDB7/rxn005718",
+    "RDB7/rxn010898",
+    "RDB7/rxn004135",
+    "RDB7/rxn007398",
+    "RDB7/rxn006168",
+    "RDB7/rxn000691",
+    "RDB7/rxn005611",
+    "RDB7/rxn002340",
+    "RDB7/rxn010449",
+    "RDB7/rxn007766"
+  ],
+  "fixed_singlet_panel": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 56.687247115679554,
+      "rmsd_kcal_mol": 62.97346775751427
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 25.561627363005076,
+      "rmsd_kcal_mol": 35.62777893055118
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -81.74118327883792,
+        "error": -74.64118327883793,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -65.73739987116801
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": 25.052503178571452,
+        "error": 64.48250317857145,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": 73.57919677262956
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -26.354734242790855,
+        "error": 35.31526575720915,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": 46.940643127259605
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": 11.443699431482896,
+        "error": 92.65369943148289,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 80.70182517943195
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 49.779200611029964,
+        "error": 1.6792006110299624
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": 18.335616678733658,
+        "error": -14.664383321266342
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 34.86712430147823,
+        "error": 3.1671243014782284
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 3.8678440859283496,
+        "error": -65.43215591407164
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 17.734727332820807,
+        "error": -42.8652726671792
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 31.443583932296306,
+        "error": 16.343583932296305
+      }
+    ]
+  },
+  "stage_seconds": {
+    "prepare": 9.772885292000865,
+    "assemble_reactions": 50.13991880199865,
+    "assemble_derivatives": 2.028952489999938,
+    "linear_solves": 5.281042644999616
+  },
+  "selected_trial": 1,
+  "test": {
+    "RDB7_test": {
+      "reaction": {
+        "n": 400,
+        "mae_kcal_mol": 18.380446160317128,
+        "rmsd_kcal_mol": 26.12604280126316
+      },
+      "barrier": {
+        "n": 800,
+        "mae_kcal_mol": 23.3784644883863,
+        "rmsd_kcal_mol": 31.95137067631619
+      }
+    },
+    "BH9_TRIP50_test": {
+      "reaction": {
+        "n": 65,
+        "mae_kcal_mol": 17.35426138534555,
+        "rmsd_kcal_mol": 24.766003424482413
+      },
+      "barrier": {
+        "n": 130,
+        "mae_kcal_mol": 15.954908789296493,
+        "rmsd_kcal_mol": 21.810069587703197
+      }
+    }
+  },
+  "matched_control": {
+    "RDB7_test": {
+      "reaction": {
+        "n": 400,
+        "mae_kcal_mol": 19.035526309055967,
+        "rmsd_kcal_mol": 26.688908185823227
+      },
+      "barrier": {
+        "n": 800,
+        "mae_kcal_mol": 23.906732103409812,
+        "rmsd_kcal_mol": 32.52634868025772
+      }
+    },
+    "BH9_TRIP50_test": {
+      "reaction": {
+        "n": 65,
+        "mae_kcal_mol": 19.015795508367574,
+        "rmsd_kcal_mol": 26.830263886463168
+      },
+      "barrier": {
+        "n": 130,
+        "mae_kcal_mol": 17.07133872996551,
+        "rmsd_kcal_mol": 23.210392080842844
+      }
+    }
+  },
+  "matched_twelve_groups": {
+    "RDB7_test": {
+      "reaction": {
+        "n": 400,
+        "mae_kcal_mol": 18.386220572434098,
+        "rmsd_kcal_mol": 26.1824275338268
+      },
+      "barrier": {
+        "n": 800,
+        "mae_kcal_mol": 23.506872833486103,
+        "rmsd_kcal_mol": 32.06002150161535
+      }
+    },
+    "BH9_TRIP50_test": {
+      "reaction": {
+        "n": 65,
+        "mae_kcal_mol": 17.831107926557255,
+        "rmsd_kcal_mol": 25.233604390017852
+      },
+      "barrier": {
+        "n": 130,
+        "mae_kcal_mol": 16.14659521828204,
+        "rmsd_kcal_mol": 22.060145329935356
+      }
+    }
+  },
+  "by_environment": {
+    "RDB7_test": {
+      "hydroxyl_present": {
+        "control": {
+          "reaction": {
+            "n": 165,
+            "mae_kcal_mol": 16.92226074643505,
+            "rmsd_kcal_mol": 22.088892233495805
+          },
+          "barrier": {
+            "n": 330,
+            "mae_kcal_mol": 21.08038461656422,
+            "rmsd_kcal_mol": 26.859464238886368
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 165,
+            "mae_kcal_mol": 15.711751259206865,
+            "rmsd_kcal_mol": 20.44997568374896
+          },
+          "barrier": {
+            "n": 330,
+            "mae_kcal_mol": 19.35695644651785,
+            "rmsd_kcal_mol": 24.209311831373757
+          }
+        }
+      },
+      "oxygen_oxygen_present": {
+        "n": 0
+      },
+      "carbon_hydroxyl_present": {
+        "control": {
+          "reaction": {
+            "n": 161,
+            "mae_kcal_mol": 16.894291008286988,
+            "rmsd_kcal_mol": 22.077210986682356
+          },
+          "barrier": {
+            "n": 322,
+            "mae_kcal_mol": 20.993140678660588,
+            "rmsd_kcal_mol": 26.81141758987017
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 161,
+            "mae_kcal_mol": 15.654361100032915,
+            "rmsd_kcal_mol": 20.42709086498972
+          },
+          "barrier": {
+            "n": 322,
+            "mae_kcal_mol": 19.242199587324674,
+            "rmsd_kcal_mol": 24.072037363086864
+          }
+        }
+      },
+      "ether_present": {
+        "control": {
+          "reaction": {
+            "n": 142,
+            "mae_kcal_mol": 15.383452206146465,
+            "rmsd_kcal_mol": 20.23154091289487
+          },
+          "barrier": {
+            "n": 284,
+            "mae_kcal_mol": 19.640595659535737,
+            "rmsd_kcal_mol": 25.49614663971962
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 142,
+            "mae_kcal_mol": 14.820554879512201,
+            "rmsd_kcal_mol": 19.350605057048707
+          },
+          "barrier": {
+            "n": 284,
+            "mae_kcal_mol": 19.01797804213788,
+            "rmsd_kcal_mol": 23.933987366609536
+          }
+        }
+      },
+      "carbon_peroxy_present": {
+        "n": 0
+      },
+      "hydroperoxy_present": {
+        "n": 0
+      },
+      "organic_hydroperoxide_present": {
+        "n": 0
+      },
+      "carbonyl_present": {
+        "control": {
+          "reaction": {
+            "n": 229,
+            "mae_kcal_mol": 17.16949368210636,
+            "rmsd_kcal_mol": 22.86383046421287
+          },
+          "barrier": {
+            "n": 458,
+            "mae_kcal_mol": 21.057269370573728,
+            "rmsd_kcal_mol": 27.24684011035109
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 229,
+            "mae_kcal_mol": 16.188843966711158,
+            "rmsd_kcal_mol": 21.51407963202689
+          },
+          "barrier": {
+            "n": 458,
+            "mae_kcal_mol": 19.78713463612767,
+            "rmsd_kcal_mol": 25.189016804740334
+          }
+        }
+      },
+      "formyl_present": {
+        "control": {
+          "reaction": {
+            "n": 183,
+            "mae_kcal_mol": 16.05659608359171,
+            "rmsd_kcal_mol": 21.21682566845654
+          },
+          "barrier": {
+            "n": 366,
+            "mae_kcal_mol": 21.301450987097304,
+            "rmsd_kcal_mol": 27.46145033904319
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 183,
+            "mae_kcal_mol": 15.125130825109348,
+            "rmsd_kcal_mol": 19.8918839701697
+          },
+          "barrier": {
+            "n": 366,
+            "mae_kcal_mol": 20.078973966281023,
+            "rmsd_kcal_mol": 25.18366652079406
+          }
+        }
+      },
+      "carbon_substituted_formyl_present": {
+        "control": {
+          "reaction": {
+            "n": 164,
+            "mae_kcal_mol": 16.000390536666313,
+            "rmsd_kcal_mol": 20.897893277913685
+          },
+          "barrier": {
+            "n": 328,
+            "mae_kcal_mol": 22.102171246747243,
+            "rmsd_kcal_mol": 28.128008705255933
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 164,
+            "mae_kcal_mol": 15.031815918358994,
+            "rmsd_kcal_mol": 19.410916898763855
+          },
+          "barrier": {
+            "n": 328,
+            "mae_kcal_mol": 20.549545902030314,
+            "rmsd_kcal_mol": 25.53297075061239
+          }
+        }
+      },
+      "carbonyl_carbon_present": {
+        "control": {
+          "reaction": {
+            "n": 200,
+            "mae_kcal_mol": 17.849186998759034,
+            "rmsd_kcal_mol": 23.377403871538622
+          },
+          "barrier": {
+            "n": 400,
+            "mae_kcal_mol": 22.080860035924534,
+            "rmsd_kcal_mol": 28.151615069420103
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 200,
+            "mae_kcal_mol": 16.59710856095562,
+            "rmsd_kcal_mol": 21.664838389969713
+          },
+          "barrier": {
+            "n": 400,
+            "mae_kcal_mol": 20.62455490603591,
+            "rmsd_kcal_mol": 25.866860586245185
+          }
+        }
+      },
+      "carbonyl_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 47,
+            "mae_kcal_mol": 14.900171384724652,
+            "rmsd_kcal_mol": 19.417677669506784
+          },
+          "barrier": {
+            "n": 94,
+            "mae_kcal_mol": 22.22881828029197,
+            "rmsd_kcal_mol": 29.572832549896194
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 47,
+            "mae_kcal_mol": 12.414641585663842,
+            "rmsd_kcal_mol": 16.55301050505897
+          },
+          "barrier": {
+            "n": 94,
+            "mae_kcal_mol": 20.810338554100262,
+            "rmsd_kcal_mol": 26.656505818653898
+          }
+        }
+      },
+      "carbon_H_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 32,
+            "mae_kcal_mol": 14.237166675499473,
+            "rmsd_kcal_mol": 18.6695041159807
+          },
+          "barrier": {
+            "n": 64,
+            "mae_kcal_mol": 21.30565847790325,
+            "rmsd_kcal_mol": 27.69523187838002
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 32,
+            "mae_kcal_mol": 13.840754904883209,
+            "rmsd_kcal_mol": 16.687191314878884
+          },
+          "barrier": {
+            "n": 64,
+            "mae_kcal_mol": 16.47371169166302,
+            "rmsd_kcal_mol": 20.609393747347525
+          }
+        }
+      },
+      "oxygen_H_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 4.506714758114682,
+            "rmsd_kcal_mol": 5.637735914485484
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 20.257421573319558,
+            "rmsd_kcal_mol": 22.122713581629636
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 7.63649696519805,
+            "rmsd_kcal_mol": 8.332854943341877
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 17.433687782264265,
+            "rmsd_kcal_mol": 20.009488738686237
+          }
+        }
+      },
+      "nitrogen_H_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 10.073876296551118,
+            "rmsd_kcal_mol": 13.383988653544145
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 9.373241252945423,
+            "rmsd_kcal_mol": 10.009576778965709
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 11.408708028887625,
+            "rmsd_kcal_mol": 14.009110444121557
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 6.123951016847075,
+            "rmsd_kcal_mol": 10.26646270603725
+          }
+        }
+      },
+      "carbon_H_peroxy_present": {
+        "n": 0
+      },
+      "oxygen_H_peroxy_present": {
+        "n": 0
+      },
+      "hbond_OH_O_present": {
+        "control": {
+          "reaction": {
+            "n": 52,
+            "mae_kcal_mol": 15.605818012043366,
+            "rmsd_kcal_mol": 20.496753494463032
+          },
+          "barrier": {
+            "n": 104,
+            "mae_kcal_mol": 18.810246909251944,
+            "rmsd_kcal_mol": 23.951835061087603
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 52,
+            "mae_kcal_mol": 13.555687453468998,
+            "rmsd_kcal_mol": 18.316039476447035
+          },
+          "barrier": {
+            "n": 104,
+            "mae_kcal_mol": 17.446420513333855,
+            "rmsd_kcal_mol": 21.935434833339908
+          }
+        }
+      },
+      "hbond_OH_peroxy_present": {
+        "n": 0
+      },
+      "hbond_OH_carbonyl_present": {
+        "control": {
+          "reaction": {
+            "n": 31,
+            "mae_kcal_mol": 14.939278282055664,
+            "rmsd_kcal_mol": 19.043788289270147
+          },
+          "barrier": {
+            "n": 62,
+            "mae_kcal_mol": 18.43942144283414,
+            "rmsd_kcal_mol": 22.306229481801914
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 31,
+            "mae_kcal_mol": 12.237277307538942,
+            "rmsd_kcal_mol": 16.069274342210445
+          },
+          "barrier": {
+            "n": 62,
+            "mae_kcal_mol": 14.912484831604836,
+            "rmsd_kcal_mol": 18.146317758354922
+          }
+        }
+      },
+      "hydroxyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 76,
+            "mae_kcal_mol": 16.287191316114267,
+            "rmsd_kcal_mol": 21.90453561809492
+          },
+          "barrier": {
+            "n": 152,
+            "mae_kcal_mol": 19.957572496557766,
+            "rmsd_kcal_mol": 25.164775010857326
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 76,
+            "mae_kcal_mol": 15.41827562385179,
+            "rmsd_kcal_mol": 20.326387139359102
+          },
+          "barrier": {
+            "n": 152,
+            "mae_kcal_mol": 17.60720312205124,
+            "rmsd_kcal_mol": 21.761320481810344
+          }
+        }
+      },
+      "oxygen_oxygen_changes": {
+        "n": 0
+      },
+      "carbon_hydroxyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 80,
+            "mae_kcal_mol": 17.41813915822575,
+            "rmsd_kcal_mol": 22.819708808809757
+          },
+          "barrier": {
+            "n": 160,
+            "mae_kcal_mol": 19.703974068328524,
+            "rmsd_kcal_mol": 24.900078865699406
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 80,
+            "mae_kcal_mol": 16.421101520343715,
+            "rmsd_kcal_mol": 21.30916868868606
+          },
+          "barrier": {
+            "n": 160,
+            "mae_kcal_mol": 17.79108103182566,
+            "rmsd_kcal_mol": 21.89137517122476
+          }
+        }
+      },
+      "ether_changes": {
+        "control": {
+          "reaction": {
+            "n": 77,
+            "mae_kcal_mol": 17.124951619520697,
+            "rmsd_kcal_mol": 21.983265463269625
+          },
+          "barrier": {
+            "n": 154,
+            "mae_kcal_mol": 19.851205090479997,
+            "rmsd_kcal_mol": 25.67973357186841
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 77,
+            "mae_kcal_mol": 15.711117934276512,
+            "rmsd_kcal_mol": 20.440488989863233
+          },
+          "barrier": {
+            "n": 154,
+            "mae_kcal_mol": 19.72304680678076,
+            "rmsd_kcal_mol": 24.14101433575842
+          }
+        }
+      },
+      "carbon_peroxy_changes": {
+        "n": 0
+      },
+      "hydroperoxy_changes": {
+        "n": 0
+      },
+      "organic_hydroperoxide_changes": {
+        "n": 0
+      },
+      "carbonyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 59,
+            "mae_kcal_mol": 18.63787856100487,
+            "rmsd_kcal_mol": 23.75046192420749
+          },
+          "barrier": {
+            "n": 118,
+            "mae_kcal_mol": 24.687201307332675,
+            "rmsd_kcal_mol": 31.33613494446006
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 59,
+            "mae_kcal_mol": 16.175109971082684,
+            "rmsd_kcal_mol": 20.81506756509768
+          },
+          "barrier": {
+            "n": 118,
+            "mae_kcal_mol": 20.249499112189238,
+            "rmsd_kcal_mol": 25.388395219474063
+          }
+        }
+      },
+      "formyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 113,
+            "mae_kcal_mol": 18.490923100235793,
+            "rmsd_kcal_mol": 23.302074193654093
+          },
+          "barrier": {
+            "n": 226,
+            "mae_kcal_mol": 22.17448938374698,
+            "rmsd_kcal_mol": 28.138598305966124
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 113,
+            "mae_kcal_mol": 16.57911031738247,
+            "rmsd_kcal_mol": 21.204086016475898
+          },
+          "barrier": {
+            "n": 226,
+            "mae_kcal_mol": 19.836017195356654,
+            "rmsd_kcal_mol": 24.203613124199858
+          }
+        }
+      },
+      "carbon_substituted_formyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 106,
+            "mae_kcal_mol": 16.703041826954877,
+            "rmsd_kcal_mol": 21.45012639492877
+          },
+          "barrier": {
+            "n": 212,
+            "mae_kcal_mol": 21.926892825918568,
+            "rmsd_kcal_mol": 28.296100138733458
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 106,
+            "mae_kcal_mol": 15.569183321293211,
+            "rmsd_kcal_mol": 19.840419952148448
+          },
+          "barrier": {
+            "n": 212,
+            "mae_kcal_mol": 19.860518190605973,
+            "rmsd_kcal_mol": 24.423011820377432
+          }
+        }
+      },
+      "carbonyl_carbon_changes": {
+        "control": {
+          "reaction": {
+            "n": 88,
+            "mae_kcal_mol": 18.009183682680014,
+            "rmsd_kcal_mol": 23.958821604011987
+          },
+          "barrier": {
+            "n": 176,
+            "mae_kcal_mol": 22.124211570705725,
+            "rmsd_kcal_mol": 28.682558750319526
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 88,
+            "mae_kcal_mol": 16.238643740004616,
+            "rmsd_kcal_mol": 21.929982584700483
+          },
+          "barrier": {
+            "n": 176,
+            "mae_kcal_mol": 20.652095661648247,
+            "rmsd_kcal_mol": 25.75505037734837
+          }
+        }
+      },
+      "carbonyl_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 30,
+            "mae_kcal_mol": 18.216028487915015,
+            "rmsd_kcal_mol": 21.836547461995405
+          },
+          "barrier": {
+            "n": 60,
+            "mae_kcal_mol": 26.669852592743833,
+            "rmsd_kcal_mol": 33.758420900861026
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 30,
+            "mae_kcal_mol": 14.40413654072422,
+            "rmsd_kcal_mol": 18.98768062450628
+          },
+          "barrier": {
+            "n": 60,
+            "mae_kcal_mol": 25.182623885752182,
+            "rmsd_kcal_mol": 30.54171400510955
+          }
+        }
+      },
+      "carbon_H_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 32,
+            "mae_kcal_mol": 14.237166675499473,
+            "rmsd_kcal_mol": 18.6695041159807
+          },
+          "barrier": {
+            "n": 64,
+            "mae_kcal_mol": 21.30565847790325,
+            "rmsd_kcal_mol": 27.69523187838002
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 32,
+            "mae_kcal_mol": 13.840754904883209,
+            "rmsd_kcal_mol": 16.687191314878884
+          },
+          "barrier": {
+            "n": 64,
+            "mae_kcal_mol": 16.47371169166302,
+            "rmsd_kcal_mol": 20.609393747347525
+          }
+        }
+      },
+      "oxygen_H_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 4.506714758114682,
+            "rmsd_kcal_mol": 5.637735914485484
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 20.257421573319558,
+            "rmsd_kcal_mol": 22.122713581629636
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 7.63649696519805,
+            "rmsd_kcal_mol": 8.332854943341877
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 17.433687782264265,
+            "rmsd_kcal_mol": 20.009488738686237
+          }
+        }
+      },
+      "nitrogen_H_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 10.073876296551118,
+            "rmsd_kcal_mol": 13.383988653544145
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 9.373241252945423,
+            "rmsd_kcal_mol": 10.009576778965709
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 11.408708028887625,
+            "rmsd_kcal_mol": 14.009110444121557
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 6.123951016847075,
+            "rmsd_kcal_mol": 10.26646270603725
+          }
+        }
+      },
+      "carbon_H_peroxy_changes": {
+        "n": 0
+      },
+      "oxygen_H_peroxy_changes": {
+        "n": 0
+      },
+      "hbond_OH_O_changes": {
+        "control": {
+          "reaction": {
+            "n": 28,
+            "mae_kcal_mol": 15.157282529298923,
+            "rmsd_kcal_mol": 20.2918572734126
+          },
+          "barrier": {
+            "n": 56,
+            "mae_kcal_mol": 19.867693801295434,
+            "rmsd_kcal_mol": 26.107965214827363
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 28,
+            "mae_kcal_mol": 13.477984700052286,
+            "rmsd_kcal_mol": 18.204496237571146
+          },
+          "barrier": {
+            "n": 56,
+            "mae_kcal_mol": 19.565414066634332,
+            "rmsd_kcal_mol": 24.78575611159319
+          }
+        }
+      },
+      "hbond_OH_peroxy_changes": {
+        "n": 0
+      },
+      "hbond_OH_carbonyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 15,
+            "mae_kcal_mol": 16.47631395381233,
+            "rmsd_kcal_mol": 21.33493885216833
+          },
+          "barrier": {
+            "n": 30,
+            "mae_kcal_mol": 19.391946159128675,
+            "rmsd_kcal_mol": 23.238351527814363
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 15,
+            "mae_kcal_mol": 15.08061947525045,
+            "rmsd_kcal_mol": 19.25828254436315
+          },
+          "barrier": {
+            "n": 30,
+            "mae_kcal_mol": 14.023479619088224,
+            "rmsd_kcal_mol": 17.282705113519576
+          }
+        }
+      }
+    },
+    "BH9_TRIP50_test": {
+      "hydroxyl_present": {
+        "control": {
+          "reaction": {
+            "n": 16,
+            "mae_kcal_mol": 10.690277409024452,
+            "rmsd_kcal_mol": 13.441222899430404
+          },
+          "barrier": {
+            "n": 32,
+            "mae_kcal_mol": 16.175583137028553,
+            "rmsd_kcal_mol": 20.53619786947063
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 16,
+            "mae_kcal_mol": 7.359715946095482,
+            "rmsd_kcal_mol": 10.439837492274243
+          },
+          "barrier": {
+            "n": 32,
+            "mae_kcal_mol": 13.41808323818038,
+            "rmsd_kcal_mol": 16.798454197473937
+          }
+        }
+      },
+      "oxygen_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "carbon_hydroxyl_present": {
+        "control": {
+          "reaction": {
+            "n": 12,
+            "mae_kcal_mol": 11.315449243693072,
+            "rmsd_kcal_mol": 14.412475935543256
+          },
+          "barrier": {
+            "n": 24,
+            "mae_kcal_mol": 16.473456561636656,
+            "rmsd_kcal_mol": 21.53133706201096
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 12,
+            "mae_kcal_mol": 7.42799811380885,
+            "rmsd_kcal_mol": 11.084860026499559
+          },
+          "barrier": {
+            "n": 24,
+            "mae_kcal_mol": 13.06982561496767,
+            "rmsd_kcal_mol": 16.92589030610021
+          }
+        }
+      },
+      "ether_present": {
+        "control": {
+          "reaction": {
+            "n": 8,
+            "mae_kcal_mol": 24.196017169853775,
+            "rmsd_kcal_mol": 28.670438582887876
+          },
+          "barrier": {
+            "n": 16,
+            "mae_kcal_mol": 18.622448212254078,
+            "rmsd_kcal_mol": 25.242880797152168
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 8,
+            "mae_kcal_mol": 21.812986530540577,
+            "rmsd_kcal_mol": 26.867799006915188
+          },
+          "barrier": {
+            "n": 16,
+            "mae_kcal_mol": 17.59803969434433,
+            "rmsd_kcal_mol": 23.940221062707195
+          }
+        }
+      },
+      "carbon_peroxy_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "hydroperoxy_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "organic_hydroperoxide_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "carbonyl_present": {
+        "control": {
+          "reaction": {
+            "n": 37,
+            "mae_kcal_mol": 15.487081672538846,
+            "rmsd_kcal_mol": 22.74313411592077
+          },
+          "barrier": {
+            "n": 74,
+            "mae_kcal_mol": 15.274504029885378,
+            "rmsd_kcal_mol": 20.39600521216578
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 37,
+            "mae_kcal_mol": 13.91135396042798,
+            "rmsd_kcal_mol": 21.643223963553822
+          },
+          "barrier": {
+            "n": 74,
+            "mae_kcal_mol": 13.62635171460657,
+            "rmsd_kcal_mol": 18.556710833471467
+          }
+        }
+      },
+      "formyl_present": {
+        "control": {
+          "reaction": {
+            "n": 13,
+            "mae_kcal_mol": 15.236363469107717,
+            "rmsd_kcal_mol": 18.99283974810106
+          },
+          "barrier": {
+            "n": 26,
+            "mae_kcal_mol": 15.705291906730634,
+            "rmsd_kcal_mol": 20.165831439568333
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 13,
+            "mae_kcal_mol": 14.679520150009072,
+            "rmsd_kcal_mol": 18.44827491936302
+          },
+          "barrier": {
+            "n": 26,
+            "mae_kcal_mol": 14.618194213290092,
+            "rmsd_kcal_mol": 19.190819823909212
+          }
+        }
+      },
+      "carbon_substituted_formyl_present": {
+        "control": {
+          "reaction": {
+            "n": 9,
+            "mae_kcal_mol": 22.812144183209753,
+            "rmsd_kcal_mol": 28.42498538114778
+          },
+          "barrier": {
+            "n": 18,
+            "mae_kcal_mol": 13.816119792170808,
+            "rmsd_kcal_mol": 20.13760981213649
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 9,
+            "mae_kcal_mol": 22.798103457016914,
+            "rmsd_kcal_mol": 27.848681870338382
+          },
+          "barrier": {
+            "n": 18,
+            "mae_kcal_mol": 12.7283901657369,
+            "rmsd_kcal_mol": 19.209623614130077
+          }
+        }
+      },
+      "carbonyl_carbon_present": {
+        "control": {
+          "reaction": {
+            "n": 38,
+            "mae_kcal_mol": 15.370210169273225,
+            "rmsd_kcal_mol": 22.513311185976647
+          },
+          "barrier": {
+            "n": 76,
+            "mae_kcal_mol": 15.026030680364643,
+            "rmsd_kcal_mol": 20.167986385124713
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 38,
+            "mae_kcal_mol": 13.744152575001566,
+            "rmsd_kcal_mol": 21.391708403520443
+          },
+          "barrier": {
+            "n": 76,
+            "mae_kcal_mol": 13.367206949935658,
+            "rmsd_kcal_mol": 18.32993764624909
+          }
+        }
+      },
+      "carbonyl_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 25.883343437146852,
+            "rmsd_kcal_mol": 34.04730298794426
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 23.35108744065767,
+            "rmsd_kcal_mol": 30.570769069539324
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 22.783795284828745,
+            "rmsd_kcal_mol": 32.00689455044382
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 23.149258079270993,
+            "rmsd_kcal_mol": 29.76297382722567
+          }
+        }
+      },
+      "carbon_H_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 9.325243579221269,
+            "rmsd_kcal_mol": 9.818353918275239
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 14.098886215655565,
+            "rmsd_kcal_mol": 16.76237737242673
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 6.673865550902251,
+            "rmsd_kcal_mol": 7.025848708022759
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 15.562668865919978,
+            "rmsd_kcal_mol": 18.26577360791203
+          }
+        }
+      },
+      "oxygen_H_oxygen_present": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 13.665802361646248,
+            "rmsd_kcal_mol": 14.3771443445427
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 18.090162771004668,
+            "rmsd_kcal_mol": 26.439450245399282
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 4.041534020865614,
+            "rmsd_kcal_mol": 4.090285550259825
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 7.69518385120016,
+            "rmsd_kcal_mol": 9.767861024140865
+          }
+        }
+      },
+      "nitrogen_H_oxygen_present": {
+        "n": 0
+      },
+      "carbon_H_peroxy_present": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 13.967171866593215,
+            "rmsd_kcal_mol": 13.967171866593215
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 18.961927557497184,
+            "rmsd_kcal_mol": 20.207057410308657
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 9.72898259510372,
+            "rmsd_kcal_mol": 9.72898259510372
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 22.999525618554376,
+            "rmsd_kcal_mol": 23.508327338679344
+          }
+        }
+      },
+      "oxygen_H_peroxy_present": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 19.968305889133543,
+            "rmsd_kcal_mol": 19.968305889133543
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 43.76093673911135,
+            "rmsd_kcal_mol": 44.88544189717874
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 3.2788588261932725,
+            "rmsd_kcal_mol": 3.2788588261932725
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 15.616515420753226,
+            "rmsd_kcal_mol": 15.702333670099812
+          }
+        }
+      },
+      "hbond_OH_O_present": {
+        "control": {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 16.79710265046871,
+            "rmsd_kcal_mol": 20.870926669383184
+          },
+          "barrier": {
+            "n": 8,
+            "mae_kcal_mol": 23.183085168462497,
+            "rmsd_kcal_mol": 28.137010713923576
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 11.878106941336469,
+            "rmsd_kcal_mol": 17.317817303914016
+          },
+          "barrier": {
+            "n": 8,
+            "mae_kcal_mol": 16.489377942575565,
+            "rmsd_kcal_mol": 18.704094215003554
+          }
+        }
+      },
+      "hbond_OH_peroxy_present": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 19.968305889133543,
+            "rmsd_kcal_mol": 19.968305889133543
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 43.76093673911135,
+            "rmsd_kcal_mol": 44.88544189717874
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 3.2788588261932725,
+            "rmsd_kcal_mol": 3.2788588261932725
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 15.616515420753226,
+            "rmsd_kcal_mol": 15.702333670099812
+          }
+        }
+      },
+      "hbond_OH_carbonyl_present": {
+        "control": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 20.17964148300174,
+            "rmsd_kcal_mol": 25.461521999210547
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 11.60279112798496,
+            "rmsd_kcal_mol": 15.434009651003802
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 18.223848924901638,
+            "rmsd_kcal_mol": 23.75138396878068
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 11.658595948091278,
+            "rmsd_kcal_mol": 14.271796043928493
+          }
+        }
+      },
+      "hydroxyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 13,
+            "mae_kcal_mol": 8.77562574720659,
+            "rmsd_kcal_mol": 10.07074310408502
+          },
+          "barrier": {
+            "n": 26,
+            "mae_kcal_mol": 15.315417777757794,
+            "rmsd_kcal_mol": 19.35488518269604
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 13,
+            "mae_kcal_mol": 5.397962225011678,
+            "rmsd_kcal_mol": 6.149517444340118
+          },
+          "barrier": {
+            "n": 26,
+            "mae_kcal_mol": 11.971252107240641,
+            "rmsd_kcal_mol": 14.673055188037079
+          }
+        }
+      },
+      "oxygen_oxygen_changes": {
+        "n": 0
+      },
+      "carbon_hydroxyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 9,
+            "mae_kcal_mol": 8.758231899290141,
+            "rmsd_kcal_mol": 10.112853478435765
+          },
+          "barrier": {
+            "n": 18,
+            "mae_kcal_mol": 15.330286628670478,
+            "rmsd_kcal_mol": 20.235737053401962
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 9,
+            "mae_kcal_mol": 4.617114572592254,
+            "rmsd_kcal_mol": 4.9694790048935324
+          },
+          "barrier": {
+            "n": 18,
+            "mae_kcal_mol": 10.863872551428253,
+            "rmsd_kcal_mol": 13.831129415685368
+          }
+        }
+      },
+      "ether_changes": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 16.602020864702098,
+            "rmsd_kcal_mol": 16.602020864702098
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 36.50331682563562,
+            "rmsd_kcal_mol": 37.43526296783203
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 11.13424836257263,
+            "rmsd_kcal_mol": 11.13424836257263
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 35.7458625205752,
+            "rmsd_kcal_mol": 36.17678204304145
+          }
+        }
+      },
+      "carbon_peroxy_changes": {
+        "n": 0
+      },
+      "hydroperoxy_changes": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "organic_hydroperoxide_changes": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.373836864539049,
+            "rmsd_kcal_mol": 14.188797638478443
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 28.400777480403324,
+            "rmsd_kcal_mol": 31.2564246881805
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.135721883354883,
+            "rmsd_kcal_mol": 6.087166124798636
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 15.881440833145966,
+            "rmsd_kcal_mol": 17.147923025463555
+          }
+        }
+      },
+      "carbonyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 9.338923402994721,
+            "rmsd_kcal_mol": 10.976553660657911
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 17.302381142635046,
+            "rmsd_kcal_mol": 23.035932308462417
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 6.907311898409634,
+            "rmsd_kcal_mol": 9.358914578339277
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 10.110453120919225,
+            "rmsd_kcal_mol": 12.119001846692003
+          }
+        }
+      },
+      "formyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 13.383362062449642,
+            "rmsd_kcal_mol": 17.138468252241637
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 17.181885930086917,
+            "rmsd_kcal_mol": 21.405575905572523
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 6,
+            "mae_kcal_mol": 13.277586498616452,
+            "rmsd_kcal_mol": 16.908752715833838
+          },
+          "barrier": {
+            "n": 12,
+            "mae_kcal_mol": 16.881145704959412,
+            "rmsd_kcal_mol": 21.03198563931841
+          }
+        }
+      },
+      "carbon_substituted_formyl_changes": {
+        "control": {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 26.950020576327454,
+            "rmsd_kcal_mol": 33.90784912423156
+          },
+          "barrier": {
+            "n": 8,
+            "mae_kcal_mol": 14.308879099874465,
+            "rmsd_kcal_mol": 21.847024323306265
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 24.557719093008256,
+            "rmsd_kcal_mol": 32.11610853005021
+          },
+          "barrier": {
+            "n": 8,
+            "mae_kcal_mol": 13.55219528932431,
+            "rmsd_kcal_mol": 20.838414232576877
+          }
+        }
+      },
+      "carbonyl_carbon_changes": {
+        "control": {
+          "reaction": {
+            "n": 10,
+            "mae_kcal_mol": 18.79378739571326,
+            "rmsd_kcal_mol": 25.159053486210624
+          },
+          "barrier": {
+            "n": 20,
+            "mae_kcal_mol": 15.97022867247071,
+            "rmsd_kcal_mol": 22.269677181811627
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 10,
+            "mae_kcal_mol": 14.810605717513898,
+            "rmsd_kcal_mol": 22.825979732137323
+          },
+          "barrier": {
+            "n": 20,
+            "mae_kcal_mol": 12.212301175154263,
+            "rmsd_kcal_mol": 16.923318848294457
+          }
+        }
+      },
+      "carbonyl_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 4.65317465587722,
+            "rmsd_kcal_mol": 4.65317465587722
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 5.3525281009067935,
+            "rmsd_kcal_mol": 5.83830939046577
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 2.991660283908076,
+            "rmsd_kcal_mol": 2.991660283908076
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 6.58917311323496,
+            "rmsd_kcal_mol": 6.755721784408916
+          }
+        }
+      },
+      "carbon_H_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 9.325243579221269,
+            "rmsd_kcal_mol": 9.818353918275239
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 14.098886215655565,
+            "rmsd_kcal_mol": 16.76237737242673
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 5,
+            "mae_kcal_mol": 6.673865550902251,
+            "rmsd_kcal_mol": 7.025848708022759
+          },
+          "barrier": {
+            "n": 10,
+            "mae_kcal_mol": 15.562668865919978,
+            "rmsd_kcal_mol": 18.26577360791203
+          }
+        }
+      },
+      "oxygen_H_oxygen_changes": {
+        "control": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 13.665802361646248,
+            "rmsd_kcal_mol": 14.3771443445427
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 18.090162771004668,
+            "rmsd_kcal_mol": 26.439450245399282
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 4.041534020865614,
+            "rmsd_kcal_mol": 4.090285550259825
+          },
+          "barrier": {
+            "n": 6,
+            "mae_kcal_mol": 7.69518385120016,
+            "rmsd_kcal_mol": 9.767861024140865
+          }
+        }
+      },
+      "nitrogen_H_oxygen_changes": {
+        "n": 0
+      },
+      "carbon_H_peroxy_changes": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 13.967171866593215,
+            "rmsd_kcal_mol": 13.967171866593215
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 18.961927557497184,
+            "rmsd_kcal_mol": 20.207057410308657
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 9.72898259510372,
+            "rmsd_kcal_mol": 9.72898259510372
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 22.999525618554376,
+            "rmsd_kcal_mol": 23.508327338679344
+          }
+        }
+      },
+      "oxygen_H_peroxy_changes": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 19.968305889133543,
+            "rmsd_kcal_mol": 19.968305889133543
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 43.76093673911135,
+            "rmsd_kcal_mol": 44.88544189717874
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 3.2788588261932725,
+            "rmsd_kcal_mol": 3.2788588261932725
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 15.616515420753226,
+            "rmsd_kcal_mol": 15.702333670099812
+          }
+        }
+      },
+      "hbond_OH_O_changes": {
+        "control": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 13.414563817935683,
+            "rmsd_kcal_mol": 14.929904807508251
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 34.76337920894004,
+            "rmsd_kcal_mol": 36.67661502815687
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 2,
+            "mae_kcal_mol": 5.5323649577713,
+            "rmsd_kcal_mol": 5.973721780518038
+          },
+          "barrier": {
+            "n": 4,
+            "mae_kcal_mol": 21.32015993705986,
+            "rmsd_kcal_mol": 22.27110501272817
+          }
+        }
+      },
+      "hbond_OH_peroxy_changes": {
+        "control": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 19.968305889133543,
+            "rmsd_kcal_mol": 19.968305889133543
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 43.76093673911135,
+            "rmsd_kcal_mol": 44.88544189717874
+          }
+        },
+        "chemical": {
+          "reaction": {
+            "n": 1,
+            "mae_kcal_mol": 3.2788588261932725,
+            "rmsd_kcal_mol": 3.2788588261932725
+          },
+          "barrier": {
+            "n": 2,
+            "mae_kcal_mol": 15.616515420753226,
+            "rmsd_kcal_mol": 15.702333670099812
+          }
+        }
+      },
+      "hbond_OH_carbonyl_changes": {
+        "n": 0
+      }
+    }
+  },
+  "training_coverage": {
+    "BH9_TRIP50_train": {
+      "2": {
+        "hydroxyl": 20,
+        "oxygen_oxygen": 0,
+        "carbon_hydroxyl": 11,
+        "ether": 0,
+        "carbon_peroxy": 0,
+        "hydroperoxy": 2,
+        "organic_hydroperoxide": 1,
+        "carbonyl": 3,
+        "formyl": 4,
+        "carbon_substituted_formyl": 4,
+        "carbonyl_carbon": 6,
+        "carbonyl_oxygen": 0,
+        "carbon_H_oxygen": 11,
+        "oxygen_H_oxygen": 2,
+        "nitrogen_H_oxygen": 1,
+        "carbon_H_peroxy": 1,
+        "oxygen_H_peroxy": 0,
+        "hbond_OH_O": 4,
+        "hbond_OH_peroxy": 0,
+        "hbond_OH_carbonyl": 4
+      },
+      "1": {
+        "hydroxyl": 3,
+        "oxygen_oxygen": 0,
+        "carbon_hydroxyl": 2,
+        "ether": 10,
+        "carbon_peroxy": 0,
+        "hydroperoxy": 0,
+        "organic_hydroperoxide": 0,
+        "carbonyl": 3,
+        "formyl": 7,
+        "carbon_substituted_formyl": 4,
+        "carbonyl_carbon": 6,
+        "carbonyl_oxygen": 3,
+        "carbon_H_oxygen": 1,
+        "oxygen_H_oxygen": 1,
+        "nitrogen_H_oxygen": 0,
+        "carbon_H_peroxy": 0,
+        "oxygen_H_peroxy": 0,
+        "hbond_OH_O": 2,
+        "hbond_OH_peroxy": 0,
+        "hbond_OH_carbonyl": 1
+      },
+      "3": {
+        "hydroxyl": 3,
+        "oxygen_oxygen": 0,
+        "carbon_hydroxyl": 1,
+        "ether": 5,
+        "carbon_peroxy": 0,
+        "hydroperoxy": 0,
+        "organic_hydroperoxide": 0,
+        "carbonyl": 0,
+        "formyl": 0,
+        "carbon_substituted_formyl": 1,
+        "carbonyl_carbon": 7,
+        "carbonyl_oxygen": 1,
+        "carbon_H_oxygen": 1,
+        "oxygen_H_oxygen": 0,
+        "nitrogen_H_oxygen": 0,
+        "carbon_H_peroxy": 0,
+        "oxygen_H_peroxy": 0,
+        "hbond_OH_O": 0,
+        "hbond_OH_peroxy": 0,
+        "hbond_OH_carbonyl": 0
+      }
+    },
+    "RDB7_train": {
+      "1": {
+        "hydroxyl": 588,
+        "oxygen_oxygen": 11,
+        "carbon_hydroxyl": 623,
+        "ether": 837,
+        "carbon_peroxy": 11,
+        "hydroperoxy": 4,
+        "organic_hydroperoxide": 4,
+        "carbonyl": 578,
+        "formyl": 1022,
+        "carbon_substituted_formyl": 1079,
+        "carbonyl_carbon": 1062,
+        "carbonyl_oxygen": 164,
+        "carbon_H_oxygen": 182,
+        "oxygen_H_oxygen": 19,
+        "nitrogen_H_oxygen": 23,
+        "carbon_H_peroxy": 0,
+        "oxygen_H_peroxy": 0,
+        "hbond_OH_O": 92,
+        "hbond_OH_peroxy": 0,
+        "hbond_OH_carbonyl": 68
+      }
+    }
+  },
+  "augmented_basis": {
+    "training_reactions": 400,
+    "extra_centers_per_element_limit": 128,
+    "resulting_centers": {
+      "1": 176,
+      "6": 176,
+      "7": 176,
+      "8": 176,
+      "9": 48,
+      "15": 3,
+      "16": 48,
+      "17": 48
+    }
+  },
+  "chemical_basis": {
+    "schema": "smooth-oxygen-groups/3",
+    "features": 162,
+    "groups": [
+      "hydroxyl",
+      "oxygen_oxygen",
+      "carbon_hydroxyl",
+      "ether",
+      "carbon_peroxy",
+      "hydroperoxy",
+      "organic_hydroperoxide",
+      "carbonyl",
+      "formyl",
+      "carbon_substituted_formyl",
+      "carbonyl_carbon",
+      "carbonyl_oxygen",
+      "carbon_H_oxygen",
+      "oxygen_H_oxygen",
+      "nitrogen_H_oxygen",
+      "carbon_H_peroxy",
+      "oxygen_H_peroxy",
+      "hbond_OH_O",
+      "hbond_OH_peroxy",
+      "hbond_OH_carbonyl",
+      "torsion_CCOO",
+      "torsion_COOH",
+      "torsion_CCOH",
+      "torsion_CCCO"
+    ]
+  }
+}

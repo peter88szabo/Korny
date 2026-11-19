@@ -21,7 +21,7 @@ directory = Path("experiments/des15k")
 base = directory / json.loads((directory / "results.json").read_text())["checkpoint"]
 volumes = directory / json.loads((directory / "volumes.json").read_text())["checkpoint"]
 model = ForceField.load(base, dispersion="ts", volumes=volumes)
-energy_eV, forces_eV_A = model.predict(atomic_numbers, positions_angstrom, charge=0)
+energy_eV, forces_eV_A = model.predict(atomic_numbers, positions_angstrom, charge=0, multiplicity=1)
 ```
 
 Use `dispersion="off"` (default) or `dispersion="d3"` with the same base checkpoint.
@@ -43,6 +43,129 @@ force RMSE and the original SO3LR checkpoint gives 0.06765 eV/Å. SO3LR had
 QM7-X training coverage. [DES scores](experiments/des15k/des_validation.json) ·
 [QM7-X scores](experiments/des15k/qm7x_validation.json) ·
 [Neural comparison](experiments/des15k/so3lr_comparison.json)
+
+### Charge and spin multiplicity
+
+Pass the total molecular charge and multiplicity (2S+1) for each molecule or
+complex. Korny checks electron-count parity and the states present in the
+checkpoint. The state multiplies geometry features during fitting. Consequently
+changing state at a fixed geometry can change forces as well as energy.
+
+```python
+directory = Path("experiments/reactivity")
+report = json.loads((directory / "gmtkn_pbe0_states.json").read_text())
+model = ForceField.load(directory / report["checkpoint"])
+print(model.supported_states, model.prediction_target)
+energy_eV, force_eV_A = model.predict(atomic_numbers, positions_angstrom,
+                                     charge=0, multiplicity=2)
+```
+
+Smite takes the same `charge` and `multiplicity` keys in its Korny PES
+configuration. One trajectory follows one fixed electronic surface. Legacy
+checkpoints support singlets. The separate experimental BH9/TRIP50 checkpoints
+fit high-level relative energies using D3(BJ) during calibration. The singlet
+geometry/frequency checkpoint remains available for equilibrium spectroscopy.
+The [bare PBE0 fit](experiments/reactivity/gmtkn_pbe0_states.json),
+[high-level energy fit](experiments/reactivity/electronic_energy_only.json) and
+[constrained fit](experiments/reactivity/electronic_fit.json) give the
+checkpoint names, distinct targets and held-out errors.
+
+To share a hard 26 GB RAM budget across experiment processes on this
+workstation, use `experiments/run_limited.sh python -m experiments.reactivity.spin_fit`.
+This uses a transient user systemd slice and disables swap for those jobs.
+
+### Functional groups on a reactive potential
+
+Experimental checkpoints can add 82 smooth features for twelve oxygen-containing
+environments. A carbon-bound aldehyde requires short C–O, C–H and C–C bonds
+on one carbon. A hydroperoxide requires a connected C–O–O–H path. Each
+environment contributes its occupancy, bond stretches and angle cosines with
+linear and quadratic terms. Their fitted coefficients therefore enter energies,
+Cartesian forces and frequency calculations. Smooth switching lets a molecule
+change functional groups during MD. Total charge and spin multiplicity remain
+inputs. The barrier fit learns a shared chemical contribution and separate
+doublet and triplet deviations. [Functional-group definitions](src/chemical.py)
+
+On 400 RDB7 test reactions, adding functional groups reduced reaction/barrier
+MAEs from 19.04/23.91 to 18.39/23.51 kcal/mol. On 65 BH9/TRIP50 test reactions
+the corresponding MAEs fell from 19.02/17.07 to 17.83/16.15 kcal/mol. The
+controls use the same sparse kernel, training structures and loss weights.
+Ethanol development frequency MAE increased from 118 to 145 cm⁻¹. Use the
+recorded checkpoint with `dispersion="d3"` to reproduce these high-level
+calibrations. [Fit, controls and chemical subgroup counts](experiments/reactivity/rdb7_balanced_centers128_chemical.json)
+
+Peroxide transfer needs additional data. Among the 159 BH9/TRIP50 training
+reactions, one doublet changed organic hydroperoxide occupancy by at least 0.5.
+Four of 4,000 RDB7 singlets did so. In three independent archived geometries
+of a single isoprene H shift, joint refitting increased forward-barrier MAE
+from 4.42 to 30.49 kcal/mol. Freezing the previous potential and fitting only
+the chemical correction gave 9.15 kcal/mol. The experimental shared-hydrogen
+basis adds smooth donor–H–acceptor features, including C–H–O–O. Checkpoints
+record the basis version. [Training coverage](experiments/reactivity/rdb7_chemical_residual.json)
+[Peroxy validation and larger-molecule spectra](experiments/reactivity/chemical_validation.json)
+
+The specialized isoprene experiments use the workstation's existing Leuven
+archive. The cross-composition experiment fits 91 C₅H₉O₅ calculations at
+UCCSD(T)-F12b/cc-pVDZ-F12 and reserves C₅H₉O₃. The within-reaction experiment
+uses M06-2X-D3zero/aug-cc-pVTZ IRC energies, gradients and Cartesian Hessians
+for existing C₅H₉O₃ conformers. It groups near duplicates and excludes groups
+overlapping the external NEB validation. The JSON reports identify each model's
+electronic reference and scope. [Composition transfer](experiments/reactivity/peroxy_transfer_bridges.json)
+[Grouped conformer fit](experiments/reactivity/isoprene_irc_fit.json)
+
+The third functional-group basis has 162 features. It adds directional O–H···O
+hydrogen bonds with carbonyl or peroxy acceptors and four smooth torsional
+features along oxygen-containing chains (two terms per torsion). The dihedral
+response tends to zero when an adjacent bond angle straightens. The chemistry-only
+IRC fit compares all 162 columns with the first 125 columns on identical
+conformer groups. Adding hydrogen bonds and torsions reduced the equally weighted
+group-validation score from 7.89 to 5.72 kcal/mol. Its three external peroxy
+paths gave MAEs of 6.26 kcal/mol for reaction energies, 11.35 for forward
+barriers and 8.48 for reverse barriers. [Conformer experiment](experiments/reactivity/isoprene_chemical_conformers.json)
+
+On the broad held-out sets the 162-feature joint fit gave reaction/barrier
+MAEs of 18.38/23.38 kcal/mol on RDB7 and 17.35/15.95 on BH9/TRIP50. In a
+seven-molecule geometry check it changed benzene connectivity during relaxation.
+The same checkpoint ran through Smite on a 17-atom neutral doublet with a
+finite-difference force discrepancy of 2.3 × 10⁻⁸ eV/Å and a 3 fs energy
+change of −0.0011 kcal/mol. Its reaction and geometry errors limit its use
+for dynamical predictions. [Broad fit](experiments/reactivity/rdb7_balanced_centers128_chemical_v3.json)
+[Relaxed structures and spectra](experiments/reactivity/chemical_v3_larger.json)
+[Smite test](experiments/reactivity/smite_peroxy_chemical_v3.json)
+
+The geometry-preserving 162-feature experiment freezes the previous potential
+and fits only the chemical correction. It retained connectivity for all seven
+larger-molecule minima and gave 18.93/16.74 kcal/mol on BH9/TRIP50 and
+18.97/23.80 on RDB7 (reaction/barrier MAE). Frequency MAE was 90 cm⁻¹ for
+acetone, 145 for benzene and 343 for furan. Its checkpoint is
+`rdb7-ea561724508fdf4a.npz`. Use D3 for the reported calibration.
+[Frozen fit](experiments/reactivity/rdb7_chemical_residual_v3.json)
+[Seven spectra and geometries](experiments/reactivity/chemical_v3_frozen_larger.json)
+
+To reproduce the comparison, place the original BH9, TRIP50, RDB7 and NIST
+reference files under `dataset_for_training/` and run the commands below from
+the repository root in the training environment. The paired peroxy validation
+also reads the three archived ORCA saddle-point calculations on this workstation.
+
+```sh
+experiments/run_limited.sh python -m experiments.reactivity.matern_fit --compare-kernels
+experiments/run_limited.sh python -m experiments.reactivity.barrier_curve --balanced --added-centers 128
+experiments/run_limited.sh python -m experiments.reactivity.barrier_curve --balanced --added-centers 128 --chemical
+experiments/run_limited.sh python -m experiments.reactivity.chemical_validation
+experiments/run_limited.sh python -m experiments.reactivity.barrier_curve --balanced --chemical-residual
+experiments/run_limited.sh python -m experiments.reactivity.peroxy_transfer --bridges
+experiments/run_limited.sh python -m experiments.reactivity.isoprene_irc_fit
+experiments/run_limited.sh python -m experiments.reactivity.isoprene_trajectory_fit
+experiments/run_limited.sh python -m experiments.reactivity.isoprene_trajectory_fit --conformers
+experiments/run_limited.sh python -m experiments.reactivity.barrier_curve --balanced --added-centers 128 --chemical --chemical-schema 3
+experiments/run_limited.sh python -m experiments.reactivity.barrier_curve --balanced --chemical-residual --chemical-schema 3
+```
+
+The independent OSOS doublet thermochemistry experiment fits separate bare
+PBE0 and W1-F12 energy functions and reserves entire heavy-element compositions.
+`python -m experiments.reactivity.osos_fit --chemical` enables the same groups
+for this comparison. [RDB7 reference data](https://doi.org/10.1038/s41597-022-01529-6)
+[OSOS reference data](https://doi.org/10.1021/acs.jpca.6c03915)
 
 ### Reaction and frequency validation
 

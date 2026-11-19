@@ -1,0 +1,498 @@
+{
+  "checkpoint": "matern-15d11dacaf49a610.npz",
+  "backbone": "pbe0-core-9325855e31063235.npz",
+  "dispersion": "d3",
+  "fit_seconds": 43.64060990300095,
+  "selected_trial": 5,
+  "selection": "equal normalized development terms for reactions, barriers, ethanol geometry and spectrum",
+  "reaction_groups": {
+    "test": 65,
+    "train": 159,
+    "development": 50
+  },
+  "auxiliary_labels": {},
+  "training_curvature_modes": 111,
+  "trials": [
+    {
+      "kernel": "matern52",
+      "length": 1.0,
+      "angular_scale": 1.0,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 13.525186335517429,
+          "rmsd_kcal_mol": 16.653569638101416
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.681037064575591,
+          "rmsd_kcal_mol": 14.93193115074579
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.0331202012136356,
+        "angle_mae_deg": 2.5766036959288297,
+        "mae_cm1": 68.00969597490239,
+        "aligned_rmsd_A": 0.1526637709517217
+      },
+      "selection_loss": 1.0205391506600978
+    },
+    {
+      "kernel": "double_matern52",
+      "length": 1.0,
+      "angular_scale": 1.0,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 13.442108056509635,
+          "rmsd_kcal_mol": 16.770833086790166
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 11.118649576592201,
+          "rmsd_kcal_mol": 15.071348727231285
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.03341239476370518,
+        "angle_mae_deg": 2.390879988901633,
+        "mae_cm1": 60.31963452321887,
+        "aligned_rmsd_A": 0.1469117304304448
+      },
+      "selection_loss": 1.0036563381885992
+    },
+    {
+      "kernel": "gaussian",
+      "length": 1.0,
+      "angular_scale": 1.0,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 13.700886644202502,
+          "rmsd_kcal_mol": 16.993840518080333
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.840352130679626,
+          "rmsd_kcal_mol": 15.303037327082354
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.033138022240130016,
+        "angle_mae_deg": 2.726506664891331,
+        "mae_cm1": 70.50357699171587,
+        "aligned_rmsd_A": 0.15712828273952673
+      },
+      "selection_loss": 1.0414694488890235
+    },
+    {
+      "kernel": "matern52",
+      "length": 1.0,
+      "angular_scale": 1.6,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 12.787310000568555,
+          "rmsd_kcal_mol": 16.20964296058883
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.509610700402783,
+          "rmsd_kcal_mol": 14.447049634683415
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.0346639654354295,
+        "angle_mae_deg": 2.1291104822637723,
+        "mae_cm1": 69.54230346720159,
+        "aligned_rmsd_A": 0.14701422841843761
+      },
+      "selection_loss": 0.9894249022675675
+    },
+    {
+      "kernel": "double_matern52",
+      "length": 1.0,
+      "angular_scale": 1.6,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 13.602797721981306,
+          "rmsd_kcal_mol": 17.245825242251055
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 11.352751306530891,
+          "rmsd_kcal_mol": 15.217362995085802
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.03274791787444248,
+        "angle_mae_deg": 2.269090904542042,
+        "mae_cm1": 61.58254150419727,
+        "aligned_rmsd_A": 0.1442553413765957
+      },
+      "selection_loss": 1.0088401916393934
+    },
+    {
+      "kernel": "gaussian",
+      "length": 1.0,
+      "angular_scale": 1.6,
+      "radial_width_A": 0.25,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 12.260487484057382,
+          "rmsd_kcal_mol": 15.906322584712814
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.27771175237598,
+          "rmsd_kcal_mol": 14.407464060306362
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.0354320515112095,
+        "angle_mae_deg": 2.0934725093014777,
+        "mae_cm1": 75.86169883615568,
+        "aligned_rmsd_A": 0.1473715483578403
+      },
+      "selection_loss": 0.987970797185491
+    },
+    {
+      "kernel": "matern52",
+      "length": 0.5,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.17,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 11.503600485915173,
+          "rmsd_kcal_mol": 13.803324473609026
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.500565688929573,
+          "rmsd_kcal_mol": 14.194438393087523
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.03655609657141176,
+        "angle_mae_deg": 2.283516618333406,
+        "mae_cm1": 94.39795279044951,
+        "aligned_rmsd_A": 0.1351982536191009
+      },
+      "selection_loss": 1.0335626311586834
+    },
+    {
+      "kernel": "double_matern52",
+      "length": 0.5,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.17,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 11.860716010669627,
+          "rmsd_kcal_mol": 14.04355168870136
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.611828463747898,
+          "rmsd_kcal_mol": 14.328129484747738
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.03701436987079769,
+        "angle_mae_deg": 2.590292315678033,
+        "mae_cm1": 92.67529263866429,
+        "aligned_rmsd_A": 0.14417292687336564
+      },
+      "selection_loss": 1.0556572310720074
+    },
+    {
+      "kernel": "gaussian",
+      "length": 0.5,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.17,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 11.636820823833673,
+          "rmsd_kcal_mol": 13.912226074124986
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 10.508165406364139,
+          "rmsd_kcal_mol": 14.190135161412497
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.03692217018163549,
+        "angle_mae_deg": 2.355973110041122,
+        "mae_cm1": 98.89046564100222,
+        "aligned_rmsd_A": 0.1342276143199394
+      },
+      "selection_loss": 1.052858741865979
+    },
+    {
+      "kernel": "matern52",
+      "length": 2.0,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.36,
+      "ridge": 0.3,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 15.865636294952077,
+          "rmsd_kcal_mol": 21.31364837155122
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 12.282855405802641,
+          "rmsd_kcal_mol": 18.188807127261477
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.021328293983313443,
+        "angle_mae_deg": 3.9081350468917893,
+        "mae_cm1": 86.49405311319035,
+        "aligned_rmsd_A": 0.16617842098561544
+      },
+      "selection_loss": 1.171654277186141
+    },
+    {
+      "kernel": "double_matern52",
+      "length": 2.0,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.36,
+      "ridge": 3.0,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 14.429861288148599,
+          "rmsd_kcal_mol": 18.715390492753283
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 13.35375611608926,
+          "rmsd_kcal_mol": 17.796146760056985
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.04721476644298839,
+        "angle_mae_deg": 5.9818869369347345,
+        "mae_cm1": 252.97953568447224,
+        "aligned_rmsd_A": 0.2450944469785283
+      },
+      "selection_loss": 1.773012756868526
+    },
+    {
+      "kernel": "gaussian",
+      "length": 2.0,
+      "angular_scale": 0.5,
+      "radial_width_A": 0.36,
+      "ridge": 0.3,
+      "dev_energies": {
+        "reaction": {
+          "n": 50,
+          "mae_kcal_mol": 15.02584745521832,
+          "rmsd_kcal_mol": 20.191849189354723
+        },
+        "barrier": {
+          "n": 100,
+          "mae_kcal_mol": 12.367556636120833,
+          "rmsd_kcal_mol": 18.046228360274846
+        }
+      },
+      "dev_ethanol": {
+        "bond_mae_A": 0.024250718643016672,
+        "angle_mae_deg": 3.8344372822000654,
+        "mae_cm1": 91.6244639338786,
+        "aligned_rmsd_A": 0.16330394270545592
+      },
+      "selection_loss": 1.1747091432224142
+    }
+  ],
+  "results": {
+    "default": {
+      "trial": 0,
+      "test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 16.168506056619815,
+          "rmsd_kcal_mol": 22.21349009506529
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 16.20786033824056,
+          "rmsd_kcal_mol": 21.88015993987532
+        }
+      }
+    },
+    "matern52": {
+      "trial": 3,
+      "test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 16.266772079910332,
+          "rmsd_kcal_mol": 22.013963286683698
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 16.471375087426246,
+          "rmsd_kcal_mol": 21.901067715472692
+        }
+      }
+    },
+    "double_matern52": {
+      "trial": 1,
+      "test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 15.983952522888492,
+          "rmsd_kcal_mol": 22.085843690510902
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 15.917995194354479,
+          "rmsd_kcal_mol": 21.525262421499384
+        }
+      }
+    },
+    "gaussian": {
+      "trial": 5,
+      "test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 16.758805142819458,
+          "rmsd_kcal_mol": 22.479464483465684
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 16.870020056583527,
+          "rmsd_kcal_mol": 22.344331537875707
+        }
+      }
+    },
+    "selected": {
+      "trial": 5,
+      "test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 16.758805142819458,
+          "rmsd_kcal_mol": 22.479464483465684
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 16.870020056583527,
+          "rmsd_kcal_mol": 22.344331537875707
+        }
+      }
+    }
+  },
+  "fixed_singlet_panel": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 26.35278681191532,
+      "rmsd_kcal_mol": 39.83660777354721
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 36.02755156545902,
+      "rmsd_kcal_mol": 42.65582405728318
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -17.614431060941016,
+        "error": -10.514431060941016,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -1.6106476532711014
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -55.68505558405481,
+        "error": -16.25505558405481,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -7.158361989996699
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -67.40514833044351,
+        "error": -5.735148330443508,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": 5.89022903960695
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": 4.481404548112925,
+        "error": 85.69140454811291,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 73.73953029606197
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 27.37642555111611,
+        "error": -20.72357444888389
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -1.291468984908253,
+        "error": -34.291468984908256
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 34.59077928905637,
+        "error": 2.890779289056372
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 5.581566082837832,
+        "error": -63.718433917162166
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 2.086498812715574,
+        "error": -58.513501187284426
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 28.667894536024363,
+        "error": 13.567894536024362
+      }
+    ]
+  }
+}

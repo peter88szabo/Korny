@@ -44,7 +44,7 @@ def reference(case_dir):
     return run, numbers.astype(int), masses, xyz, np.asarray(values)
 
 
-def vibrations(model, numbers, xyz, mass, step):
+def vibrations(model, numbers, xyz, mass, step, *, charge=0, multiplicity=1):
     """Diagonalize the internal mass-weighted Hessian and retain imaginary modes.
 
     The orthogonal complement of the rigid mass-weighted displacements removes
@@ -53,8 +53,8 @@ def vibrations(model, numbers, xyz, mass, step):
     """
     hessian = []
     for direction in np.eye(xyz.size).reshape(-1, *xyz.shape):
-        fplus = model.predict(numbers, xyz + step * direction)[1]
-        fminus = model.predict(numbers, xyz - step * direction)[1]
+        fplus = model.predict(numbers, xyz + step * direction, charge, multiplicity)[1]
+        fminus = model.predict(numbers, xyz - step * direction, charge, multiplicity)[1]
         hessian.append(((fminus - fplus) / (2 * step)).ravel())
     hessian = np.array(hessian)
     hessian = (hessian + hessian.T) / 2
@@ -85,9 +85,13 @@ def geometry_errors(numbers, reference_xyz, xyz):
     the model remains in the score. The fixed atom order follows the reference.
     """
     radii = {1:.31, 6:.76, 7:.71, 8:.66, 9:.57, 15:1.07, 16:1.05, 17:1.02}
-    pairs = [(i,j) for i,j in combinations(range(len(numbers)),2)
-             if np.linalg.norm(reference_xyz[i]-reference_xyz[j]) <
-             1.22*(radii[numbers[i]]+radii[numbers[j]])]
+    def bonds_at(x):
+        return {(i,j) for i,j in combinations(range(len(numbers)),2)
+                if np.linalg.norm(x[i]-x[j]) < 1.22*(radii[numbers[i]]+radii[numbers[j]])}
+
+    ref_pairs = bonds_at(reference_xyz)
+    predicted_pairs = bonds_at(xyz)
+    pairs = sorted(ref_pairs)
     triples = []
     for i in range(len(numbers)):
         neighbors = [b if a == i else a for a,b in pairs if i in (a,b)]
@@ -107,7 +111,10 @@ def geometry_errors(numbers, reference_xyz, xyz):
     u,_,vt = np.linalg.svd(x.T@y)
     u[:,-1] *= np.linalg.det(u@vt)
     aligned = x@u@vt-y
-    return dict(bond_lengths_A=bonds.tolist(), angles_deg=angles.tolist(),
+    return dict(same_connectivity=predicted_pairs == ref_pairs,
+                lost_reference_bonds=sorted(ref_pairs-predicted_pairs),
+                new_bonds=sorted(predicted_pairs-ref_pairs),
+                bond_lengths_A=bonds.tolist(), angles_deg=angles.tolist(),
                 reference_bonds_A=ref_bonds.tolist(),reference_angles_deg=ref_angles.tolist(),
                 bond_mae_A=float(np.mean(np.abs(bonds-ref_bonds))),
                 angle_mae_deg=float(np.mean(np.abs(angles-ref_angles))),

@@ -1,0 +1,419 @@
+{
+  "checkpoint": "peroxy-66f35790e2da03c8.npz",
+  "parent": "peroxy-101ed57f5caee4e8.npz",
+  "reference": "wB97X-D3/def2-TZVP electronic energy",
+  "source": "10.5281/zenodo.3731554",
+  "rejected_logs": {
+    "unverified_energy_or_stationary_point": 21,
+    "incomplete_or_other_method": 8
+  },
+  "peroxy_saddles": {
+    "train": 0,
+    "development": 1,
+    "test": 0
+  },
+  "groups": {
+    "train": [
+      "rxn000037",
+      "rxn000038",
+      "rxn000040",
+      "rxn000053",
+      "rxn000055",
+      "rxn000057",
+      "rxn000058",
+      "rxn000064",
+      "rxn000093",
+      "rxn000109",
+      "rxn000121",
+      "rxn000126",
+      "rxn000130",
+      "rxn000131",
+      "rxn000154",
+      "rxn000155",
+      "rxn000156",
+      "rxn000372",
+      "rxn000373",
+      "rxn000377",
+      "rxn000378",
+      "rxn000397",
+      "rxn000443",
+      "rxn000640",
+      "rxn000642",
+      "rxn000644",
+      "rxn000681",
+      "rxn000690",
+      "rxn000723",
+      "rxn000724",
+      "rxn000726",
+      "rxn000777",
+      "rxn000783",
+      "rxn000791",
+      "rxn000794",
+      "rxn000795",
+      "rxn000849",
+      "rxn000850",
+      "rxn000853",
+      "rxn000919",
+      "rxn000928",
+      "rxn000934",
+      "rxn000935",
+      "rxn000952",
+      "rxn001039",
+      "rxn001095",
+      "rxn001108",
+      "rxn001109",
+      "rxn001114",
+      "rxn001117",
+      "rxn001294",
+      "rxn001311",
+      "rxn001322"
+    ],
+    "development": [
+      "rxn000170",
+      "rxn000174",
+      "rxn000336",
+      "rxn000350",
+      "rxn000470",
+      "rxn000860",
+      "rxn000863",
+      "rxn000865",
+      "rxn000869",
+      "rxn000902",
+      "rxn001006",
+      "rxn001007",
+      "rxn001008",
+      "rxn001012",
+      "rxn001167",
+      "rxn001179",
+      "rxn001185",
+      "rxn001203"
+    ],
+    "test": [
+      "rxn000358",
+      "rxn000360",
+      "rxn000479",
+      "rxn000483",
+      "rxn000485",
+      "rxn000489",
+      "rxn000495",
+      "rxn000500",
+      "rxn000504",
+      "rxn000569",
+      "rxn000578",
+      "rxn000600",
+      "rxn000601",
+      "rxn000621",
+      "rxn000638",
+      "rxn001028",
+      "rxn001032",
+      "rxn001141",
+      "rxn001251",
+      "rxn001337",
+      "rxn001338"
+    ]
+  },
+  "development_trials": [
+    {
+      "ridge": null,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 25.42641592335623,
+          "rmsd_kcal_mol": 30.084646130048757
+        }
+      }
+    },
+    {
+      "ridge": 0.03,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 16.412472419427147,
+          "rmsd_kcal_mol": 21.189052212533827
+        }
+      }
+    },
+    {
+      "ridge": 0.3,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 16.584236840756322,
+          "rmsd_kcal_mol": 21.328213096679693
+        }
+      }
+    },
+    {
+      "ridge": 3.0,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 16.90801381503578,
+          "rmsd_kcal_mol": 21.13361633296501
+        }
+      }
+    },
+    {
+      "ridge": 30.0,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 18.029495296867125,
+          "rmsd_kcal_mol": 21.348122493330564
+        }
+      }
+    },
+    {
+      "ridge": 300.0,
+      "development": {
+        "reaction": {
+          "n": 18,
+          "mae_kcal_mol": 21.04218900759561,
+          "rmsd_kcal_mol": 25.587381649740614
+        },
+        "barrier": {
+          "n": 36,
+          "mae_kcal_mol": 20.800129710498187,
+          "rmsd_kcal_mol": 24.476349482205258
+        }
+      }
+    }
+  ],
+  "selected": 1,
+  "control": {
+    "reaction": {
+      "n": 21,
+      "mae_kcal_mol": 28.760728964724805,
+      "rmsd_kcal_mol": 34.121997599954696
+    },
+    "barrier": {
+      "n": 42,
+      "mae_kcal_mol": 30.979673189876767,
+      "rmsd_kcal_mol": 36.7622579187267
+    }
+  },
+  "test": {
+    "reaction": {
+      "n": 21,
+      "mae_kcal_mol": 28.760728964724805,
+      "rmsd_kcal_mol": 34.121997599954696
+    },
+    "barrier": {
+      "n": 42,
+      "mae_kcal_mol": 21.127273472758343,
+      "rmsd_kcal_mol": 27.501855763433333
+    }
+  },
+  "paths": {
+    "neb_conformer_pair_10_27-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_10_27-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 18.467072708704023,
+        "reverse_barrier": 25.415636048994198,
+        "reaction": -6.948563340290175
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 89.86869669586424,
+        "reverse_barrier": 96.20774563279365,
+        "reaction": -6.339048936929391
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 71.40162398716022,
+        "reverse_barrier": 70.79210958379944,
+        "reaction": 0.6095144033607838
+      },
+      "reference_imaginary_cm1": -1754.95,
+      "model_negative_modes_cm1": [
+        -5141.5460194842935,
+        -916.9879169815572,
+        -797.7386290281022,
+        -723.2642644868749,
+        -624.9688010548782,
+        -465.7932574108982,
+        -154.0740542665202,
+        -128.24568106627248,
+        -58.12983031158672
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 1.225729574996905,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        1.0926700234539801,
+        2.003910423936467,
+        4.352617977692995,
+        6.2135994697767245,
+        14.994398095714484,
+        22.86056386607321,
+        12.773139113678633,
+        0.7575274649676947,
+        -6.948563340290175
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        0.7099284881646865,
+        7.193917068152898,
+        10.477644348166592,
+        15.10451094921803,
+        23.448297037290796,
+        81.34041962920894,
+        45.67766331007655,
+        2.4105948004971,
+        -6.339048936929391
+      ]
+    },
+    "neb_conformer_pair_13_28-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_13_28-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 21.165310188688615,
+        "reverse_barrier": 25.349456817972847,
+        "reaction": -4.184146629284233
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 95.25971997942747,
+        "reverse_barrier": 96.53559912786763,
+        "reaction": -1.2758791484401635
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 74.09440979073887,
+        "reverse_barrier": 71.18614230989478,
+        "reaction": 2.9082674808440694
+      },
+      "reference_imaginary_cm1": -1729.0,
+      "model_negative_modes_cm1": [
+        -5170.121119518813,
+        -920.2619845426402,
+        -800.0505853660115,
+        -731.4649510525023,
+        -624.6759552228527,
+        -471.61098761874973,
+        -159.70926970124347,
+        -130.99321679692298,
+        -66.55611927569826
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 1.2424353650563484,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        2.729385031127458,
+        5.320317803269925,
+        7.3270425759981,
+        13.985338884096565,
+        27.5826002946556,
+        17.157405385659313,
+        6.178819883055073,
+        0.8267460602946599,
+        -4.184146629284233
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        -0.3847306551745444,
+        4.2689756312985105,
+        9.850763124685265,
+        20.192802670006287,
+        84.4648938748285,
+        50.13270404265186,
+        10.124423557637709,
+        -5.282989710995152,
+        -1.2758791484401635
+      ]
+    },
+    "neb_conformer_pair_1_19-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_1_19-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 17.29451189465839,
+        "reverse_barrier": 25.765556210868738,
+        "reaction": -8.471044316210351
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 89.36851483750799,
+        "reverse_barrier": 97.16383043771236,
+        "reaction": -7.795315600204385
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 72.0740029428496,
+        "reverse_barrier": 71.39827422684363,
+        "reaction": 0.675728716005966
+      },
+      "reference_imaginary_cm1": -1879.35,
+      "model_negative_modes_cm1": [
+        -5180.800879131412,
+        -942.0587566499629,
+        -820.8232635062368,
+        -789.9834552390417,
+        -612.9582988919113,
+        -517.3072974582229,
+        -249.1070820867465,
+        -218.15618085470277,
+        -177.0687466379945,
+        -123.67874369728683,
+        -66.01623566156907
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 1.151095292698459,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        0.39544275655198374,
+        0.9573066097502677,
+        0.6672872480446195,
+        4.63719723928742,
+        13.194486122036837,
+        21.10174462136006,
+        9.338131720614285,
+        -4.0193921055568165,
+        -8.471044316210351
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        5.636973419447719,
+        5.5322958134460025,
+        19.041192548704878,
+        27.23028634540143,
+        35.70311284190321,
+        93.2925806249743,
+        55.091789746624634,
+        10.533857758383162,
+        -7.795315600204385
+      ]
+    }
+  }
+}

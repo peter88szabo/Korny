@@ -1,0 +1,193 @@
+{
+  "checkpoint": "electronic-948cb4c3aa2dfa40.npz",
+  "dispersion": "d3",
+  "cases": {
+    "neb_conformer_pair_10_27-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_10_27-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 18.467072708704023,
+        "reverse_barrier": 25.415636048994198,
+        "reaction": -6.948563340290175
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 20.14065666132401,
+        "reverse_barrier": 27.827045130440947,
+        "reaction": -7.686388469116939
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 1.6735839526199854,
+        "reverse_barrier": 2.411409081446749,
+        "reaction": -0.7378251288267643
+      },
+      "reference_imaginary_cm1": -1754.95,
+      "model_negative_modes_cm1": [
+        -2021.6992183871125,
+        -856.2888395187624,
+        -528.7615790415338,
+        -471.7581305304218,
+        -384.4469271760251,
+        -326.71265223208957,
+        -305.04575938271614,
+        -223.54172261201612,
+        -175.2120072857424
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 0.9243045722036617,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        1.0926700234539801,
+        2.003910423936467,
+        4.352617977692995,
+        6.2135994697767245,
+        14.994398095714484,
+        22.86056386607321,
+        12.773139113678633,
+        0.7575274649676947,
+        -6.948563340290175
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        -3.0329668485942505,
+        6.594966066806775,
+        11.854414270683243,
+        19.409041760271556,
+        26.17521696981295,
+        26.781225837277493,
+        22.883363505586843,
+        4.101481773615297,
+        -7.686388469116939
+      ]
+    },
+    "neb_conformer_pair_13_28-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_13_28-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 21.165310188688615,
+        "reverse_barrier": 25.349456817972847,
+        "reaction": -4.184146629284233
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 33.058464437361955,
+        "reverse_barrier": 27.921497264690895,
+        "reaction": 5.136967172671063
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 11.89315424867334,
+        "reverse_barrier": 2.5720404467180487,
+        "reaction": 9.321113801955295
+      },
+      "reference_imaginary_cm1": -1729.0,
+      "model_negative_modes_cm1": [
+        -2032.0353917735367,
+        -857.7859142524186,
+        -532.0184812124123,
+        -475.50820669877857,
+        -385.8829295752472,
+        -338.73957344636636,
+        -311.0549264608766,
+        -228.68839617753048,
+        -177.5280420838347
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 0.9208694115719508,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        2.729385031127458,
+        5.320317803269925,
+        7.3270425759981,
+        13.985338884096565,
+        27.5826002946556,
+        17.157405385659313,
+        6.178819883055073,
+        0.8267460602946599,
+        -4.184146629284233
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        3.7307519025689704,
+        11.293249522619572,
+        17.803528141345605,
+        32.04833537731396,
+        35.73849904056484,
+        32.700200144452765,
+        19.005204261028428,
+        0.023552116958291732,
+        5.136967172671063
+      ]
+    },
+    "neb_conformer_pair_1_19-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_1_19-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 17.29451189465839,
+        "reverse_barrier": 25.765556210868738,
+        "reaction": -8.471044316210351
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 34.703710996418714,
+        "reverse_barrier": 40.65827588970438,
+        "reaction": -5.954564893285669
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 17.409199101760326,
+        "reverse_barrier": 14.89271967883564,
+        "reaction": 2.5164794229246823
+      },
+      "reference_imaginary_cm1": -1879.35,
+      "model_negative_modes_cm1": [
+        -2193.715281010012,
+        -830.4396797686179,
+        -589.0109280376255,
+        -521.0141407553139,
+        -465.86019850665565,
+        -407.1650629824984,
+        -341.8022011673912,
+        -239.19558044042506,
+        -192.475319404616,
+        -166.24468611102486
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 1.0228077958867579,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        0.39544275655198374,
+        0.9573066097502677,
+        0.6672872480446195,
+        4.63719723928742,
+        13.194486122036837,
+        21.10174462136006,
+        9.338131720614285,
+        -4.0193921055568165,
+        -8.471044316210351
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        8.432977036085566,
+        10.43466621676101,
+        24.992289158617368,
+        35.44118177298888,
+        43.94036517330525,
+        46.298556528006934,
+        38.85847913081011,
+        11.092302898911944,
+        -5.954564893285669
+      ]
+    }
+  },
+  "excluded": {
+    "neb_conformer_pair_4_20-11": "Need a completed first-order saddle"
+  }
+}

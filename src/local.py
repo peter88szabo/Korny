@@ -17,7 +17,7 @@ from .jets import Jet, bilinear, join
 
 
 def descriptor(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
-               species=(1, 6, 7, 8)):
+               species=(1, 6, 7, 8), inverse_radius=False):
     """Build the reference descriptor using differentiable arithmetic.
 
     Chebyshev polynomials describe radial positions. Legendre polynomials of
@@ -42,7 +42,7 @@ def descriptor(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
         cutoff = Jet(1.)
         if r.x > ron:
             cutoff = 1. + t.power(4)*(-35.+t*(84.+t*(-70.+20.*t)))
-        s = r*(2./rc)-1.
+        s = r.power(-1.)-1. if inverse_radius else r*(2./rc)-1.
         cheb = [Jet(1.)]
         if nr > 1:
             cheb.append(s)
@@ -95,7 +95,7 @@ def descriptor_layout(nspecies, nr, lmax):
 
 
 def descriptor_array(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
-                     species=(1, 6, 7, 8), *, gradient=False):
+                     species=(1, 6, 7, 8), *, gradient=False, inverse_radius=False):
     """Return the packed descriptor and optionally its Cartesian Jacobian.
 
     The Jacobian axes are (feature, atom, xyz) and coordinates are in Å. Each
@@ -114,7 +114,9 @@ def descriptor_array(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
     t = np.clip((r - ron) / (rc - ron), 0., 1.)
     cutoff = 1. + t**4 * (-35. + t*(84. + t*(-70. + 20.*t)))
     slope = -140. * t**3 * (1.-t)**3 / (rc-ron)
-    x = 2.*r/rc - 1.
+    # The inverse-distance radial coordinate follows the sGDML metric, with r in Å.
+    x = 1./r - 1. if inverse_radius else 2.*r/rc - 1.
+    dx = -1./r**2 if inverse_radius else np.full_like(r, 2./rc)
     cheb = np.polynomial.chebyshev.chebvander(x, nr-1).reshape(len(r), nr)
     # dT_n(x)/dx from differentiating the same Chebyshev recurrence.
     dcheb = np.zeros_like(cheb)
@@ -133,7 +135,7 @@ def descriptor_array(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
     jac = None
     if gradient:
         dU = np.zeros_like(U)
-        dU[idx] = slope[:, None]*cheb + (2./rc)*cutoff[:, None]*dcheb
+        dU[idx] = slope[:, None]*cheb + (dx*cutoff)[:, None]*dcheb
         jac = np.zeros((len(raw), len(Z), 3))
         jac[:channels, neighbors] = dU.T[:, :, None]*direction
 

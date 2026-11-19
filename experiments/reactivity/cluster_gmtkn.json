@@ -1,0 +1,278 @@
+{
+  "off": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 50.85933466953159,
+      "rmsd_kcal_mol": 58.07501184768888
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 37.80589317155703,
+      "rmsd_kcal_mol": 45.14594488282995
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -31.57332811284795,
+        "error": -24.473328112847952,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -15.569544705178036
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -105.79909785455277,
+        "error": -66.36909785455276,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -57.27240426049466
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -92.34649374225249,
+        "error": -30.67649374225249,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -19.05111637220203
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": 17.61127472375115,
+        "error": 98.82127472375115,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 86.8694004717002
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 31.573830273627316,
+        "error": -16.526169726372686
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -17.4826486406263,
+        "error": -50.4826486406263
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 33.11592797991031,
+        "error": 1.415927979910311
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 2.126848404206986,
+        "error": -67.17315159579302
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 7.168432084917144,
+        "error": -53.43156791508286
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 49.05647891425362,
+        "error": 33.956478914253616
+      }
+    ]
+  },
+  "ts": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 50.85204746007613,
+      "rmsd_kcal_mol": 58.07269419305626
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 37.81975427005768,
+      "rmsd_kcal_mol": 45.16525530883638
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -31.57720035352518,
+        "error": -24.477200353525177,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -15.573416945855264
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -105.80524179643565,
+        "error": -66.37524179643566,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -57.27854820237754
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -92.29553672321572,
+        "error": -30.625536723215717,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -19.00015935316526
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": 17.61487257926828,
+        "error": 98.82487257926827,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 86.87299832721733
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 31.577600021796528,
+        "error": -16.522399978203474
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -17.4797858261393,
+        "error": -50.4797858261393
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 33.11449950565518,
+        "error": 1.4144995056551828
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 2.0953135195742925,
+        "error": -67.2046864804257
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 7.122600440135285,
+        "error": -53.477399559864715
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 49.05738584793583,
+        "error": 33.957385847935825
+      }
+    ]
+  },
+  "d3": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 50.97098481892201,
+      "rmsd_kcal_mol": 58.22035125357848
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 37.79089315726939,
+      "rmsd_kcal_mol": 45.12894381805981
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -31.71469421884476,
+        "error": -24.61469421884476,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -15.710910811174845
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -106.1874086073097,
+        "error": -66.75740860730971,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -57.6607150132516
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -92.24075822813992,
+        "error": -30.570758228139923,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -18.945380858089464
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": 17.790095614397362,
+        "error": 99.00009561439735,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 87.04822136234641
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 31.57796628157852,
+        "error": -16.522033718421483
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -17.43400114433979,
+        "error": -50.43400114433979
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 33.116715934302135,
+        "error": 1.416715934302136
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 2.133107960245608,
+        "error": -67.16689203975439
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 7.185177050470872,
+        "error": -53.41482294952913
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 49.01196742591831,
+        "error": 33.911967425918306
+      }
+    ]
+  }
+}

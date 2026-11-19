@@ -1,0 +1,610 @@
+{
+  "parent": "rdb7-b2b299a0aea2028a.npz",
+  "checkpoint": "reaction-centers-8418b49d27745de7.npz",
+  "centers": {
+    "1": 157,
+    "6": 162,
+    "7": 117,
+    "8": 130,
+    "9": 3,
+    "15": 0,
+    "16": 21,
+    "17": 0
+  },
+  "coverage": {
+    "RDB7_train": {
+      "unassigned": 2802,
+      "KinBot/ketoenol": 286,
+      "KinBot/Retro_Ene": 51,
+      "KinBot/intra_H_migration": 698,
+      "RMG/Singlet_Carbene_Intra_Disproportionation": 116,
+      "KinBot/r13_insertion_ROR": 14,
+      "RMG/6_membered_central_C-C_shift": 3,
+      "RMG/Intra_ene_reaction": 3,
+      "RMG/1,2_Insertion_carbene": 3,
+      "KinBot/r22_cycloaddition": 22,
+      "KinBot/Diels_alder_addition": 2
+    },
+    "RDB7_dev": {
+      "KinBot/ketoenol": 14,
+      "unassigned": 112,
+      "KinBot/intra_H_migration": 16,
+      "KinBot/r22_cycloaddition": 2,
+      "KinBot/Retro_Ene": 2,
+      "RMG/Singlet_Carbene_Intra_Disproportionation": 3,
+      "KinBot/r13_insertion_ROR": 1
+    },
+    "RDB7_test": {
+      "KinBot/intra_H_migration": 52,
+      "unassigned": 299,
+      "KinBot/ketoenol": 29,
+      "KinBot/Retro_Ene": 8,
+      "KinBot/r22_cycloaddition": 1,
+      "KinBot/r13_insertion_ROR": 4,
+      "RMG/Singlet_Carbene_Intra_Disproportionation": 6,
+      "RMG/Intra_ene_reaction": 1
+    },
+    "BH9_TRIP50_train": {
+      "BH9/Radical rearrangement": 17,
+      "BH9/Radical addition": 1,
+      "KinBot/Diels_alder_addition": 12,
+      "BH9/[3+2] cycloaddition": 9,
+      "BH9/Electrocyclic": 3,
+      "BH9/[4+6] cycloaddition": 1,
+      "BH9/[6+4] cycloaddition": 1,
+      "BH9/[8+2] cycloaddition": 1,
+      "BH9/[3,3] rearrangement": 10,
+      "BH9/[2+2+2] intramolecular": 1,
+      "BH9/Halogen atom transfer": 22,
+      "KinBot/abstraction": 33,
+      "BH9/Hydrogen atom transfer": 8,
+      "BH9/Hydride transfer": 3,
+      "BH9/Proton transfer": 4,
+      "BH9/Nucleophilic substitution": 4,
+      "BH9/Nucleophilic addition": 9,
+      "TRIP50/C-C": 8,
+      "TRIP50/C-O": 5,
+      "TRIP50/C-S": 1,
+      "TRIP50/C-X": 2,
+      "TRIP50/HAT": 1,
+      "TRIP50/N": 3
+    },
+    "BH9_TRIP50_development": {
+      "BH9/Radical rearrangement": 5,
+      "KinBot/Diels_alder_addition": 4,
+      "BH9/[3+2] cycloaddition": 4,
+      "BH9/[3,3] rearrangement": 2,
+      "BH9/Halogen atom transfer": 4,
+      "BH9/Hydrogen atom transfer": 9,
+      "KinBot/abstraction": 13,
+      "BH9/Hydride transfer": 1,
+      "BH9/Proton transfer": 1,
+      "BH9/Nucleophilic substitution": 2,
+      "BH9/Nucleophilic addition": 1,
+      "TRIP50/C-C": 2,
+      "TRIP50/C-S": 1,
+      "TRIP50/HAT": 1
+    },
+    "BH9_TRIP50_test": {
+      "BH9/Radical rearrangement": 12,
+      "KinBot/Diels_alder_addition": 4,
+      "BH9/[3+2] cycloaddition": 1,
+      "BH9/Electrocyclic": 7,
+      "BH9/[3,3] rearrangement": 1,
+      "BH9/Halogen atom transfer": 4,
+      "KinBot/abstraction": 11,
+      "BH9/Hydrogen atom transfer": 1,
+      "BH9/Hydride transfer": 3,
+      "BH9/Proton transfer": 2,
+      "BH9/Nucleophilic substitution": 1,
+      "BH9/Nucleophilic addition": 11,
+      "TRIP50/C-C": 2,
+      "TRIP50/C-S": 2,
+      "TRIP50/C-X": 1,
+      "TRIP50/HAT": 1,
+      "TRIP50/N": 1
+    }
+  },
+  "trials": [
+    {
+      "class_balanced": false,
+      "ratio": 0.1,
+      "ridge": 0.3,
+      "dev_loss": 70.9926932279962
+    },
+    {
+      "class_balanced": false,
+      "ratio": 0.1,
+      "ridge": 3.0,
+      "dev_loss": 72.29776950399852
+    },
+    {
+      "class_balanced": false,
+      "ratio": 0.1,
+      "ridge": 30.0,
+      "dev_loss": 73.15633946419851
+    },
+    {
+      "class_balanced": false,
+      "ratio": 0.5,
+      "ridge": 0.3,
+      "dev_loss": 69.71256655634713
+    },
+    {
+      "class_balanced": false,
+      "ratio": 0.5,
+      "ridge": 3.0,
+      "dev_loss": 71.10918924162252
+    },
+    {
+      "class_balanced": false,
+      "ratio": 0.5,
+      "ridge": 30.0,
+      "dev_loss": 72.61356669231911
+    },
+    {
+      "class_balanced": false,
+      "ratio": 2.0,
+      "ridge": 0.3,
+      "dev_loss": 69.7686442285204
+    },
+    {
+      "class_balanced": false,
+      "ratio": 2.0,
+      "ridge": 3.0,
+      "dev_loss": 70.08350057894731
+    },
+    {
+      "class_balanced": false,
+      "ratio": 2.0,
+      "ridge": 30.0,
+      "dev_loss": 72.14653405348551
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.1,
+      "ridge": 0.3,
+      "dev_loss": 70.9789350247409
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.1,
+      "ridge": 3.0,
+      "dev_loss": 72.23412089961019
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.1,
+      "ridge": 30.0,
+      "dev_loss": 73.16332470502654
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.5,
+      "ridge": 0.3,
+      "dev_loss": 70.29537496797525
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.5,
+      "ridge": 3.0,
+      "dev_loss": 70.80940061228155
+    },
+    {
+      "class_balanced": true,
+      "ratio": 0.5,
+      "ridge": 30.0,
+      "dev_loss": 72.3507222314609
+    },
+    {
+      "class_balanced": true,
+      "ratio": 2.0,
+      "ridge": 0.3,
+      "dev_loss": 70.41502725300884
+    },
+    {
+      "class_balanced": true,
+      "ratio": 2.0,
+      "ridge": 3.0,
+      "dev_loss": 70.41958349996605
+    },
+    {
+      "class_balanced": true,
+      "ratio": 2.0,
+      "ridge": 30.0,
+      "dev_loss": 71.6258365109045
+    }
+  ],
+  "chosen": {
+    "class_balanced": false,
+    "ratio": 0.5,
+    "ridge": 0.3,
+    "dev_loss": 69.71256655634713
+  },
+  "balanced_ablation": {
+    "False": {
+      "RDB7_test": {
+        "reaction": {
+          "n": 400,
+          "mae_kcal_mol": 16.928960902328107,
+          "rmsd_kcal_mol": 23.63532051954401
+        },
+        "barrier": {
+          "n": 800,
+          "mae_kcal_mol": 22.284595684635747,
+          "rmsd_kcal_mol": 30.4317784407619
+        }
+      },
+      "BH9_TRIP50_test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 15.595100359092143,
+          "rmsd_kcal_mol": 23.120152860936408
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 14.953193698244196,
+          "rmsd_kcal_mol": 21.260004020619572
+        }
+      }
+    },
+    "True": {
+      "RDB7_test": {
+        "reaction": {
+          "n": 400,
+          "mae_kcal_mol": 16.989654439626328,
+          "rmsd_kcal_mol": 23.84612634656783
+        },
+        "barrier": {
+          "n": 800,
+          "mae_kcal_mol": 22.401831393170628,
+          "rmsd_kcal_mol": 30.751308333632476
+        }
+      },
+      "BH9_TRIP50_test": {
+        "reaction": {
+          "n": 65,
+          "mae_kcal_mol": 15.27886738425523,
+          "rmsd_kcal_mol": 22.718522793097733
+        },
+        "barrier": {
+          "n": 130,
+          "mae_kcal_mol": 14.974655222345934,
+          "rmsd_kcal_mol": 21.050563496751796
+        }
+      }
+    }
+  },
+  "test": {
+    "RDB7_test": {
+      "reaction": {
+        "n": 400,
+        "mae_kcal_mol": 16.928960902328107,
+        "rmsd_kcal_mol": 23.63532051954401
+      },
+      "barrier": {
+        "n": 800,
+        "mae_kcal_mol": 22.284595684635747,
+        "rmsd_kcal_mol": 30.4317784407619
+      }
+    },
+    "BH9_TRIP50_test": {
+      "reaction": {
+        "n": 65,
+        "mae_kcal_mol": 15.595100359092143,
+        "rmsd_kcal_mol": 23.120152860936408
+      },
+      "barrier": {
+        "n": 130,
+        "mae_kcal_mol": 14.953193698244196,
+        "rmsd_kcal_mol": 21.260004020619572
+      }
+    }
+  },
+  "by_family": {
+    "RDB7_test": {
+      "KinBot/Retro_Ene": {
+        "reaction": {
+          "n": 8,
+          "mae_kcal_mol": 13.045138897478585,
+          "rmsd_kcal_mol": 13.391230433140134
+        },
+        "barrier": {
+          "n": 16,
+          "mae_kcal_mol": 14.648492824321488,
+          "rmsd_kcal_mol": 17.637140791833254
+        }
+      },
+      "KinBot/intra_H_migration": {
+        "reaction": {
+          "n": 52,
+          "mae_kcal_mol": 13.008526971099114,
+          "rmsd_kcal_mol": 16.628843333989852
+        },
+        "barrier": {
+          "n": 104,
+          "mae_kcal_mol": 17.531057657418906,
+          "rmsd_kcal_mol": 23.111604179172758
+        }
+      },
+      "KinBot/ketoenol": {
+        "reaction": {
+          "n": 29,
+          "mae_kcal_mol": 17.670352131426895,
+          "rmsd_kcal_mol": 25.404920653148885
+        },
+        "barrier": {
+          "n": 58,
+          "mae_kcal_mol": 15.082257514010298,
+          "rmsd_kcal_mol": 20.39373360069236
+        }
+      },
+      "KinBot/r13_insertion_ROR": {
+        "reaction": {
+          "n": 4,
+          "mae_kcal_mol": 9.698761597382463,
+          "rmsd_kcal_mol": 13.341250117884272
+        },
+        "barrier": {
+          "n": 8,
+          "mae_kcal_mol": 13.400163009897184,
+          "rmsd_kcal_mol": 15.24688524102031
+        }
+      },
+      "KinBot/r22_cycloaddition": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 19.386482426871364,
+          "rmsd_kcal_mol": 19.386482426871364
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 27.626114027843784,
+          "rmsd_kcal_mol": 29.277313768535446
+        }
+      },
+      "RMG/Intra_ene_reaction": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 12.714568230040795,
+          "rmsd_kcal_mol": 12.714568230040795
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 21.77447563174341,
+          "rmsd_kcal_mol": 22.683536989554305
+        }
+      },
+      "RMG/Singlet_Carbene_Intra_Disproportionation": {
+        "reaction": {
+          "n": 6,
+          "mae_kcal_mol": 9.850434116861187,
+          "rmsd_kcal_mol": 10.913036961787506
+        },
+        "barrier": {
+          "n": 12,
+          "mae_kcal_mol": 18.96025666498968,
+          "rmsd_kcal_mol": 21.555290457239195
+        }
+      },
+      "unassigned": {
+        "reaction": {
+          "n": 299,
+          "mae_kcal_mol": 17.88742787189054,
+          "rmsd_kcal_mol": 25.00547657634219
+        },
+        "barrier": {
+          "n": 598,
+          "mae_kcal_mol": 24.183568841065323,
+          "rmsd_kcal_mol": 32.86856957250329
+        }
+      }
+    },
+    "BH9_TRIP50_test": {
+      "BH9/Electrocyclic": {
+        "reaction": {
+          "n": 7,
+          "mae_kcal_mol": 42.90920432470516,
+          "rmsd_kcal_mol": 45.9092036512424
+        },
+        "barrier": {
+          "n": 14,
+          "mae_kcal_mol": 33.90949183484051,
+          "rmsd_kcal_mol": 41.20679218197506
+        }
+      },
+      "BH9/Halogen atom transfer": {
+        "reaction": {
+          "n": 4,
+          "mae_kcal_mol": 17.28078743558424,
+          "rmsd_kcal_mol": 31.22484884486483
+        },
+        "barrier": {
+          "n": 8,
+          "mae_kcal_mol": 10.656874441460943,
+          "rmsd_kcal_mol": 16.025612125614916
+        }
+      },
+      "BH9/Hydride transfer": {
+        "reaction": {
+          "n": 3,
+          "mae_kcal_mol": 9.111578901992816,
+          "rmsd_kcal_mol": 14.322800887264549
+        },
+        "barrier": {
+          "n": 6,
+          "mae_kcal_mol": 7.682913616861566,
+          "rmsd_kcal_mol": 9.741847085290955
+        }
+      },
+      "BH9/Hydrogen atom transfer": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 6.182319931863328,
+          "rmsd_kcal_mol": 6.182319931863328
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 3.0861599659316608,
+          "rmsd_kcal_mol": 3.542026830177076
+        }
+      },
+      "BH9/Nucleophilic addition": {
+        "reaction": {
+          "n": 11,
+          "mae_kcal_mol": 17.92959010874919,
+          "rmsd_kcal_mol": 23.36760037267684
+        },
+        "barrier": {
+          "n": 22,
+          "mae_kcal_mol": 13.521138825264366,
+          "rmsd_kcal_mol": 19.206070589457653
+        }
+      },
+      "BH9/Nucleophilic substitution": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 20.739299871676636,
+          "rmsd_kcal_mol": 20.739299871676636
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 31.97141571529795,
+          "rmsd_kcal_mol": 33.61102590865432
+        }
+      },
+      "BH9/Proton transfer": {
+        "reaction": {
+          "n": 2,
+          "mae_kcal_mol": 9.79967437087228,
+          "rmsd_kcal_mol": 9.89704394869618
+        },
+        "barrier": {
+          "n": 4,
+          "mae_kcal_mol": 21.545294783000728,
+          "rmsd_kcal_mol": 23.95230964415535
+        }
+      },
+      "BH9/Radical rearrangement": {
+        "reaction": {
+          "n": 12,
+          "mae_kcal_mol": 8.303917345990692,
+          "rmsd_kcal_mol": 10.15020981914211
+        },
+        "barrier": {
+          "n": 24,
+          "mae_kcal_mol": 9.018611193507192,
+          "rmsd_kcal_mol": 11.502285638549363
+        }
+      },
+      "BH9/[3+2] cycloaddition": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 26.540108360025965,
+          "rmsd_kcal_mol": 26.540108360025965
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 25.450755757238742,
+          "rmsd_kcal_mol": 28.702531361451395
+        }
+      },
+      "BH9/[3,3] rearrangement": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 0.2408612814799684,
+          "rmsd_kcal_mol": 0.2408612814799684
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 4.302723635374936,
+          "rmsd_kcal_mol": 4.304408695935267
+        }
+      },
+      "KinBot/Diels_alder_addition": {
+        "reaction": {
+          "n": 4,
+          "mae_kcal_mol": 25.178823800077865,
+          "rmsd_kcal_mol": 36.210641690016
+        },
+        "barrier": {
+          "n": 8,
+          "mae_kcal_mol": 18.951725805212057,
+          "rmsd_kcal_mol": 26.007938035527435
+        }
+      },
+      "KinBot/abstraction": {
+        "reaction": {
+          "n": 11,
+          "mae_kcal_mol": 7.476301513100737,
+          "rmsd_kcal_mol": 8.96765295705799
+        },
+        "barrier": {
+          "n": 22,
+          "mae_kcal_mol": 14.113066314778395,
+          "rmsd_kcal_mol": 17.692153582665572
+        }
+      },
+      "TRIP50/C-C": {
+        "reaction": {
+          "n": 2,
+          "mae_kcal_mol": 13.192911069766609,
+          "rmsd_kcal_mol": 13.671645460894734
+        },
+        "barrier": {
+          "n": 4,
+          "mae_kcal_mol": 6.59648429263331,
+          "rmsd_kcal_mol": 7.282338068849334
+        }
+      },
+      "TRIP50/C-S": {
+        "reaction": {
+          "n": 2,
+          "mae_kcal_mol": 9.54245179272618,
+          "rmsd_kcal_mol": 10.960791168265262
+        },
+        "barrier": {
+          "n": 4,
+          "mae_kcal_mol": 16.551131095076872,
+          "rmsd_kcal_mol": 18.94996592926863
+        }
+      },
+      "TRIP50/C-X": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 3.8239423600840015,
+          "rmsd_kcal_mol": 3.8239423600840015
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 1.9119821430420005,
+          "rmsd_kcal_mol": 2.0561478626633023
+        }
+      },
+      "TRIP50/HAT": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 8.303496419861407,
+          "rmsd_kcal_mol": 8.303496419861407
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 5.598484811770058,
+          "rmsd_kcal_mol": 6.96994368065686
+        }
+      },
+      "TRIP50/N": {
+        "reaction": {
+          "n": 1,
+          "mae_kcal_mol": 6.131992735467369,
+          "rmsd_kcal_mol": 6.131992735467369
+        },
+        "barrier": {
+          "n": 2,
+          "mae_kcal_mol": 19.201072472078522,
+          "rmsd_kcal_mol": 19.444316851036827
+        }
+      }
+    }
+  }
+}

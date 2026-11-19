@@ -11,7 +11,7 @@ import numpy as np
 
 import h5py
 
-from experiments.des15k.run import ATOMIC, DATA, OUT, metrics
+from experiments.des15k.run import ATOMIC, DATA, OUT, electronic_labels, metrics
 from src.dispersion.d3 import d3_energy_forces
 from src.dispersion.ts import ts_from_log_ratios
 from src.dispersion.volumes import HirshfeldVolumes
@@ -30,7 +30,7 @@ def frames(stream):
         data = [next(stream).split() for _ in range(natoms)]
         z = np.array([ELEMENTS[row[0]] for row in data])
         values = np.array([row[1:8] for row in data], dtype=float)
-        yield z, values[:, :3], values[:, 3:6], float(fields["energy"]), int(fields.get("charge", 0)), values[:, 6]
+        yield z, values[:, :3], values[:, 3:6], float(fields["energy"]), int(fields.get("charge", 0)), values[:, 6], int(fields.get("multiplicity", 1))
 
 
 def des_frames(path, heldout):
@@ -41,7 +41,8 @@ def des_frames(path, heldout):
                 if name.rsplit("-", 1)[0] in heldout:
                     z = g["atNUM"][:]
                     e = float(g["ePBE0+MBD"][0]) - sum(ATOMIC[a] for a in z)
-                    yield z, g["atXYZ"][:], g["totFOR"][:], e, round(g["hCHG"][:].sum()), g["hRAT"][:]
+                    charge, multiplicity = electronic_labels(g)
+                    yield z, g["atXYZ"][:], g["totFOR"][:], e, charge, g["hRAT"][:], multiplicity
 
 
 def assess(records, checkpoint, volume_file):
@@ -53,8 +54,12 @@ def assess(records, checkpoint, volume_file):
     abs_f, sq_f = dict.fromkeys(names, 0.), dict.fromkeys(names, 0.)
     natoms, ratio_errors = [], []
     started = perf_counter()
-    for z, r, fref, eref, charge, href in records:
-        e, f = model.predict(z, r, charge)
+    excluded = 0
+    for z, r, fref, eref, charge, href, multiplicity in records:
+        if multiplicity is None:
+            excluded += 1
+            continue
+        e, f = model.predict(z, r, charge, multiplicity)
         logs, jac = volumes.evaluate(z, r)
         ratio_errors.extend(np.exp(logs)-href)
         corrections = ((0., 0.), ts_from_log_ratios(z, r, logs, jac), d3_energy_forces(z, r))
@@ -69,7 +74,7 @@ def assess(records, checkpoint, volume_file):
     if not np.isfinite(ratios).all() or not all(np.isfinite(list(v.values())).all() for v in stats.values()):
         raise ValueError("Non-finite dispersion validation result")
     return dict(checkpoint=checkpoint.name, volumes=volume_file.name, reference="PBE0+MBD",
-                elapsed_seconds=perf_counter()-started, volume_ratio_mae=float(np.abs(ratios).mean()),
+                unlabelled_spin_excluded=excluded, elapsed_seconds=perf_counter()-started, volume_ratio_mae=float(np.abs(ratios).mean()),
                 volume_ratio_rmse=float(np.sqrt(np.mean(ratios**2))), models=stats)
 
 
@@ -84,11 +89,12 @@ if __name__ == "__main__":
     if args.dataset == "des":
         heldout = set((OUT/"test_parents.txt").read_text().splitlines())
         report = assess(des_frames(DATA/"DES15k.hdf5", heldout), model, volumes)
-        expected = json.loads((OUT/"results.json").read_text())["test"]["structures"]
+        with h5py.File(DATA/"DES15k.hdf5") as h:
+            expected = sum(len(g) for k, g in h.items() if k.rsplit("-", 1)[0] in heldout)
     else:
         with tarfile.open(DATA/"so3lr_test.tar.gz", "r:gz") as tar, io.TextIOWrapper(tar.extractfile(MEMBER)) as stream:
             report = assess(frames(stream), model, volumes)
         expected = 10000
-    if report["models"]["off"]["geometries"] != expected:
+    if report["models"]["off"]["geometries"] + report["unlabelled_spin_excluded"] != expected:
         raise ValueError("Incorrect validation structure count")
     (args.out or OUT/(args.dataset+"_validation.json")).write_text(json.dumps(report, indent=2)+"\n")

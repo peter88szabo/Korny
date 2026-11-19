@@ -1,0 +1,478 @@
+{
+  "checkpoint": "isoprene-64157f27f274973a.npz",
+  "parent": "peroxy-b6552b0f8be9e828.npz",
+  "groups": [
+    [
+      "conformer_15",
+      "conformer_16",
+      "conformer_30"
+    ],
+    [
+      "conformer_13",
+      "conformer_14",
+      "conformer_18",
+      "conformer_19"
+    ],
+    [
+      "conformer_11",
+      "conformer_12",
+      "conformer_17"
+    ]
+  ],
+  "roles": {
+    "conformer_24": "overlap_with_NEB",
+    "conformer_20": "overlap_with_NEB",
+    "conformer_26": "overlap_with_NEB",
+    "conformer_29": "overlap_with_NEB",
+    "conformer_25": "overlap_with_NEB",
+    "conformer_21": "overlap_with_NEB",
+    "conformer_22": "overlap_with_NEB",
+    "conformer_28": "overlap_with_NEB",
+    "conformer_23": "overlap_with_NEB",
+    "conformer_27": "overlap_with_NEB",
+    "conformer_30": "test",
+    "conformer_16": "test",
+    "conformer_15": "test",
+    "conformer_13": "development",
+    "conformer_14": "development",
+    "conformer_18": "development",
+    "conformer_19": "development",
+    "conformer_11": "train",
+    "conformer_12": "train",
+    "conformer_17": "train"
+  },
+  "n_intermediate": [
+    72,
+    96,
+    72
+  ],
+  "n_gradients": 10,
+  "n_hessian_directions": 1530,
+  "selected": {
+    "ridge": 0.01,
+    "held_groups": [
+      {
+        "reaction": {
+          "n": 3,
+          "mae_kcal_mol": 5.658012785241161,
+          "rmsd_kcal_mol": 5.658564724866309
+        },
+        "barrier_span": {
+          "n": 6,
+          "mae_kcal_mol": 2.8290063926205833,
+          "rmsd_kcal_mol": 3.4764602374338565
+        }
+      },
+      {
+        "reaction": {
+          "n": 4,
+          "mae_kcal_mol": 12.257238274141777,
+          "rmsd_kcal_mol": 12.25801787254867
+        },
+        "barrier_span": {
+          "n": 8,
+          "mae_kcal_mol": 6.128619137070894,
+          "rmsd_kcal_mol": 7.577729365339716
+        }
+      },
+      {
+        "reaction": {
+          "n": 3,
+          "mae_kcal_mol": 3.043288130238127,
+          "rmsd_kcal_mol": 3.043470324332234
+        },
+        "barrier_span": {
+          "n": 6,
+          "mae_kcal_mol": 3.609876973329572,
+          "rmsd_kcal_mol": 3.9189326829750786
+        }
+      }
+    ],
+    "mean_group_MAE": 5.587673615440353
+  },
+  "trials": [
+    {
+      "ridge": 0.01,
+      "held_groups": [
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.658012785241161,
+            "rmsd_kcal_mol": 5.658564724866309
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 2.8290063926205833,
+            "rmsd_kcal_mol": 3.4764602374338565
+          }
+        },
+        {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 12.257238274141777,
+            "rmsd_kcal_mol": 12.25801787254867
+          },
+          "barrier_span": {
+            "n": 8,
+            "mae_kcal_mol": 6.128619137070894,
+            "rmsd_kcal_mol": 7.577729365339716
+          }
+        },
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 3.043288130238127,
+            "rmsd_kcal_mol": 3.043470324332234
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 3.609876973329572,
+            "rmsd_kcal_mol": 3.9189326829750786
+          }
+        }
+      ],
+      "mean_group_MAE": 5.587673615440353
+    },
+    {
+      "ridge": 0.1,
+      "held_groups": [
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 9.6132291474408,
+            "rmsd_kcal_mol": 9.613495603464868
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 4.806614573720402,
+            "rmsd_kcal_mol": 5.992622950015685
+          }
+        },
+        {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 12.507918899737167,
+            "rmsd_kcal_mol": 12.508255289755036
+          },
+          "barrier_span": {
+            "n": 8,
+            "mae_kcal_mol": 8.581646775240815,
+            "rmsd_kcal_mol": 10.61924436512548
+          }
+        },
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 6.252705466564226,
+            "rmsd_kcal_mol": 6.254656973126576
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 3.1263527332821024,
+            "rmsd_kcal_mol": 3.1593778503698644
+          }
+        }
+      ],
+      "mean_group_MAE": 7.481411265997586
+    },
+    {
+      "ridge": 1.0,
+      "held_groups": [
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 10.386481795576568,
+            "rmsd_kcal_mol": 10.386596707216984
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 5.19324089778828,
+            "rmsd_kcal_mol": 5.390727321298882
+          }
+        },
+        {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 11.7343705552585,
+            "rmsd_kcal_mol": 11.734391656923584
+          },
+          "barrier_span": {
+            "n": 8,
+            "mae_kcal_mol": 8.363849940439211,
+            "rmsd_kcal_mol": 10.216681260152818
+          }
+        },
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 5.646333456033247,
+            "rmsd_kcal_mol": 5.647650670947315
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 3.3323016785917705,
+            "rmsd_kcal_mol": 4.36860642801866
+          }
+        }
+      ],
+      "mean_group_MAE": 7.442763053947929
+    },
+    {
+      "ridge": 10.0,
+      "held_groups": [
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.495238496448087,
+            "rmsd_kcal_mol": 12.49524582067934
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 6.24761924822404,
+            "rmsd_kcal_mol": 6.2766418991963615
+          }
+        },
+        {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 13.34979253871653,
+            "rmsd_kcal_mol": 13.349987483860676
+          },
+          "barrier_span": {
+            "n": 8,
+            "mae_kcal_mol": 6.6748962693582605,
+            "rmsd_kcal_mol": 9.105216082022602
+          }
+        },
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 3.0015202872867355,
+            "rmsd_kcal_mol": 3.0021924761003778
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 5.224024840492291,
+            "rmsd_kcal_mol": 5.435960360522443
+          }
+        }
+      ],
+      "mean_group_MAE": 7.832181946754325
+    },
+    {
+      "ridge": 100.0,
+      "held_groups": [
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 12.152885029662613,
+            "rmsd_kcal_mol": 12.152887919594905
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 6.076442514831307,
+            "rmsd_kcal_mol": 6.644633574425976
+          }
+        },
+        {
+          "reaction": {
+            "n": 4,
+            "mae_kcal_mol": 12.561556808010153,
+            "rmsd_kcal_mol": 12.562028037003442
+          },
+          "barrier_span": {
+            "n": 8,
+            "mae_kcal_mol": 6.280778404005078,
+            "rmsd_kcal_mol": 6.380460993619764
+          }
+        },
+        {
+          "reaction": {
+            "n": 3,
+            "mae_kcal_mol": 1.604599380090984,
+            "rmsd_kcal_mol": 1.6049139094283253
+          },
+          "barrier_span": {
+            "n": 6,
+            "mae_kcal_mol": 2.1930637558482027,
+            "rmsd_kcal_mol": 2.337176448922022
+          }
+        }
+      ],
+      "mean_group_MAE": 6.811554315408055
+    }
+  ],
+  "paths": {
+    "neb_conformer_pair_10_27-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_10_27-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 18.467072708704023,
+        "reverse_barrier": 25.415636048994198,
+        "reaction": -6.948563340290175
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 41.54029519996422,
+        "reverse_barrier": 29.94561741047873,
+        "reaction": 11.594677789485491
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 23.073222491260196,
+        "reverse_barrier": 4.529981361484531,
+        "reaction": 18.543241129775666
+      },
+      "reference_imaginary_cm1": -1754.95,
+      "model_negative_modes_cm1": [
+        -2133.435101685868,
+        -353.2625087973169,
+        -232.9380980276141,
+        -115.81344080553595
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 0.35376434179290256,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        1.0926700234539801,
+        2.003910423936467,
+        4.352617977692995,
+        6.2135994697767245,
+        14.994398095714484,
+        22.86056386607321,
+        12.773139113678633,
+        0.7575274649676947,
+        -6.948563340290175
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        -3.1308803692464666,
+        10.222892293459626,
+        18.373799610983575,
+        21.921491247386655,
+        28.713795973070923,
+        39.5889918974918,
+        30.343358800295146,
+        14.018552828957484,
+        11.594677789485491
+      ]
+    },
+    "neb_conformer_pair_13_28-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_13_28-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 21.165310188688615,
+        "reverse_barrier": 25.349456817972847,
+        "reaction": -4.184146629284233
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 46.70894476736044,
+        "reverse_barrier": 30.320320034929217,
+        "reaction": 16.388624732431225
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 25.543634578671828,
+        "reverse_barrier": 4.970863216956371,
+        "reaction": 20.572771361715457
+      },
+      "reference_imaginary_cm1": -1729.0,
+      "model_negative_modes_cm1": [
+        -2188.7567314876947,
+        -349.65013045942186,
+        -234.12558603847674,
+        -109.85422960587006
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 0.3642956139859157,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        2.729385031127458,
+        5.320317803269925,
+        7.3270425759981,
+        13.985338884096565,
+        27.5826002946556,
+        17.157405385659313,
+        6.178819883055073,
+        0.8267460602946599,
+        -4.184146629284233
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        0.34512074812157184,
+        7.376351579226513,
+        17.42083371281287,
+        28.38450144668105,
+        43.62974069496413,
+        35.57741262916161,
+        22.191544052797713,
+        10.529272551971712,
+        16.388624732431225
+      ]
+    },
+    "neb_conformer_pair_1_19-11": {
+      "folder": "/home/peter/Dropbox/Research_Leuven/LIM1_reevol/Ready_calc/16H_Shift_Case2/NEB_Frontal_ready_Case2/neb_conformer_pair_1_19-11",
+      "state": [
+        0,
+        2
+      ],
+      "n_atoms": 17,
+      "reference_method": "! UKS M062X D3zero aug-cc-pvtz NEB-TS freq",
+      "reference_kcal_mol": {
+        "forward_barrier": 17.29451189465839,
+        "reverse_barrier": 25.765556210868738,
+        "reaction": -8.471044316210351
+      },
+      "predicted_kcal_mol": {
+        "forward_barrier": 44.21276054919361,
+        "reverse_barrier": 35.84884900434457,
+        "reaction": 8.36391154484904
+      },
+      "error_kcal_mol": {
+        "forward_barrier": 26.918248654535223,
+        "reverse_barrier": 10.083292793475835,
+        "reaction": 16.83495586105939
+      },
+      "reference_imaginary_cm1": -1879.35,
+      "model_negative_modes_cm1": [
+        -2210.664136377785,
+        -340.5534311063189,
+        -274.36871950751316,
+        -231.5853770869622,
+        -176.61130562262443,
+        -129.48230766074454,
+        -65.14515365521622
+      ],
+      "model_rms_force_at_ref_TS_eV_A": 0.29719062794667983,
+      "reference_path_relative_kcal_mol": [
+        0.0,
+        0.39544275655198374,
+        0.9573066097502677,
+        0.6672872480446195,
+        4.63719723928742,
+        13.194486122036837,
+        21.10174462136006,
+        9.338131720614285,
+        -4.0193921055568165,
+        -8.471044316210351
+      ],
+      "model_path_relative_kcal_mol": [
+        0.0,
+        6.90193637404567,
+        9.034472532529117,
+        21.662686340518658,
+        29.260570149953743,
+        35.611397023424516,
+        46.87192507337837,
+        33.55195326725367,
+        17.79295935686608,
+        8.36391154484904
+      ]
+    }
+  }
+}

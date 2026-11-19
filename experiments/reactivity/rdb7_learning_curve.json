@@ -1,0 +1,828 @@
+{
+  "checkpoint": "rdb7-6a67e4a45bf6797d.npz",
+  "backbone": "matern-15d11dacaf49a610.npz",
+  "source": "10.1038/s41597-022-01529-6",
+  "excluded": {
+    "unverified_log": 1,
+    "incomplete_reaction": 1,
+    "fixed_or_larger_validation_formula": 2278
+  },
+  "available": {
+    "train": 5158,
+    "development": 2614,
+    "test": 1875
+  },
+  "sample": {
+    "RDB7_train": 4000,
+    "RDB7_dev": 150,
+    "RDB7_test": 400,
+    "BH9_TRIP50_train": 159,
+    "BH9_TRIP50_development": 50,
+    "BH9_TRIP50_test": 65
+  },
+  "curve": [
+    {
+      "n_RDB7_reactions": 0,
+      "metrics": {
+        "RDB7_train": {
+          "reaction": {
+            "n": 4000,
+            "mae_kcal_mol": 28.903850022234796,
+            "rmsd_kcal_mol": 40.98958094348413
+          },
+          "barrier": {
+            "n": 8000,
+            "mae_kcal_mol": 38.94863329687483,
+            "rmsd_kcal_mol": 53.25289408038169
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 29.78350922393119,
+            "rmsd_kcal_mol": 42.630072217146115
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 51.84773748390293,
+            "rmsd_kcal_mol": 73.00276718192232
+          }
+        },
+        "RDB7_test": {
+          "reaction": {
+            "n": 400,
+            "mae_kcal_mol": 26.110368216312438,
+            "rmsd_kcal_mol": 36.640588230481676
+          },
+          "barrier": {
+            "n": 800,
+            "mae_kcal_mol": 38.91717742949125,
+            "rmsd_kcal_mol": 50.64126537019568
+          }
+        },
+        "BH9_TRIP50_train": {
+          "reaction": {
+            "n": 159,
+            "mae_kcal_mol": 6.053190874805478,
+            "rmsd_kcal_mol": 8.277592753304656
+          },
+          "barrier": {
+            "n": 318,
+            "mae_kcal_mol": 6.384460309226417,
+            "rmsd_kcal_mol": 9.93975108565315
+          }
+        },
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 12.260487484057347,
+            "rmsd_kcal_mol": 15.906322584712765
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 10.277711752375957,
+            "rmsd_kcal_mol": 14.407464060306324
+          }
+        },
+        "BH9_TRIP50_test": {
+          "reaction": {
+            "n": 65,
+            "mae_kcal_mol": 16.758805142819433,
+            "rmsd_kcal_mol": 22.479464483465662
+          },
+          "barrier": {
+            "n": 130,
+            "mae_kcal_mol": 16.87002005658356,
+            "rmsd_kcal_mol": 22.344331537875753
+          }
+        }
+      }
+    },
+    {
+      "n_RDB7_reactions": 250,
+      "metrics": {
+        "RDB7_train": {
+          "reaction": {
+            "n": 4000,
+            "mae_kcal_mol": 20.136344114615014,
+            "rmsd_kcal_mol": 28.070725498032743
+          },
+          "barrier": {
+            "n": 8000,
+            "mae_kcal_mol": 24.380987833519168,
+            "rmsd_kcal_mol": 34.16640398087771
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 20.069605343306442,
+            "rmsd_kcal_mol": 29.01890294882683
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 30.104363465144257,
+            "rmsd_kcal_mol": 44.78687734276445
+          }
+        },
+        "RDB7_test": {
+          "reaction": {
+            "n": 400,
+            "mae_kcal_mol": 19.916949025068387,
+            "rmsd_kcal_mol": 26.617652288033806
+          },
+          "barrier": {
+            "n": 800,
+            "mae_kcal_mol": 23.609937164243803,
+            "rmsd_kcal_mol": 31.365576565862213
+          }
+        },
+        "BH9_TRIP50_train": {
+          "reaction": {
+            "n": 159,
+            "mae_kcal_mol": 6.304348676178659,
+            "rmsd_kcal_mol": 9.333430778644281
+          },
+          "barrier": {
+            "n": 318,
+            "mae_kcal_mol": 6.6357783892491895,
+            "rmsd_kcal_mol": 10.716214794034228
+          }
+        },
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 17.68867490383758,
+            "rmsd_kcal_mol": 30.793655447470655
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 14.865727223349632,
+            "rmsd_kcal_mol": 26.1895464212243
+          }
+        },
+        "BH9_TRIP50_test": {
+          "reaction": {
+            "n": 65,
+            "mae_kcal_mol": 21.327815865706718,
+            "rmsd_kcal_mol": 31.543585390387285
+          },
+          "barrier": {
+            "n": 130,
+            "mae_kcal_mol": 17.753311548551526,
+            "rmsd_kcal_mol": 25.708020353012454
+          }
+        }
+      }
+    },
+    {
+      "n_RDB7_reactions": 1000,
+      "metrics": {
+        "RDB7_train": {
+          "reaction": {
+            "n": 4000,
+            "mae_kcal_mol": 15.490951797064273,
+            "rmsd_kcal_mol": 21.334505379544897
+          },
+          "barrier": {
+            "n": 8000,
+            "mae_kcal_mol": 21.31252770451369,
+            "rmsd_kcal_mol": 30.42750079631333
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 16.56305006588568,
+            "rmsd_kcal_mol": 22.345258501843908
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 26.546634765560423,
+            "rmsd_kcal_mol": 40.61241231976646
+          }
+        },
+        "RDB7_test": {
+          "reaction": {
+            "n": 400,
+            "mae_kcal_mol": 17.444735760517318,
+            "rmsd_kcal_mol": 22.932893195093474
+          },
+          "barrier": {
+            "n": 800,
+            "mae_kcal_mol": 21.303468853072033,
+            "rmsd_kcal_mol": 29.072041108686268
+          }
+        },
+        "BH9_TRIP50_train": {
+          "reaction": {
+            "n": 159,
+            "mae_kcal_mol": 7.912953580768463,
+            "rmsd_kcal_mol": 10.694047452764748
+          },
+          "barrier": {
+            "n": 318,
+            "mae_kcal_mol": 8.591798088419889,
+            "rmsd_kcal_mol": 13.038569497076525
+          }
+        },
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 23.52145623480603,
+            "rmsd_kcal_mol": 49.693029339612224
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 17.303190354700263,
+            "rmsd_kcal_mol": 39.978047336601826
+          }
+        },
+        "BH9_TRIP50_test": {
+          "reaction": {
+            "n": 65,
+            "mae_kcal_mol": 22.529890845131643,
+            "rmsd_kcal_mol": 32.48777526667255
+          },
+          "barrier": {
+            "n": 130,
+            "mae_kcal_mol": 20.396297054149162,
+            "rmsd_kcal_mol": 29.262871512675293
+          }
+        }
+      }
+    },
+    {
+      "n_RDB7_reactions": 4000,
+      "metrics": {
+        "RDB7_train": {
+          "reaction": {
+            "n": 4000,
+            "mae_kcal_mol": 13.738066095861308,
+            "rmsd_kcal_mol": 18.806668172910552
+          },
+          "barrier": {
+            "n": 8000,
+            "mae_kcal_mol": 19.553435907301463,
+            "rmsd_kcal_mol": 27.96309039010145
+          }
+        },
+        "RDB7_dev": {
+          "reaction": {
+            "n": 150,
+            "mae_kcal_mol": 14.973960613120122,
+            "rmsd_kcal_mol": 20.73650134992137
+          },
+          "barrier": {
+            "n": 300,
+            "mae_kcal_mol": 24.17338429805133,
+            "rmsd_kcal_mol": 37.404937052190284
+          }
+        },
+        "RDB7_test": {
+          "reaction": {
+            "n": 400,
+            "mae_kcal_mol": 16.149323086859727,
+            "rmsd_kcal_mol": 21.426110321823245
+          },
+          "barrier": {
+            "n": 800,
+            "mae_kcal_mol": 20.029872997220167,
+            "rmsd_kcal_mol": 27.721728641480745
+          }
+        },
+        "BH9_TRIP50_train": {
+          "reaction": {
+            "n": 159,
+            "mae_kcal_mol": 10.514857207499851,
+            "rmsd_kcal_mol": 14.814581738725504
+          },
+          "barrier": {
+            "n": 318,
+            "mae_kcal_mol": 10.40792407545466,
+            "rmsd_kcal_mol": 15.680946896195266
+          }
+        },
+        "BH9_TRIP50_development": {
+          "reaction": {
+            "n": 50,
+            "mae_kcal_mol": 26.216265872347712,
+            "rmsd_kcal_mol": 65.56716492164031
+          },
+          "barrier": {
+            "n": 100,
+            "mae_kcal_mol": 19.80040780894693,
+            "rmsd_kcal_mol": 53.58113611678569
+          }
+        },
+        "BH9_TRIP50_test": {
+          "reaction": {
+            "n": 65,
+            "mae_kcal_mol": 24.17713744102819,
+            "rmsd_kcal_mol": 37.63983580942401
+          },
+          "barrier": {
+            "n": 130,
+            "mae_kcal_mol": 23.04554333064836,
+            "rmsd_kcal_mol": 34.38678390174771
+          }
+        }
+      }
+    }
+  ],
+  "seconds": 55.591084526000486,
+  "test_ids": [
+    "RDB7/rxn006171",
+    "RDB7/rxn000490",
+    "RDB7/rxn009344",
+    "RDB7/rxn006863",
+    "RDB7/rxn004869",
+    "RDB7/rxn011321",
+    "RDB7/rxn004117",
+    "RDB7/rxn008387",
+    "RDB7/rxn011155",
+    "RDB7/rxn008326",
+    "RDB7/rxn008595",
+    "RDB7/rxn011113",
+    "RDB7/rxn003362",
+    "RDB7/rxn008394",
+    "RDB7/rxn007095",
+    "RDB7/rxn008004",
+    "RDB7/rxn004871",
+    "RDB7/rxn009637",
+    "RDB7/rxn001279",
+    "RDB7/rxn004778",
+    "RDB7/rxn010180",
+    "RDB7/rxn002255",
+    "RDB7/rxn003165",
+    "RDB7/rxn011264",
+    "RDB7/rxn009576",
+    "RDB7/rxn002275",
+    "RDB7/rxn006451",
+    "RDB7/rxn011442",
+    "RDB7/rxn006871",
+    "RDB7/rxn001297",
+    "RDB7/rxn001750",
+    "RDB7/rxn008601",
+    "RDB7/rxn008389",
+    "RDB7/rxn000810",
+    "RDB7/rxn009564",
+    "RDB7/rxn011333",
+    "RDB7/rxn006539",
+    "RDB7/rxn007562",
+    "RDB7/rxn000862",
+    "RDB7/rxn007507",
+    "RDB7/rxn004746",
+    "RDB7/rxn009268",
+    "RDB7/rxn004172",
+    "RDB7/rxn007508",
+    "RDB7/rxn006547",
+    "RDB7/rxn007543",
+    "RDB7/rxn005205",
+    "RDB7/rxn004783",
+    "RDB7/rxn002152",
+    "RDB7/rxn007409",
+    "RDB7/rxn004868",
+    "RDB7/rxn008392",
+    "RDB7/rxn005252",
+    "RDB7/rxn005158",
+    "RDB7/rxn011207",
+    "RDB7/rxn005248",
+    "RDB7/rxn007536",
+    "RDB7/rxn001971",
+    "RDB7/rxn001173",
+    "RDB7/rxn006832",
+    "RDB7/rxn008003",
+    "RDB7/rxn001959",
+    "RDB7/rxn010313",
+    "RDB7/rxn011925",
+    "RDB7/rxn010324",
+    "RDB7/rxn009228",
+    "RDB7/rxn002425",
+    "RDB7/rxn006553",
+    "RDB7/rxn006814",
+    "RDB7/rxn007109",
+    "RDB7/rxn005326",
+    "RDB7/rxn007261",
+    "RDB7/rxn004322",
+    "RDB7/rxn009558",
+    "RDB7/rxn003711",
+    "RDB7/rxn005610",
+    "RDB7/rxn008598",
+    "RDB7/rxn002341",
+    "RDB7/rxn006568",
+    "RDB7/rxn010441",
+    "RDB7/rxn003980",
+    "RDB7/rxn004294",
+    "RDB7/rxn004627",
+    "RDB7/rxn010890",
+    "RDB7/rxn007200",
+    "RDB7/rxn006170",
+    "RDB7/rxn005279",
+    "RDB7/rxn008591",
+    "RDB7/rxn005161",
+    "RDB7/rxn008483",
+    "RDB7/rxn004367",
+    "RDB7/rxn010574",
+    "RDB7/rxn002959",
+    "RDB7/rxn009917",
+    "RDB7/rxn011353",
+    "RDB7/rxn001715",
+    "RDB7/rxn008603",
+    "RDB7/rxn008600",
+    "RDB7/rxn006162",
+    "RDB7/rxn010975",
+    "RDB7/rxn011203",
+    "RDB7/rxn009566",
+    "RDB7/rxn001056",
+    "RDB7/rxn003333",
+    "RDB7/rxn001747",
+    "RDB7/rxn001005",
+    "RDB7/rxn009620",
+    "RDB7/rxn007053",
+    "RDB7/rxn007560",
+    "RDB7/rxn010938",
+    "RDB7/rxn009584",
+    "RDB7/rxn007599",
+    "RDB7/rxn005647",
+    "RDB7/rxn002460",
+    "RDB7/rxn003507",
+    "RDB7/rxn000507",
+    "RDB7/rxn001426",
+    "RDB7/rxn001439",
+    "RDB7/rxn006352",
+    "RDB7/rxn009526",
+    "RDB7/rxn003595",
+    "RDB7/rxn009621",
+    "RDB7/rxn011397",
+    "RDB7/rxn004343",
+    "RDB7/rxn002954",
+    "RDB7/rxn007939",
+    "RDB7/rxn000152",
+    "RDB7/rxn003713",
+    "RDB7/rxn004373",
+    "RDB7/rxn003354",
+    "RDB7/rxn007880",
+    "RDB7/rxn006214",
+    "RDB7/rxn010939",
+    "RDB7/rxn006395",
+    "RDB7/rxn006834",
+    "RDB7/rxn009264",
+    "RDB7/rxn010085",
+    "RDB7/rxn003372",
+    "RDB7/rxn006440",
+    "RDB7/rxn010798",
+    "RDB7/rxn009532",
+    "RDB7/rxn007992",
+    "RDB7/rxn006494",
+    "RDB7/rxn007248",
+    "RDB7/rxn008385",
+    "RDB7/rxn011926",
+    "RDB7/rxn006813",
+    "RDB7/rxn011647",
+    "RDB7/rxn010639",
+    "RDB7/rxn002087",
+    "RDB7/rxn000116",
+    "RDB7/rxn006434",
+    "RDB7/rxn002052",
+    "RDB7/rxn002091",
+    "RDB7/rxn007528",
+    "RDB7/rxn003710",
+    "RDB7/rxn008384",
+    "RDB7/rxn011545",
+    "RDB7/rxn004972",
+    "RDB7/rxn009638",
+    "RDB7/rxn008327",
+    "RDB7/rxn010647",
+    "RDB7/rxn006409",
+    "RDB7/rxn011449",
+    "RDB7/rxn001296",
+    "RDB7/rxn009627",
+    "RDB7/rxn011122",
+    "RDB7/rxn011649",
+    "RDB7/rxn010914",
+    "RDB7/rxn000700",
+    "RDB7/rxn004936",
+    "RDB7/rxn000682",
+    "RDB7/rxn011793",
+    "RDB7/rxn003979",
+    "RDB7/rxn011451",
+    "RDB7/rxn000681",
+    "RDB7/rxn011703",
+    "RDB7/rxn005995",
+    "RDB7/rxn005418",
+    "RDB7/rxn011312",
+    "RDB7/rxn011771",
+    "RDB7/rxn011782",
+    "RDB7/rxn002376",
+    "RDB7/rxn010649",
+    "RDB7/rxn000117",
+    "RDB7/rxn000689",
+    "RDB7/rxn007196",
+    "RDB7/rxn005652",
+    "RDB7/rxn010177",
+    "RDB7/rxn009527",
+    "RDB7/rxn003876",
+    "RDB7/rxn003781",
+    "RDB7/rxn007509",
+    "RDB7/rxn000841",
+    "RDB7/rxn011320",
+    "RDB7/rxn003384",
+    "RDB7/rxn003520",
+    "RDB7/rxn010802",
+    "RDB7/rxn006219",
+    "RDB7/rxn006351",
+    "RDB7/rxn010792",
+    "RDB7/rxn002268",
+    "RDB7/rxn010583",
+    "RDB7/rxn007112",
+    "RDB7/rxn004937",
+    "RDB7/rxn005320",
+    "RDB7/rxn011109",
+    "RDB7/rxn003933",
+    "RDB7/rxn009643",
+    "RDB7/rxn005325",
+    "RDB7/rxn010635",
+    "RDB7/rxn011786",
+    "RDB7/rxn009533",
+    "RDB7/rxn005201",
+    "RDB7/rxn006830",
+    "RDB7/rxn010895",
+    "RDB7/rxn009721",
+    "RDB7/rxn001024",
+    "RDB7/rxn010336",
+    "RDB7/rxn003881",
+    "RDB7/rxn011159",
+    "RDB7/rxn005277",
+    "RDB7/rxn010352",
+    "RDB7/rxn007641",
+    "RDB7/rxn010934",
+    "RDB7/rxn005032",
+    "RDB7/rxn011331",
+    "RDB7/rxn009221",
+    "RDB7/rxn000811",
+    "RDB7/rxn001434",
+    "RDB7/rxn009964",
+    "RDB7/rxn005328",
+    "RDB7/rxn006831",
+    "RDB7/rxn006133",
+    "RDB7/rxn003785",
+    "RDB7/rxn010349",
+    "RDB7/rxn006535",
+    "RDB7/rxn007253",
+    "RDB7/rxn000170",
+    "RDB7/rxn008334",
+    "RDB7/rxn002423",
+    "RDB7/rxn002987",
+    "RDB7/rxn005254",
+    "RDB7/rxn011778",
+    "RDB7/rxn006222",
+    "RDB7/rxn007997",
+    "RDB7/rxn000012",
+    "RDB7/rxn006165",
+    "RDB7/rxn009568",
+    "RDB7/rxn010308",
+    "RDB7/rxn004086",
+    "RDB7/rxn006973",
+    "RDB7/rxn004090",
+    "RDB7/rxn003038",
+    "RDB7/rxn006492",
+    "RDB7/rxn007180",
+    "RDB7/rxn001721",
+    "RDB7/rxn009649",
+    "RDB7/rxn000688",
+    "RDB7/rxn007533",
+    "RDB7/rxn002456",
+    "RDB7/rxn006810",
+    "RDB7/rxn005016",
+    "RDB7/rxn001976",
+    "RDB7/rxn006446",
+    "RDB7/rxn006282",
+    "RDB7/rxn007951",
+    "RDB7/rxn003689",
+    "RDB7/rxn003885",
+    "RDB7/rxn010644",
+    "RDB7/rxn003574",
+    "RDB7/rxn005107",
+    "RDB7/rxn009225",
+    "RDB7/rxn001161",
+    "RDB7/rxn006806",
+    "RDB7/rxn008386",
+    "RDB7/rxn005283",
+    "RDB7/rxn010301",
+    "RDB7/rxn003342",
+    "RDB7/rxn003692",
+    "RDB7/rxn011729",
+    "RDB7/rxn006423",
+    "RDB7/rxn006708",
+    "RDB7/rxn001295",
+    "RDB7/rxn011702",
+    "RDB7/rxn011435",
+    "RDB7/rxn009741",
+    "RDB7/rxn001435",
+    "RDB7/rxn004745",
+    "RDB7/rxn008339",
+    "RDB7/rxn004419",
+    "RDB7/rxn011911",
+    "RDB7/rxn009349",
+    "RDB7/rxn006010",
+    "RDB7/rxn011699",
+    "RDB7/rxn001899",
+    "RDB7/rxn010916",
+    "RDB7/rxn006349",
+    "RDB7/rxn008321",
+    "RDB7/rxn010979",
+    "RDB7/rxn005654",
+    "RDB7/rxn011215",
+    "RDB7/rxn002379",
+    "RDB7/rxn010828",
+    "RDB7/rxn000510",
+    "RDB7/rxn002157",
+    "RDB7/rxn004293",
+    "RDB7/rxn008489",
+    "RDB7/rxn004606",
+    "RDB7/rxn002189",
+    "RDB7/rxn009727",
+    "RDB7/rxn006213",
+    "RDB7/rxn006656",
+    "RDB7/rxn006816",
+    "RDB7/rxn011352",
+    "RDB7/rxn009224",
+    "RDB7/rxn003887",
+    "RDB7/rxn003977",
+    "RDB7/rxn009345",
+    "RDB7/rxn006704",
+    "RDB7/rxn002429",
+    "RDB7/rxn006443",
+    "RDB7/rxn002618",
+    "RDB7/rxn006865",
+    "RDB7/rxn009354",
+    "RDB7/rxn006347",
+    "RDB7/rxn001730",
+    "RDB7/rxn011166",
+    "RDB7/rxn011922",
+    "RDB7/rxn001749",
+    "RDB7/rxn009926",
+    "RDB7/rxn002377",
+    "RDB7/rxn005033",
+    "RDB7/rxn004978",
+    "RDB7/rxn002721",
+    "RDB7/rxn009853",
+    "RDB7/rxn011773",
+    "RDB7/rxn009626",
+    "RDB7/rxn010357",
+    "RDB7/rxn007626",
+    "RDB7/rxn005256",
+    "RDB7/rxn009569",
+    "RDB7/rxn010923",
+    "RDB7/rxn005204",
+    "RDB7/rxn000392",
+    "RDB7/rxn007531",
+    "RDB7/rxn011733",
+    "RDB7/rxn011244",
+    "RDB7/rxn001748",
+    "RDB7/rxn002257",
+    "RDB7/rxn002608",
+    "RDB7/rxn001431",
+    "RDB7/rxn007838",
+    "RDB7/rxn005657",
+    "RDB7/rxn002274",
+    "RDB7/rxn003359",
+    "RDB7/rxn002375",
+    "RDB7/rxn009648",
+    "RDB7/rxn005102",
+    "RDB7/rxn007534",
+    "RDB7/rxn011783",
+    "RDB7/rxn009265",
+    "RDB7/rxn000171",
+    "RDB7/rxn001007",
+    "RDB7/rxn009634",
+    "RDB7/rxn011377",
+    "RDB7/rxn010837",
+    "RDB7/rxn001423",
+    "RDB7/rxn000506",
+    "RDB7/rxn011128",
+    "RDB7/rxn001057",
+    "RDB7/rxn008574",
+    "RDB7/rxn009628",
+    "RDB7/rxn001172",
+    "RDB7/rxn004864",
+    "RDB7/rxn001141",
+    "RDB7/rxn002426",
+    "RDB7/rxn010889",
+    "RDB7/rxn003924",
+    "RDB7/rxn000491",
+    "RDB7/rxn005515",
+    "RDB7/rxn006533",
+    "RDB7/rxn010343",
+    "RDB7/rxn010342",
+    "RDB7/rxn008572",
+    "RDB7/rxn000813",
+    "RDB7/rxn002984",
+    "RDB7/rxn001727",
+    "RDB7/rxn002098",
+    "RDB7/rxn006407",
+    "RDB7/rxn005718",
+    "RDB7/rxn010898",
+    "RDB7/rxn004135",
+    "RDB7/rxn007398",
+    "RDB7/rxn006168",
+    "RDB7/rxn000691",
+    "RDB7/rxn005611",
+    "RDB7/rxn002340",
+    "RDB7/rxn010449",
+    "RDB7/rxn007766"
+  ],
+  "fixed_singlet_panel": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 73.55970283949867,
+      "rmsd_kcal_mol": 105.85097690147553
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 30.638032610775372,
+      "rmsd_kcal_mol": 39.5707894732422
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -22.157577818172104,
+        "error": -15.057577818172105,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -6.15379441050219
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -129.91856576834203,
+        "error": -90.48856576834203,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -81.39187217428392
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -277.2950994279212,
+        "error": -215.62509942792116,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -203.9997220578707
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": -100.91803868314048,
+        "error": -19.708038683140487,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": -31.65991293519143
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 48.016265341443834,
+        "error": -0.08373465855616757
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": 5.997032841526315,
+        "error": -27.002967158473684
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 44.081259248851325,
+        "error": 12.381259248851325
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 27.93735792515145,
+        "error": -41.36264207484855
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": -11.759559913147116,
+        "error": -72.35955991314712
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 42.019232499917514,
+        "error": 26.919232499917513
+      }
+    ]
+  }
+}

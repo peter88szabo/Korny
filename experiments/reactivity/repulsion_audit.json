@@ -1,0 +1,22 @@
+{
+  "checkpoint": "pbe0-core-de81957f6833011c.npz",
+  "backbone": "pbe0-stationary-d08ad76d97f10894.npz",
+  "reference": "MP2 screening, 30\u20131000 eV",
+  "source": "https://zenodo.org/records/17302337",
+  "n_element_pairs": 36,
+  "n_points": 181,
+  "metrics": {
+    "original": {
+      "mae_eV": 352.463604518232,
+      "median_absolute_percent": 99.92376606899481,
+      "inward_force_points": 106
+    },
+    "with_core": {
+      "mae_eV": 15.416153154994037,
+      "median_absolute_percent": 4.544130869443731,
+      "inward_force_points": 0
+    }
+  },
+  "worst_force_fd_eV_A": 1.5256895267157233e-06,
+  "worst_core_force_fd_eV_A": 1.5408383546855475e-06
+}

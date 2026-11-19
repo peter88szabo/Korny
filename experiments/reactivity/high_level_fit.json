@@ -1,0 +1,5368 @@
+{
+  "backbone": "pbe0-core-de81957f6833011c.npz",
+  "dispersion": "d3",
+  "correction": "gmtkn-d3-delta-3cac910c55ec87b6.npz",
+  "ridge": 1.0,
+  "n_train": 255,
+  "n_development": 39,
+  "fixed_panel": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 104.2509551779588,
+      "rmsd_kcal_mol": 148.48438704651483
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 56.15604496383821,
+      "rmsd_kcal_mol": 59.9408248563552
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": 21.02861031727319,
+        "error": 28.128610317273193,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": 37.032393724943105
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -336.5854303523442,
+        "error": -297.1554303523442,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -288.0587367582861
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -199.47509364253486,
+        "error": -137.80509364253487,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -126.1797162724844
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": -95.06730416817597,
+        "error": -13.857304168175972,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": -25.809178420226914
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 14.384443842972749,
+        "error": -33.71555615702725
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -45.023893566493065,
+        "error": -78.02389356649306
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 59.695421159503624,
+        "error": 27.995421159503625
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": -3.3913388436234557,
+        "error": -72.69133884362346
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": -7.754015092543678,
+        "error": -68.35401509254368
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 59.408337409465815,
+        "error": 44.308337409465814
+      }
+    ]
+  },
+  "families": {
+    "BHDIV10": {
+      "split": "development",
+      "before": {
+        "n": 5,
+        "mae_kcal_mol": 27.257869328486777,
+        "rmsd_kcal_mol": 33.91558169549765
+      },
+      "after": {
+        "n": 5,
+        "mae_kcal_mol": 39.3891107003772,
+        "rmsd_kcal_mol": 49.83772157522783
+      }
+    },
+    "BHPERI": {
+      "split": "train",
+      "before": {
+        "n": 22,
+        "mae_kcal_mol": 20.15279538152015,
+        "rmsd_kcal_mol": 26.20657801506104
+      },
+      "after": {
+        "n": 22,
+        "mae_kcal_mol": 14.763600883172051,
+        "rmsd_kcal_mol": 22.783819802283265
+      }
+    },
+    "BHROT27": {
+      "split": "train",
+      "before": {
+        "n": 26,
+        "mae_kcal_mol": 7.0939813510860485,
+        "rmsd_kcal_mol": 9.448803444484161
+      },
+      "after": {
+        "n": 26,
+        "mae_kcal_mol": 6.400366852298918,
+        "rmsd_kcal_mol": 8.256305569895858
+      }
+    },
+    "BSR36": {
+      "split": "train",
+      "before": {
+        "n": 35,
+        "mae_kcal_mol": 25.22997736438268,
+        "rmsd_kcal_mol": 40.135802618514205
+      },
+      "after": {
+        "n": 35,
+        "mae_kcal_mol": 9.332828220372944,
+        "rmsd_kcal_mol": 11.10211323093441
+      }
+    },
+    "CDIE20": {
+      "split": "train",
+      "before": {
+        "n": 20,
+        "mae_kcal_mol": 14.196911002814668,
+        "rmsd_kcal_mol": 22.759822674507586
+      },
+      "after": {
+        "n": 20,
+        "mae_kcal_mol": 12.543751530409134,
+        "rmsd_kcal_mol": 17.044160353250998
+      }
+    },
+    "DARC": {
+      "split": "train",
+      "before": {
+        "n": 11,
+        "mae_kcal_mol": 77.14213593741991,
+        "rmsd_kcal_mol": 77.65549573003592
+      },
+      "after": {
+        "n": 11,
+        "mae_kcal_mol": 16.78432064384053,
+        "rmsd_kcal_mol": 19.85605332713257
+      }
+    },
+    "DC13": {
+      "split": "train",
+      "before": {
+        "n": 10,
+        "mae_kcal_mol": 162.8416507899813,
+        "rmsd_kcal_mol": 227.87569018308358
+      },
+      "after": {
+        "n": 10,
+        "mae_kcal_mol": 26.190366020456743,
+        "rmsd_kcal_mol": 31.835972542856318
+      }
+    },
+    "FH51": {
+      "split": "train",
+      "before": {
+        "n": 18,
+        "mae_kcal_mol": 37.866717083292954,
+        "rmsd_kcal_mol": 65.79348958209472
+      },
+      "after": {
+        "n": 18,
+        "mae_kcal_mol": 16.672718678211496,
+        "rmsd_kcal_mol": 24.464755152442656
+      }
+    },
+    "ISO34": {
+      "split": "development",
+      "before": {
+        "n": 34,
+        "mae_kcal_mol": 30.865934859790794,
+        "rmsd_kcal_mol": 48.554362562463766
+      },
+      "after": {
+        "n": 34,
+        "mae_kcal_mol": 17.03728712641224,
+        "rmsd_kcal_mol": 21.59410444184254
+      }
+    },
+    "ISOL24": {
+      "split": "train",
+      "before": {
+        "n": 10,
+        "mae_kcal_mol": 36.301320816878274,
+        "rmsd_kcal_mol": 46.978072872521075
+      },
+      "after": {
+        "n": 10,
+        "mae_kcal_mol": 14.527792550103715,
+        "rmsd_kcal_mol": 17.196412862784193
+      }
+    },
+    "PX13": {
+      "split": "train",
+      "before": {
+        "n": 13,
+        "mae_kcal_mol": 19.521485950267405,
+        "rmsd_kcal_mol": 22.460224806087155
+      },
+      "after": {
+        "n": 13,
+        "mae_kcal_mol": 9.950557684858902,
+        "rmsd_kcal_mol": 12.58764468517001
+      }
+    },
+    "TAUT15": {
+      "split": "train",
+      "before": {
+        "n": 15,
+        "mae_kcal_mol": 12.043489455150768,
+        "rmsd_kcal_mol": 15.237537497811875
+      },
+      "after": {
+        "n": 15,
+        "mae_kcal_mol": 14.164695246585357,
+        "rmsd_kcal_mol": 16.977553260208882
+      }
+    },
+    "W4-11": {
+      "split": "train",
+      "before": {
+        "n": 67,
+        "mae_kcal_mol": 237.98548093840827,
+        "rmsd_kcal_mol": 263.9684762562353
+      },
+      "after": {
+        "n": 67,
+        "mae_kcal_mol": 14.82739129325016,
+        "rmsd_kcal_mol": 20.39570279303452
+      }
+    },
+    "WCPT18": {
+      "split": "train",
+      "before": {
+        "n": 8,
+        "mae_kcal_mol": 14.363287527255626,
+        "rmsd_kcal_mol": 18.54660678157049
+      },
+      "after": {
+        "n": 8,
+        "mae_kcal_mol": 14.07317408371554,
+        "rmsd_kcal_mol": 16.321390350009892
+      }
+    }
+  },
+  "records": [
+    {
+      "family": "BHDIV10",
+      "terms": [
+        [
+          "ed1",
+          -1
+        ],
+        [
+          "ts1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 25.65,
+      "error_kcal_mol": 53.47047825234461
+    },
+    {
+      "family": "BHDIV10",
+      "terms": [
+        [
+          "ed3",
+          -1
+        ],
+        [
+          "ts3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 36.53,
+      "error_kcal_mol": -6.297793147949469
+    },
+    {
+      "family": "BHDIV10",
+      "terms": [
+        [
+          "ed4",
+          -1
+        ],
+        [
+          "ts4",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 96.17,
+      "error_kcal_mol": -90.72378680119915
+    },
+    {
+      "family": "BHDIV10",
+      "terms": [
+        [
+          "ed8",
+          -1
+        ],
+        [
+          "ts8",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 50.24,
+      "error_kcal_mol": -33.485137183149135
+    },
+    {
+      "family": "BHDIV10",
+      "terms": [
+        [
+          "ed10",
+          -1
+        ],
+        [
+          "ts10",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 64.93,
+      "error_kcal_mol": 12.968358117243602
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "cis-135-Hexatriene",
+          -1
+        ],
+        [
+          "TS2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 30.8,
+      "error_kcal_mol": -16.165668509828652
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "ortho-xylylene",
+          -1
+        ],
+        [
+          "TS3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 28.1,
+      "error_kcal_mol": -26.17788803505902
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13-Pentadiene",
+          -1
+        ],
+        [
+          "TS4",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 39.7,
+      "error_kcal_mol": -10.951523787615656
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13-Cyclopentadiene",
+          -1
+        ],
+        [
+          "TS5",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 28.3,
+      "error_kcal_mol": -19.4940535114912
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "15-Hexadiene",
+          -1
+        ],
+        [
+          "TS6",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 35.8,
+      "error_kcal_mol": 24.665253517443364
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13-Cyclopentadiene",
+          -1
+        ],
+        [
+          "Ethylene",
+          -1
+        ],
+        [
+          "TS8",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 18.0,
+      "error_kcal_mol": -5.951989282855014
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13-Cyclopentadiene",
+          -2
+        ],
+        [
+          "TS11",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 14.5,
+      "error_kcal_mol": -13.315220160507671
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "Cis-triscyclopropacyclohexane",
+          -1
+        ],
+        [
+          "TS9",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 26.4,
+      "error_kcal_mol": 87.63675384506506
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_2",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_2a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 20.0,
+      "error_kcal_mol": 6.573977154954038
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_3",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_3a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 13.8,
+      "error_kcal_mol": 11.026737882323141
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_4",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_4a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 11.8,
+      "error_kcal_mol": -5.560569917422448
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_5",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_5a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.5,
+      "error_kcal_mol": 5.065326415883789
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_6",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_6a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.7,
+      "error_kcal_mol": -7.7488088240267246
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_7",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_7a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 13.1,
+      "error_kcal_mol": 11.846516540252797
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_8",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_8a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.9,
+      "error_kcal_mol": 25.270255957144148
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "13r_9",
+          -1
+        ],
+        [
+          "13_c2h4",
+          -1
+        ],
+        [
+          "13ts_9a",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 0.5,
+      "error_kcal_mol": 1.6842130107303879
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "02r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "02ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 18.1,
+      "error_kcal_mol": -3.5382597749469884
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "04r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "04ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 22.9,
+      "error_kcal_mol": -7.373593307140246
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "05r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "06ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 27.8,
+      "error_kcal_mol": 6.049548489960262
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "07r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "07ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 21.3,
+      "error_kcal_mol": 11.42746951691046
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "07r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "08ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 21.6,
+      "error_kcal_mol": -5.038753224562789
+    },
+    {
+      "family": "BHPERI",
+      "terms": [
+        [
+          "09r",
+          -1
+        ],
+        [
+          "00r",
+          -1
+        ],
+        [
+          "09ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 31.3,
+      "error_kcal_mol": 12.23683876366125
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "ethane_st",
+          -1
+        ],
+        [
+          "ethane_ecl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.73,
+      "error_kcal_mol": 6.701545611790778
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "tmethane_60",
+          -1
+        ],
+        [
+          "tmethane_0",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 7.01,
+      "error_kcal_mol": -2.9842723985606017
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "tmethane_60",
+          -1
+        ],
+        [
+          "tmethane_120",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.46,
+      "error_kcal_mol": -9.730443721570913
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "tmethane_180",
+          -1
+        ],
+        [
+          "tmethane_120",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.72,
+      "error_kcal_mol": -5.527341726615054
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "methanol_st",
+          -1
+        ],
+        [
+          "methanol_ecl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.01,
+      "error_kcal_mol": -0.28871639561852386
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "methylamine_st",
+          -1
+        ],
+        [
+          "methylamine_ecl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.28,
+      "error_kcal_mol": 2.267910877978843
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "h2o2",
+          -1
+        ],
+        [
+          "h2o2_trans",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.01,
+      "error_kcal_mol": 1.6457196530703027
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "h2o2",
+          -1
+        ],
+        [
+          "h2o2_cis",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 7.17,
+      "error_kcal_mol": -7.248275173667591
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "h2s2",
+          -1
+        ],
+        [
+          "h2s2_trans",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.79,
+      "error_kcal_mol": 3.4931041916861147
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "h2s2",
+          -1
+        ],
+        [
+          "h2s2_cis",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 8.03,
+      "error_kcal_mol": -1.726567995189903
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "n2h4_st1",
+          -1
+        ],
+        [
+          "n2h4_ecl1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.62,
+      "error_kcal_mol": 0.985601012889819
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "n2h4_st1",
+          -1
+        ],
+        [
+          "n2h4_ecl2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 8.41,
+      "error_kcal_mol": -2.9948228865598674
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "nh2oh_st1",
+          -1
+        ],
+        [
+          "nh2oh_ecl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.91,
+      "error_kcal_mol": -7.3809863089338466
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "nh2oh_st2",
+          -1
+        ],
+        [
+          "nh2oh_ecl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.68,
+      "error_kcal_mol": -1.3511906813611896
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "acetamide_RC",
+          -1
+        ],
+        [
+          "acetamide_TS1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 17.24,
+      "error_kcal_mol": -15.704058745722037
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "acetamide_RC",
+          -1
+        ],
+        [
+          "acetamide_TS2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 14.52,
+      "error_kcal_mol": -16.508285885651034
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "biphenyl",
+          -1
+        ],
+        [
+          "biphenyl_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.1,
+      "error_kcal_mol": 12.227827112835419
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "bifuran_anti",
+          -1
+        ],
+        [
+          "bifuran_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.89,
+      "error_kcal_mol": -15.714831655096805
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "bifuran_syn",
+          -1
+        ],
+        [
+          "bifuran_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.09,
+      "error_kcal_mol": -11.29927292841313
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "bithiophene_anti",
+          -1
+        ],
+        [
+          "bithiophene_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.78,
+      "error_kcal_mol": -7.630924763118708
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "bithiophene_syn",
+          -1
+        ],
+        [
+          "bithiophene_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.39,
+      "error_kcal_mol": 0.2578954030041829
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "butadiene_scis",
+          -1
+        ],
+        [
+          "butadiene_TS",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.35,
+      "error_kcal_mol": 0.6810800729779335
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "ethylthiourea_180",
+          -1
+        ],
+        [
+          "ethylthiourea_TS1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 10.36,
+      "error_kcal_mol": 3.1758491086483334
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "ethylthiourea_0",
+          -1
+        ],
+        [
+          "ethylthiourea_TS1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 10.24,
+      "error_kcal_mol": 3.242011514079149
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "ethylthiourea_180",
+          -1
+        ],
+        [
+          "ethylthiourea_TS2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 17.2,
+      "error_kcal_mol": -12.8535823700813
+    },
+    {
+      "family": "BHROT27",
+      "terms": [
+        [
+          "ethylthiourea_0",
+          -1
+        ],
+        [
+          "ethylthiourea_TS2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 17.08,
+      "error_kcal_mol": -12.787419964650478
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "h1",
+          -1
+        ],
+        [
+          "ch4",
+          -4
+        ]
+      ],
+      "reference_kcal_mol": 9.54,
+      "error_kcal_mol": 4.984480214353145
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "h2",
+          -1
+        ],
+        [
+          "ch4",
+          -4
+        ]
+      ],
+      "reference_kcal_mol": 9.5,
+      "error_kcal_mol": 8.907361924773735
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "h3",
+          -1
+        ],
+        [
+          "ch4",
+          -4
+        ]
+      ],
+      "reference_kcal_mol": 11.09,
+      "error_kcal_mol": 3.1846013558768163
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "h4",
+          -1
+        ],
+        [
+          "ch4",
+          -4
+        ]
+      ],
+      "reference_kcal_mol": 8.85,
+      "error_kcal_mol": 8.7353212678394
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "h5",
+          -1
+        ],
+        [
+          "ch4",
+          -4
+        ]
+      ],
+      "reference_kcal_mol": 8.64,
+      "error_kcal_mol": 8.680525808617741
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h6",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 10.81,
+      "error_kcal_mol": 9.688922047122942
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h7",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 12.74,
+      "error_kcal_mol": 9.737049566148674
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h8",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 11.7,
+      "error_kcal_mol": 7.33038001021502
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h9",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 13.2,
+      "error_kcal_mol": 2.654593086461119
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h10",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 11.07,
+      "error_kcal_mol": 3.900012961747815
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h11",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 12.49,
+      "error_kcal_mol": -2.8090829589957407
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h12",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 12.35,
+      "error_kcal_mol": 1.3237430283826712
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h13",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 10.99,
+      "error_kcal_mol": 7.985293134098012
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "h14",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 9.83,
+      "error_kcal_mol": 9.336309980052478
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "h15",
+          -1
+        ],
+        [
+          "ch4",
+          -6
+        ]
+      ],
+      "reference_kcal_mol": 14.27,
+      "error_kcal_mol": 3.4243074310080392
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          5
+        ],
+        [
+          "r1",
+          -1
+        ],
+        [
+          "ch4",
+          -5
+        ]
+      ],
+      "reference_kcal_mol": 2.24,
+      "error_kcal_mol": 4.802944082739438
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "r2",
+          -1
+        ],
+        [
+          "ch4",
+          -6
+        ]
+      ],
+      "reference_kcal_mol": 10.56,
+      "error_kcal_mol": 10.922211836914476
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          6
+        ],
+        [
+          "r3",
+          -1
+        ],
+        [
+          "ch4",
+          -6
+        ]
+      ],
+      "reference_kcal_mol": 6.11,
+      "error_kcal_mol": 8.123470655880762
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r4",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 14.67,
+      "error_kcal_mol": 15.641419150372998
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r5",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 10.21,
+      "error_kcal_mol": 1.6969811423286196
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r6",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 9.78,
+      "error_kcal_mol": 9.443689183389907
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r7",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 8.72,
+      "error_kcal_mol": 6.202981199120414
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r8",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 10.1,
+      "error_kcal_mol": 14.29679719559408
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          7
+        ],
+        [
+          "r9",
+          -1
+        ],
+        [
+          "ch4",
+          -7
+        ]
+      ],
+      "reference_kcal_mol": 9.47,
+      "error_kcal_mol": 12.291837465403525
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          11
+        ],
+        [
+          "r10",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 18.55,
+      "error_kcal_mol": 4.347226179410276
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          11
+        ],
+        [
+          "r11",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 8.93,
+      "error_kcal_mol": -28.664765898333247
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          11
+        ],
+        [
+          "r12",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 14.56,
+      "error_kcal_mol": 12.907960414760971
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          11
+        ],
+        [
+          "r13",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 25.52,
+      "error_kcal_mol": 18.88687110162095
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          11
+        ],
+        [
+          "r14",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 22.86,
+      "error_kcal_mol": 4.54434857292133
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          13
+        ],
+        [
+          "r15",
+          -1
+        ],
+        [
+          "ch4",
+          -14
+        ]
+      ],
+      "reference_kcal_mol": 27.25,
+      "error_kcal_mol": 8.728342432904949
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          12
+        ],
+        [
+          "r16",
+          -1
+        ],
+        [
+          "ch4",
+          -12
+        ]
+      ],
+      "reference_kcal_mol": 24.96,
+      "error_kcal_mol": 11.843767005590506
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          12
+        ],
+        [
+          "c1",
+          -1
+        ],
+        [
+          "ch4",
+          -14
+        ]
+      ],
+      "reference_kcal_mol": 26.82,
+      "error_kcal_mol": -12.465643677962758
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          14
+        ],
+        [
+          "c2",
+          -1
+        ],
+        [
+          "ch4",
+          -16
+        ]
+      ],
+      "reference_kcal_mol": 38.34,
+      "error_kcal_mol": -7.984891254000079
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          14
+        ],
+        [
+          "c3",
+          -1
+        ],
+        [
+          "ch4",
+          -16
+        ]
+      ],
+      "reference_kcal_mol": 31.09,
+      "error_kcal_mol": -24.82821616787613
+    },
+    {
+      "family": "BSR36",
+      "terms": [
+        [
+          "c2h6",
+          18
+        ],
+        [
+          "c5",
+          -1
+        ],
+        [
+          "ch4",
+          -22
+        ]
+      ],
+      "reference_kcal_mol": 45.46,
+      "error_kcal_mol": -15.342638320234224
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R20",
+          -1
+        ],
+        [
+          "P20",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -3.3,
+      "error_kcal_mol": 4.180407126137032
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R21",
+          -1
+        ],
+        [
+          "P20",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.4,
+      "error_kcal_mol": 5.030118388407447
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R22",
+          -1
+        ],
+        [
+          "P22",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -5.9,
+      "error_kcal_mol": -2.8748069965658805
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R25",
+          -1
+        ],
+        [
+          "P25",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -4.8,
+      "error_kcal_mol": 4.597693702395556
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R26",
+          -1
+        ],
+        [
+          "P26",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -2.5,
+      "error_kcal_mol": 3.239688465795837
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R28",
+          -1
+        ],
+        [
+          "P26",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.0,
+      "error_kcal_mol": 4.085422369488995
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R29",
+          -1
+        ],
+        [
+          "P25",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.5,
+      "error_kcal_mol": 6.1181782811354894
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R40",
+          -1
+        ],
+        [
+          "P40",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.7,
+      "error_kcal_mol": 9.906366392937723
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R43",
+          -1
+        ],
+        [
+          "P43",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.9,
+      "error_kcal_mol": 18.968974828516373
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R44",
+          -1
+        ],
+        [
+          "P44",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.7,
+      "error_kcal_mol": -31.847756116210718
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R45",
+          -1
+        ],
+        [
+          "P45",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.2,
+      "error_kcal_mol": -25.96294762779782
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R46",
+          -1
+        ],
+        [
+          "P46",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.7,
+      "error_kcal_mol": -34.97402347666226
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R47",
+          -1
+        ],
+        [
+          "P47",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.8,
+      "error_kcal_mol": -32.42601686312108
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R48",
+          -1
+        ],
+        [
+          "P48",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.4,
+      "error_kcal_mol": -31.701946496385137
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R49",
+          -1
+        ],
+        [
+          "P49",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.2,
+      "error_kcal_mol": 3.6883654014388765
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R51",
+          -1
+        ],
+        [
+          "P51",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.6,
+      "error_kcal_mol": 6.937357904203453
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R52",
+          -1
+        ],
+        [
+          "P52",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.2,
+      "error_kcal_mol": 1.5628187212727458
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R56",
+          -1
+        ],
+        [
+          "P56",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.9,
+      "error_kcal_mol": 5.00870447878471
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R57",
+          -1
+        ],
+        [
+          "P51",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.8,
+      "error_kcal_mol": 9.258228516285389
+    },
+    {
+      "family": "CDIE20",
+      "terms": [
+        [
+          "R60",
+          -1
+        ],
+        [
+          "P60",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 8.6,
+      "error_kcal_mol": 8.505208454640158
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "ethene",
+          -1
+        ],
+        [
+          "cpdiene",
+          -1
+        ],
+        [
+          "P3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -29.9,
+      "error_kcal_mol": -7.656860127086813
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "ethene",
+          -1
+        ],
+        [
+          "chdiene",
+          -1
+        ],
+        [
+          "P5",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -37.6,
+      "error_kcal_mol": 5.335664816819262
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "ethine",
+          -1
+        ],
+        [
+          "chdiene",
+          -1
+        ],
+        [
+          "P6",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -49.0,
+      "error_kcal_mol": -41.282834742279064
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "furane",
+          -1
+        ],
+        [
+          "malein",
+          -1
+        ],
+        [
+          "P7",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -14.0,
+      "error_kcal_mol": 8.107828969073536
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "furane",
+          -1
+        ],
+        [
+          "malein",
+          -1
+        ],
+        [
+          "P7X",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -15.9,
+      "error_kcal_mol": 5.166680385306175
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "furane",
+          -1
+        ],
+        [
+          "maleinNH",
+          -1
+        ],
+        [
+          "P8",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -16.8,
+      "error_kcal_mol": 15.324890032981278
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "furane",
+          -1
+        ],
+        [
+          "maleinNH",
+          -1
+        ],
+        [
+          "P8X",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -18.9,
+      "error_kcal_mol": 22.33925513678957
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "cpdiene",
+          -1
+        ],
+        [
+          "malein",
+          -1
+        ],
+        [
+          "P9",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -31.7,
+      "error_kcal_mol": -24.745960137192792
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "cpdiene",
+          -1
+        ],
+        [
+          "malein",
+          -1
+        ],
+        [
+          "P9X",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -32.2,
+      "error_kcal_mol": -26.380078623447055
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "cpdiene",
+          -1
+        ],
+        [
+          "maleinNH",
+          -1
+        ],
+        [
+          "P10",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -34.2,
+      "error_kcal_mol": -16.47122305493114
+    },
+    {
+      "family": "DARC",
+      "terms": [
+        [
+          "cpdiene",
+          -1
+        ],
+        [
+          "maleinNH",
+          -1
+        ],
+        [
+          "P10X",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -34.6,
+      "error_kcal_mol": -11.816251056339171
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "ISO_E36",
+          1
+        ],
+        [
+          "ISO_P36",
+          -1
+        ]
+      ],
+      "reference_kcal_mol": -1.0,
+      "error_kcal_mol": -9.728525296877267
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "c20cage",
+          -1
+        ],
+        [
+          "c20bowl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -7.7,
+      "error_kcal_mol": -7.195456007870164
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "heptatriyne",
+          1
+        ],
+        [
+          "heptahexaene",
+          -1
+        ]
+      ],
+      "reference_kcal_mol": -15.2,
+      "error_kcal_mol": 48.45707496097839
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "tmethen",
+          -2
+        ],
+        [
+          "omcb",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -18.8,
+      "error_kcal_mol": -20.779955130083707
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "ISO_E35",
+          1
+        ],
+        [
+          "ISO_P35",
+          -1
+        ]
+      ],
+      "reference_kcal_mol": -22.9,
+      "error_kcal_mol": 59.23189219930469
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "carbooxo2",
+          -1
+        ],
+        [
+          "carbooxo1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -25.7,
+      "error_kcal_mol": 10.205874866583073
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "ethen",
+          -1
+        ],
+        [
+          "ch2n2",
+          -1
+        ],
+        [
+          "13dip",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -38.9,
+      "error_kcal_mol": -33.583156282038786
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "o3",
+          -1
+        ],
+        [
+          "c2h2",
+          -1
+        ],
+        [
+          "o3_c2h2_add",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -65.3,
+      "error_kcal_mol": -37.99434439796065
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "o3",
+          -1
+        ],
+        [
+          "c2h4",
+          -1
+        ],
+        [
+          "o3_c2h4_add",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -58.7,
+      "error_kcal_mol": -31.889650254628528
+    },
+    {
+      "family": "DC13",
+      "terms": [
+        [
+          "C6Cl6",
+          -1
+        ],
+        [
+          "HCL",
+          -6
+        ],
+        [
+          "C6H6",
+          1
+        ],
+        [
+          "CL2",
+          6
+        ]
+      ],
+      "reference_kcal_mol": 152.6,
+      "error_kcal_mol": -2.8377308082421733
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "trans-2-pentene",
+          -1
+        ],
+        [
+          "H2O2",
+          -1
+        ],
+        [
+          "pentanediol",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -78.51,
+      "error_kcal_mol": 21.140851650424548
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "C2H5O_2",
+          -1
+        ],
+        [
+          "C2H4OH_2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -58.53,
+      "error_kcal_mol": 21.778049333203807
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "ax-methylcyclohexene",
+          -1
+        ],
+        [
+          "eq-methylcyclohexene",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -52.6,
+      "error_kcal_mol": 1.4503294241166884
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "C3H7NH2",
+          -2
+        ],
+        [
+          "COCl2",
+          -1
+        ],
+        [
+          "CO_2NHC3H7_2",
+          1
+        ],
+        [
+          "HCl",
+          2
+        ]
+      ],
+      "reference_kcal_mol": -32.47,
+      "error_kcal_mol": -18.913863660170335
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "trans-2-pentene",
+          -1
+        ],
+        [
+          "Cl2",
+          -1
+        ],
+        [
+          "C2H5CClCHCH3",
+          1
+        ],
+        [
+          "HCl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -31.22,
+      "error_kcal_mol": -4.435847929781076
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "2-pentyne",
+          -1
+        ],
+        [
+          "HCl",
+          -1
+        ],
+        [
+          "C2H5CClCHCH3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -29.98,
+      "error_kcal_mol": -33.60993687953273
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "1-pentene",
+          -1
+        ],
+        [
+          "ethene",
+          -1
+        ],
+        [
+          "Heptene",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -25.84,
+      "error_kcal_mol": -12.068473072642467
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "C3H7CO2C2H3",
+          -1
+        ],
+        [
+          "ethyl-g-butyrolactone",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -16.14,
+      "error_kcal_mol": 0.12029793948569123
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "H2C-C5-CH2",
+          -1
+        ],
+        [
+          "heptatriyne",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -14.3,
+      "error_kcal_mol": 43.427092245050844
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "methylpyrazole",
+          -1
+        ],
+        [
+          "methylimidazole",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -13.14,
+      "error_kcal_mol": -13.487453657597667
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "hexandione",
+          -1
+        ],
+        [
+          "methyl-d-valerolactone",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -6.45,
+      "error_kcal_mol": -36.99028461624383
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "C4H9ONO",
+          -1
+        ],
+        [
+          "C4H9NO2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -3.25,
+      "error_kcal_mol": 67.79463915018039
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "n-hexane",
+          -1
+        ],
+        [
+          "neo-hexane",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -2.64,
+      "error_kcal_mol": 3.34731443307865
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "methylcyclohexa-14-diene",
+          -1
+        ],
+        [
+          "methylcyclohexa-13-diene",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -2.48,
+      "error_kcal_mol": 7.095686828125002
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "1-pentene",
+          -1
+        ],
+        [
+          "trans-2-pentene",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -2.11,
+      "error_kcal_mol": 0.9406303447408034
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "cis-2-pentene",
+          -1
+        ],
+        [
+          "trans-2-pentene",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -1.15,
+      "error_kcal_mol": -1.8946583641344872
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "3-methylpentane",
+          -1
+        ],
+        [
+          "dimethylbutane",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -0.86,
+      "error_kcal_mol": -1.8236898870955265
+    },
+    {
+      "family": "FH51",
+      "terms": [
+        [
+          "n-nonane",
+          -1
+        ],
+        [
+          "tetramethylpentane",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -0.41,
+      "error_kcal_mol": 9.789836792202403
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E1",
+          -1
+        ],
+        [
+          "P1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.49,
+      "error_kcal_mol": -25.695601235478307
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E1",
+          -1
+        ],
+        [
+          "P2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 23.36,
+      "error_kcal_mol": -14.717538428263683
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E3",
+          -1
+        ],
+        [
+          "P3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 7.27,
+      "error_kcal_mol": 13.82848648140236
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E4",
+          -1
+        ],
+        [
+          "P4",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.06,
+      "error_kcal_mol": 2.4432891593027346
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E5",
+          -1
+        ],
+        [
+          "E4",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.23,
+      "error_kcal_mol": 3.4816731418824234
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E4",
+          -1
+        ],
+        [
+          "P6",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.49,
+      "error_kcal_mol": -3.065037767334498
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E7",
+          -1
+        ],
+        [
+          "P7",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 11.15,
+      "error_kcal_mol": 43.91866869205769
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E8",
+          -1
+        ],
+        [
+          "P8",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 22.59,
+      "error_kcal_mol": 21.204380540149685
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E9",
+          -1
+        ],
+        [
+          "P9",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.54,
+      "error_kcal_mol": 1.7414587615462385
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E10",
+          -1
+        ],
+        [
+          "P10",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 3.8,
+      "error_kcal_mol": -0.25755189746011603
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E11",
+          -1
+        ],
+        [
+          "P11",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.58,
+      "error_kcal_mol": -12.99697326169105
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E12",
+          -1
+        ],
+        [
+          "P12",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 45.65,
+      "error_kcal_mol": -28.626854055480845
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E13",
+          -1
+        ],
+        [
+          "P13",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 36.85,
+      "error_kcal_mol": -17.171833166235267
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E14",
+          -1
+        ],
+        [
+          "P14",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 24.58,
+      "error_kcal_mol": 28.738234557242695
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E15",
+          -1
+        ],
+        [
+          "P15",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 8.25,
+      "error_kcal_mol": -19.46747835416571
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E16",
+          -1
+        ],
+        [
+          "P16",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 10.02,
+      "error_kcal_mol": -3.187294609483685
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E17",
+          -1
+        ],
+        [
+          "P17",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 28.51,
+      "error_kcal_mol": -29.335317597499188
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E18",
+          -1
+        ],
+        [
+          "P18",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 11.68,
+      "error_kcal_mol": 11.408943336321158
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E19",
+          -1
+        ],
+        [
+          "E20",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.58,
+      "error_kcal_mol": -3.670131084751744
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E20",
+          -1
+        ],
+        [
+          "P20",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 18.12,
+      "error_kcal_mol": 18.726228280958548
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E21",
+          -1
+        ],
+        [
+          "P21",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.16,
+      "error_kcal_mol": -7.7883885964502975
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E22",
+          -1
+        ],
+        [
+          "E21",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.65,
+      "error_kcal_mol": 11.077002451992145
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E23",
+          -1
+        ],
+        [
+          "P23",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.54,
+      "error_kcal_mol": -4.369355151525704
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E24",
+          -1
+        ],
+        [
+          "P24",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 12.26,
+      "error_kcal_mol": -31.136094396949822
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E25",
+          -1
+        ],
+        [
+          "P25",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 26.14,
+      "error_kcal_mol": -9.095139069245786
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E26",
+          -1
+        ],
+        [
+          "P26",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 17.14,
+      "error_kcal_mol": -33.686096424167275
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E27",
+          -1
+        ],
+        [
+          "P27",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 66.06,
+      "error_kcal_mol": -44.53969763789184
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E28",
+          -1
+        ],
+        [
+          "P28",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 31.26,
+      "error_kcal_mol": -10.701051032387175
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E29",
+          -1
+        ],
+        [
+          "P29",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 13.05,
+      "error_kcal_mol": 4.9750066286651125
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E30",
+          -1
+        ],
+        [
+          "P30",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 9.98,
+      "error_kcal_mol": -19.3128930756054
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E31",
+          -1
+        ],
+        [
+          "P31",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 15.23,
+      "error_kcal_mol": 2.446004224599304
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E32",
+          -1
+        ],
+        [
+          "P32",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.64,
+      "error_kcal_mol": 28.233817273564306
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E33",
+          -1
+        ],
+        [
+          "P33",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 8.7,
+      "error_kcal_mol": -50.05292727207054
+    },
+    {
+      "family": "ISO34",
+      "terms": [
+        [
+          "E34",
+          -1
+        ],
+        [
+          "P34",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.77,
+      "error_kcal_mol": -18.171314654193953
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i3e",
+          -1
+        ],
+        [
+          "i3p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 10.69,
+      "error_kcal_mol": 36.16091940527594
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i5e",
+          -1
+        ],
+        [
+          "i5p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 33.08,
+      "error_kcal_mol": 17.82560383860321
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i9e",
+          -1
+        ],
+        [
+          "i9p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 21.09,
+      "error_kcal_mol": -12.122276081504477
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i10e",
+          -1
+        ],
+        [
+          "i10p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.49,
+      "error_kcal_mol": -19.93122524609305
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i11e",
+          -1
+        ],
+        [
+          "i11p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 36.9,
+      "error_kcal_mol": 6.629023198927251
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i13e",
+          -1
+        ],
+        [
+          "i13p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 33.02,
+      "error_kcal_mol": -8.185495561884297
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i14e",
+          -1
+        ],
+        [
+          "i14p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.32,
+      "error_kcal_mol": -21.840483616421725
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i19e",
+          -1
+        ],
+        [
+          "i19p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 18.04,
+      "error_kcal_mol": -3.0869695533753103
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i20e",
+          -1
+        ],
+        [
+          "i20p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.97,
+      "error_kcal_mol": 9.560113139866326
+    },
+    {
+      "family": "ISOL24",
+      "terms": [
+        [
+          "i21e",
+          -1
+        ],
+        [
+          "i21p",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 11.9,
+      "error_kcal_mol": -9.93581585908555
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "nh3_2",
+          -1
+        ],
+        [
+          "nh3_2_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 59.3,
+      "error_kcal_mol": 3.0679941874450987
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "nh3_3",
+          -1
+        ],
+        [
+          "nh3_3_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 46.9,
+      "error_kcal_mol": -11.12986002399783
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "nh3_4",
+          -1
+        ],
+        [
+          "nh3_4_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 48.4,
+      "error_kcal_mol": -5.702789211325034
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "h2o_2",
+          -1
+        ],
+        [
+          "h2o_2_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 48.6,
+      "error_kcal_mol": 22.27653232449731
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "h2o_3",
+          -1
+        ],
+        [
+          "h2o_3_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 29.8,
+      "error_kcal_mol": 3.471334006399096
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "h2o_4",
+          -1
+        ],
+        [
+          "h2o_4_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 26.6,
+      "error_kcal_mol": -27.258892215202295
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "h2o_5",
+          -1
+        ],
+        [
+          "h2o_5_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 30.1,
+      "error_kcal_mol": -15.647507689088181
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "h2o_6",
+          -1
+        ],
+        [
+          "h2o_6_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 35.1,
+      "error_kcal_mol": 3.6536434326027813
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "hf_2",
+          -1
+        ],
+        [
+          "hf_2_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 42.3,
+      "error_kcal_mol": -14.933244982682668
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "hf_3",
+          -1
+        ],
+        [
+          "hf_3_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 20.7,
+      "error_kcal_mol": 9.653731475328975
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "hf_4",
+          -1
+        ],
+        [
+          "hf_4_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 14.7,
+      "error_kcal_mol": -3.538486681435853
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "hf_5",
+          -1
+        ],
+        [
+          "hf_5_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 14.6,
+      "error_kcal_mol": 1.7671001379777498
+    },
+    {
+      "family": "PX13",
+      "terms": [
+        [
+          "hf_6",
+          -1
+        ],
+        [
+          "hf_6_ts",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 16.6,
+      "error_kcal_mol": -7.256133535182847
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "1a",
+          -1
+        ],
+        [
+          "1b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 4.3,
+      "error_kcal_mol": -21.14795112121816
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "2a",
+          -1
+        ],
+        [
+          "2b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 6.56,
+      "error_kcal_mol": -30.5959125035529
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "3a",
+          -1
+        ],
+        [
+          "3b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -5.44,
+      "error_kcal_mol": -5.649060969663766
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "3a",
+          -1
+        ],
+        [
+          "3c",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 5.25,
+      "error_kcal_mol": -4.442677955928369
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "3a",
+          -1
+        ],
+        [
+          "3d",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 13.03,
+      "error_kcal_mol": -29.452518792805762
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "4a",
+          -1
+        ],
+        [
+          "4b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 0.93,
+      "error_kcal_mol": 9.54410790475246
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "5a",
+          -1
+        ],
+        [
+          "5b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 0.74,
+      "error_kcal_mol": 18.943852330524315
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "5a",
+          -1
+        ],
+        [
+          "5c",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 1.45,
+      "error_kcal_mol": 23.314590400611454
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "6a",
+          -1
+        ],
+        [
+          "6b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -0.17,
+      "error_kcal_mol": 6.272097200223143
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "6a",
+          -1
+        ],
+        [
+          "6c",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -0.87,
+      "error_kcal_mol": 9.108917653456599
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "6a",
+          -1
+        ],
+        [
+          "6d",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.85,
+      "error_kcal_mol": -2.064437939066992
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "7a",
+          -1
+        ],
+        [
+          "7b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 2.15,
+      "error_kcal_mol": -25.171909715507535
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "8a",
+          -1
+        ],
+        [
+          "8b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 0.55,
+      "error_kcal_mol": 8.666284857949991
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "9a",
+          -1
+        ],
+        [
+          "9b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 0.95,
+      "error_kcal_mol": -12.826057600853543
+    },
+    {
+      "family": "TAUT15",
+      "terms": [
+        [
+          "10a",
+          -1
+        ],
+        [
+          "10b",
+          1
+        ]
+      ],
+      "reference_kcal_mol": -0.45,
+      "error_kcal_mol": -5.270051752665404
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch4",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "h",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 420.42,
+      "error_kcal_mol": -13.869948592617357
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ph3",
+          -1
+        ],
+        [
+          "p",
+          1
+        ],
+        [
+          "h",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 242.267,
+      "error_kcal_mol": -16.991376931472853
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2h6",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "h",
+          6
+        ]
+      ],
+      "reference_kcal_mol": 713.08,
+      "error_kcal_mol": -7.026812329798546
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "propane",
+          -1
+        ],
+        [
+          "c",
+          3
+        ],
+        [
+          "h",
+          8
+        ]
+      ],
+      "reference_kcal_mol": 1007.909,
+      "error_kcal_mol": 2.7157325604554607
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch2-sing",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 181.456,
+      "error_kcal_mol": 20.116622637553338
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2h5f",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "h",
+          5
+        ],
+        [
+          "f",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 721.502,
+      "error_kcal_mol": -3.0296182058995584
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch3nh2",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          5
+        ]
+      ],
+      "reference_kcal_mol": 582.301,
+      "error_kcal_mol": 1.0681253192221327
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch3f",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "f",
+          1
+        ],
+        [
+          "h",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 422.959,
+      "error_kcal_mol": 3.6126310640927226
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ethanol",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          6
+        ]
+      ],
+      "reference_kcal_mol": 811.241,
+      "error_kcal_mol": -1.6714573467291367
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2h4",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "h",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 564.095,
+      "error_kcal_mol": 4.027978798365473
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "methanol",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 513.501,
+      "error_kcal_mol": -6.639753661621447
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hcl",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "cl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 107.499,
+      "error_kcal_mol": -24.242865460179104
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hf",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "f",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 141.64,
+      "error_kcal_mol": -57.5487922437975
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2h3f",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "f",
+          1
+        ],
+        [
+          "h",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 573.892,
+      "error_kcal_mol": 0.4968462495277196
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch2f2",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "f",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 437.668,
+      "error_kcal_mol": 9.397279093496325
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch2c",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 359.934,
+      "error_kcal_mol": -5.977962127825968
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "n2h4",
+          -1
+        ],
+        [
+          "h",
+          4
+        ],
+        [
+          "n",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 438.281,
+      "error_kcal_mol": 17.514197587759657
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ch2nh",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 439.441,
+      "error_kcal_mol": 1.278547487917671
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2h2",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 405.525,
+      "error_kcal_mol": -5.787598201323086
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "h2co",
+          -1
+        ],
+        [
+          "h",
+          2
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 374.658,
+      "error_kcal_mol": -12.200361779345249
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "t-hcoh",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 322.477,
+      "error_kcal_mol": -20.02631260024177
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c-hcoh",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 317.647,
+      "error_kcal_mol": -14.084597156283964
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ketene",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 533.462,
+      "error_kcal_mol": -13.079674565630798
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "formic",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 501.899,
+      "error_kcal_mol": -57.66048200995411
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "glyoxal",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "o",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 635.101,
+      "error_kcal_mol": -19.503056364464857
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hcof",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "f",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 403.743,
+      "error_kcal_mol": -12.011187548542209
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "nh2cl",
+          -1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "cl",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 248.059,
+      "error_kcal_mol": -16.31939802634627
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cf4",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "f",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 478.76,
+      "error_kcal_mol": 1.0665079616034687
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hccf",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "f",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 398.472,
+      "error_kcal_mol": -2.0342210818983433
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "oxirene",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 456.072,
+      "error_kcal_mol": -9.693489372667988
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "f2co",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "f",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 420.636,
+      "error_kcal_mol": 2.060113321076802
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hocn",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 410.066,
+      "error_kcal_mol": -3.8337273055035146
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hooh",
+          -1
+        ],
+        [
+          "h",
+          2
+        ],
+        [
+          "o",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 269.089,
+      "error_kcal_mol": 15.253419988610458
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "t-n2h2",
+          -1
+        ],
+        [
+          "h",
+          2
+        ],
+        [
+          "n",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 296.534,
+      "error_kcal_mol": 2.058539567055418
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hnco",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 434.737,
+      "error_kcal_mol": -24.02412992811351
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c-n2h2",
+          -1
+        ],
+        [
+          "h",
+          2
+        ],
+        [
+          "n",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 291.135,
+      "error_kcal_mol": 8.475600185664803
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cf2",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "f",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 258.782,
+      "error_kcal_mol": -42.41212386811998
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "fccf",
+          -1
+        ],
+        [
+          "c",
+          2
+        ],
+        [
+          "f",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 386.087,
+      "error_kcal_mol": 17.284844457109838
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "dioxirane",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          2
+        ],
+        [
+          "h",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 410.029,
+      "error_kcal_mol": -17.378049340655995
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hocl",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "cl",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 166.229,
+      "error_kcal_mol": 5.498742819671035
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "nccn",
+          -1
+        ],
+        [
+          "n",
+          2
+        ],
+        [
+          "c",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 502.037,
+      "error_kcal_mol": -10.287932503602601
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ocs",
+          -1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "s",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 335.747,
+      "error_kcal_mol": -57.06246032990133
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "clcn",
+          -1
+        ],
+        [
+          "cl",
+          1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "n",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 285.447,
+      "error_kcal_mol": -36.33150630275925
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hcno",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 364.971,
+      "error_kcal_mol": -15.835379846483956
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "honc",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "h",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 350.149,
+      "error_kcal_mol": 17.606379781747176
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hno",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "o",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 205.89,
+      "error_kcal_mol": -1.1882780117324208
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hof",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "o",
+          1
+        ],
+        [
+          "f",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 158.653,
+      "error_kcal_mol": -13.388354669222261
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c-hono",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "o",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 312.219,
+      "error_kcal_mol": 2.4873070530410435
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "t-hono",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "n",
+          1
+        ],
+        [
+          "o",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 312.649,
+      "error_kcal_mol": -4.439858124332674
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cs2",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "s",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 280.778,
+      "error_kcal_mol": 7.372348032793909
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "hnnn",
+          -1
+        ],
+        [
+          "h",
+          1
+        ],
+        [
+          "n",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 331.785,
+      "error_kcal_mol": -34.9458763354653
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cs",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "s",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 172.218,
+      "error_kcal_mol": -31.330109997086375
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "so3",
+          -1
+        ],
+        [
+          "s",
+          1
+        ],
+        [
+          "o",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 346.943,
+      "error_kcal_mol": -17.123387341513343
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "ccl2",
+          -1
+        ],
+        [
+          "c",
+          1
+        ],
+        [
+          "cl",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 177.357,
+      "error_kcal_mol": 3.4643633938103857
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "p4",
+          -1
+        ],
+        [
+          "p",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 290.578,
+      "error_kcal_mol": -0.3069725589299785
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cl2",
+          -1
+        ],
+        [
+          "cl",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 59.75,
+      "error_kcal_mol": -31.652150311993342
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "f2",
+          -1
+        ],
+        [
+          "f",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 39.042,
+      "error_kcal_mol": -13.769941138406828
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "s2o",
+          -1
+        ],
+        [
+          "s",
+          2
+        ],
+        [
+          "o",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 208.781,
+      "error_kcal_mol": -15.18620531799118
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "p2",
+          -1
+        ],
+        [
+          "p",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 117.593,
+      "error_kcal_mol": -43.27267210056637
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "clf",
+          -1
+        ],
+        [
+          "cl",
+          1
+        ],
+        [
+          "f",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 62.8,
+      "error_kcal_mol": -23.502349109757205
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "s3",
+          -1
+        ],
+        [
+          "s",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 168.364,
+      "error_kcal_mol": -2.905466798273302
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "cl2o",
+          -1
+        ],
+        [
+          "cl",
+          2
+        ],
+        [
+          "o",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 101.457,
+      "error_kcal_mol": -37.313495630837224
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "s4-c2v",
+          -1
+        ],
+        [
+          "s",
+          4
+        ]
+      ],
+      "reference_kcal_mol": 234.348,
+      "error_kcal_mol": -16.93178819867255
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "c2",
+          -1
+        ],
+        [
+          "c",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 147.023,
+      "error_kcal_mol": 9.964150707343183
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "f2o",
+          -1
+        ],
+        [
+          "f",
+          2
+        ],
+        [
+          "o",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 93.78,
+      "error_kcal_mol": -3.866416020799902
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "foof",
+          -1
+        ],
+        [
+          "f",
+          2
+        ],
+        [
+          "o",
+          2
+        ]
+      ],
+      "reference_kcal_mol": 152.369,
+      "error_kcal_mol": -4.976637633050344
+    },
+    {
+      "family": "W4-11",
+      "terms": [
+        [
+          "o3",
+          -1
+        ],
+        [
+          "o",
+          3
+        ]
+      ],
+      "reference_kcal_mol": 147.428,
+      "error_kcal_mol": -17.950704249432007
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac1",
+          -1
+        ],
+        [
+          "ts1",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 36.76,
+      "error_kcal_mol": -23.48846450676229
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac2",
+          -1
+        ],
+        [
+          "ts2",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 36.21,
+      "error_kcal_mol": -1.920201562852584
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac3",
+          -1
+        ],
+        [
+          "ts3",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 60.95,
+      "error_kcal_mol": -18.84141444992322
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac4",
+          -1
+        ],
+        [
+          "ts4",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 47.52,
+      "error_kcal_mol": -24.451248501862313
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac5",
+          -1
+        ],
+        [
+          "ts5",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 65.68,
+      "error_kcal_mol": -17.739553169258
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac7",
+          -1
+        ],
+        [
+          "ts7",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 32.0,
+      "error_kcal_mol": -12.699605658263915
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac8",
+          -1
+        ],
+        [
+          "ts8",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 28.97,
+      "error_kcal_mol": 1.4078400248359881
+    },
+    {
+      "family": "WCPT18",
+      "terms": [
+        [
+          "reac9",
+          -1
+        ],
+        [
+          "ts9",
+          1
+        ]
+      ],
+      "reference_kcal_mol": 58.8,
+      "error_kcal_mol": -12.037064795966023
+    }
+  ]
+}

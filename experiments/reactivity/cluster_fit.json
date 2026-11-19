@@ -1,0 +1,652 @@
+{
+  "checkpoint": "pbe0-stationary-df7ccc830df1c4c0.npz",
+  "backbone": "pbe0-4bbc373a85b6345a.npz",
+  "fit_seconds": 3.1798083989997394,
+  "training_molecules": [
+    "methanol",
+    "methylamine",
+    "hydrazine",
+    "hydroxylamine",
+    "hydrogen peroxide",
+    "dimethyl ether",
+    "ethane",
+    "ethylene",
+    "formaldehyde"
+  ],
+  "development": [
+    "ethanol"
+  ],
+  "bare_force_secants": [
+    [
+      "7077",
+      "Geom-m7077-i1-c1-opt",
+      "Geom-m7077-i1-c1-d49"
+    ],
+    [
+      "7077",
+      "Geom-m7077-i1-c1-opt",
+      "Geom-m7077-i1-c1-d30"
+    ],
+    [
+      "7168",
+      "Geom-m7168-i1-c1-opt",
+      "Geom-m7168-i1-c1-d33"
+    ],
+    [
+      "7168",
+      "Geom-m7168-i1-c1-opt",
+      "Geom-m7168-i1-c1-d7"
+    ],
+    [
+      "7194",
+      "Geom-m7194-i1-c1-opt",
+      "Geom-m7194-i1-c1-d3"
+    ],
+    [
+      "7194",
+      "Geom-m7194-i1-c1-opt",
+      "Geom-m7194-i1-c1-d5"
+    ],
+    [
+      "7042",
+      "Geom-m7042-i1-c1-opt",
+      "Geom-m7042-i1-c1-d17"
+    ],
+    [
+      "7042",
+      "Geom-m7042-i1-c1-opt",
+      "Geom-m7042-i1-c1-d66"
+    ],
+    [
+      "7174",
+      "Geom-m7174-i1-c1-opt",
+      "Geom-m7174-i1-c1-d12"
+    ],
+    [
+      "7174",
+      "Geom-m7174-i1-c1-opt",
+      "Geom-m7174-i1-c1-d45"
+    ],
+    [
+      "7119",
+      "Geom-m7119-i1-c1-opt",
+      "Geom-m7119-i1-c1-d34"
+    ],
+    [
+      "7119",
+      "Geom-m7119-i1-c1-opt",
+      "Geom-m7119-i1-c1-d75"
+    ],
+    [
+      "7211",
+      "Geom-m7211-i1-c1-opt",
+      "Geom-m7211-i1-c1-d30"
+    ],
+    [
+      "7211",
+      "Geom-m7211-i1-c1-opt",
+      "Geom-m7211-i1-c1-d13"
+    ],
+    [
+      "7006",
+      "Geom-m7006-i1-c1-opt",
+      "Geom-m7006-i1-c1-d44"
+    ],
+    [
+      "7006",
+      "Geom-m7006-i1-c1-opt",
+      "Geom-m7006-i1-c1-d28"
+    ],
+    [
+      "7153",
+      "Geom-m7153-i1-c1-opt",
+      "Geom-m7153-i1-c1-d56"
+    ],
+    [
+      "7153",
+      "Geom-m7153-i1-c1-opt",
+      "Geom-m7153-i1-c1-d40"
+    ],
+    [
+      "7114",
+      "Geom-m7114-i1-c1-opt",
+      "Geom-m7114-i1-c1-d17"
+    ],
+    [
+      "7114",
+      "Geom-m7114-i1-c1-opt",
+      "Geom-m7114-i1-c1-d50"
+    ],
+    [
+      "7022",
+      "Geom-m7022-i1-c1-opt",
+      "Geom-m7022-i1-c1-d27"
+    ],
+    [
+      "7022",
+      "Geom-m7022-i1-c1-opt",
+      "Geom-m7022-i1-c1-d24"
+    ],
+    [
+      "7134",
+      "Geom-m7134-i1-c1-opt",
+      "Geom-m7134-i1-c1-d51"
+    ],
+    [
+      "7134",
+      "Geom-m7134-i1-c1-opt",
+      "Geom-m7134-i1-c1-d15"
+    ],
+    [
+      "7123",
+      "Geom-m7123-i1-c1-opt",
+      "Geom-m7123-i1-c1-d50"
+    ],
+    [
+      "7123",
+      "Geom-m7123-i1-c1-opt",
+      "Geom-m7123-i1-c1-d29"
+    ],
+    [
+      "7148",
+      "Geom-m7148-i1-c1-opt",
+      "Geom-m7148-i1-c1-d36"
+    ],
+    [
+      "7148",
+      "Geom-m7148-i1-c1-opt",
+      "Geom-m7148-i1-c1-d2"
+    ],
+    [
+      "7099",
+      "Geom-m7099-i1-c1-opt",
+      "Geom-m7099-i1-c1-d8"
+    ],
+    [
+      "7099",
+      "Geom-m7099-i1-c1-opt",
+      "Geom-m7099-i1-c1-d61"
+    ],
+    [
+      "7177",
+      "Geom-m7177-i1-c1-opt",
+      "Geom-m7177-i1-c1-d11"
+    ],
+    [
+      "7177",
+      "Geom-m7177-i1-c1-opt",
+      "Geom-m7177-i1-c1-d44"
+    ],
+    [
+      "7169",
+      "Geom-m7169-i1-c1-opt",
+      "Geom-m7169-i1-c1-d5"
+    ],
+    [
+      "7169",
+      "Geom-m7169-i1-c1-opt",
+      "Geom-m7169-i1-c1-d45"
+    ],
+    [
+      "7171",
+      "Geom-m7171-i1-c1-opt",
+      "Geom-m7171-i1-c1-d16"
+    ],
+    [
+      "7171",
+      "Geom-m7171-i1-c1-opt",
+      "Geom-m7171-i1-c1-d36"
+    ],
+    [
+      "7089",
+      "Geom-m7089-i1-c1-opt",
+      "Geom-m7089-i1-c1-d33"
+    ],
+    [
+      "7089",
+      "Geom-m7089-i1-c1-opt",
+      "Geom-m7089-i1-c1-d22"
+    ],
+    [
+      "7015",
+      "Geom-m7015-i1-c1-opt",
+      "Geom-m7015-i1-c1-d55"
+    ],
+    [
+      "7015",
+      "Geom-m7015-i1-c1-opt",
+      "Geom-m7015-i1-c1-d23"
+    ],
+    [
+      "7088",
+      "Geom-m7088-i1-c1-opt",
+      "Geom-m7088-i1-c1-d39"
+    ],
+    [
+      "7088",
+      "Geom-m7088-i1-c1-opt",
+      "Geom-m7088-i1-c1-d17"
+    ],
+    [
+      "7172",
+      "Geom-m7172-i1-c1-opt",
+      "Geom-m7172-i1-c1-d37"
+    ],
+    [
+      "7172",
+      "Geom-m7172-i1-c1-opt",
+      "Geom-m7172-i1-c1-d46"
+    ],
+    [
+      "7104",
+      "Geom-m7104-i1-c1-opt",
+      "Geom-m7104-i1-c1-d18"
+    ],
+    [
+      "7104",
+      "Geom-m7104-i1-c1-opt",
+      "Geom-m7104-i1-c1-d15"
+    ],
+    [
+      "7190",
+      "Geom-m7190-i1-c1-opt",
+      "Geom-m7190-i1-c1-d42"
+    ],
+    [
+      "7190",
+      "Geom-m7190-i1-c1-opt",
+      "Geom-m7190-i1-c1-d24"
+    ],
+    [
+      "7076",
+      "Geom-m7076-i1-c1-opt",
+      "Geom-m7076-i1-c1-d32"
+    ],
+    [
+      "7076",
+      "Geom-m7076-i1-c1-opt",
+      "Geom-m7076-i1-c1-d39"
+    ],
+    [
+      "7204",
+      "Geom-m7204-i1-c1-opt",
+      "Geom-m7204-i1-c1-d80"
+    ],
+    [
+      "7204",
+      "Geom-m7204-i1-c1-opt",
+      "Geom-m7204-i1-c1-d33"
+    ],
+    [
+      "7182",
+      "Geom-m7182-i1-c1-opt",
+      "Geom-m7182-i1-c1-d14"
+    ],
+    [
+      "7182",
+      "Geom-m7182-i1-c1-opt",
+      "Geom-m7182-i1-c1-d22"
+    ],
+    [
+      "7167",
+      "Geom-m7167-i1-c1-opt",
+      "Geom-m7167-i1-c1-d82"
+    ],
+    [
+      "7167",
+      "Geom-m7167-i1-c1-opt",
+      "Geom-m7167-i1-c1-d21"
+    ],
+    [
+      "7055",
+      "Geom-m7055-i1-c1-opt",
+      "Geom-m7055-i1-c1-d36"
+    ],
+    [
+      "7055",
+      "Geom-m7055-i1-c1-opt",
+      "Geom-m7055-i1-c1-d79"
+    ],
+    [
+      "7162",
+      "Geom-m7162-i1-c1-opt",
+      "Geom-m7162-i1-c1-d41"
+    ],
+    [
+      "7162",
+      "Geom-m7162-i1-c1-opt",
+      "Geom-m7162-i1-c1-d26"
+    ],
+    [
+      "7139",
+      "Geom-m7139-i1-c1-opt",
+      "Geom-m7139-i1-c1-d55"
+    ],
+    [
+      "7139",
+      "Geom-m7139-i1-c1-opt",
+      "Geom-m7139-i1-c1-d70"
+    ],
+    [
+      "7031",
+      "Geom-m7031-i1-c1-opt",
+      "Geom-m7031-i1-c1-d93"
+    ],
+    [
+      "7031",
+      "Geom-m7031-i1-c1-opt",
+      "Geom-m7031-i1-c1-d100"
+    ]
+  ],
+  "evaluations": 10,
+  "training_cost_before": 557.2584374449835,
+  "training_cost_after": 133.1451386568848,
+  "reference_geometry_scores_before": {
+    "methanol": {
+      "force_rms_eV_A": 0.20786183128757812,
+      "spectrum_mae_cm1": 553.076183528376,
+      "imaginary_modes": 2
+    },
+    "methylamine": {
+      "force_rms_eV_A": 0.24964671353921042,
+      "spectrum_mae_cm1": 439.3302950722131,
+      "imaginary_modes": 1
+    },
+    "hydrazine": {
+      "force_rms_eV_A": 0.5612242311698686,
+      "spectrum_mae_cm1": 599.3953245001684,
+      "imaginary_modes": 2
+    },
+    "hydroxylamine": {
+      "force_rms_eV_A": 0.688840536692491,
+      "spectrum_mae_cm1": 1092.6703901917672,
+      "imaginary_modes": 4
+    },
+    "hydrogen peroxide": {
+      "force_rms_eV_A": 2.764017470426173,
+      "spectrum_mae_cm1": 926.506253951456,
+      "imaginary_modes": 2
+    },
+    "dimethyl ether": {
+      "force_rms_eV_A": 0.1324403803061938,
+      "spectrum_mae_cm1": 429.8291207548632,
+      "imaginary_modes": 1
+    },
+    "ethane": {
+      "force_rms_eV_A": 0.06992019720560044,
+      "spectrum_mae_cm1": 346.10794306739405,
+      "imaginary_modes": 0
+    },
+    "ethylene": {
+      "force_rms_eV_A": 0.2190897012505202,
+      "spectrum_mae_cm1": 414.53759190803794,
+      "imaginary_modes": 0
+    },
+    "formaldehyde": {
+      "force_rms_eV_A": 0.41298390734126367,
+      "spectrum_mae_cm1": 386.64122192416045,
+      "imaginary_modes": 0
+    },
+    "ethanol": {
+      "force_rms_eV_A": 0.21140052943622492,
+      "spectrum_mae_cm1": 371.247996886073,
+      "imaginary_modes": 2
+    }
+  },
+  "reference_geometry_scores_after": {
+    "methanol": {
+      "force_rms_eV_A": 0.2636637272303481,
+      "spectrum_mae_cm1": 188.13099346817197,
+      "imaginary_modes": 1
+    },
+    "methylamine": {
+      "force_rms_eV_A": 0.22958101994044938,
+      "spectrum_mae_cm1": 82.6002640184723,
+      "imaginary_modes": 1
+    },
+    "hydrazine": {
+      "force_rms_eV_A": 0.22397078716485394,
+      "spectrum_mae_cm1": 129.1233062464447,
+      "imaginary_modes": 1
+    },
+    "hydroxylamine": {
+      "force_rms_eV_A": 0.2581190511726664,
+      "spectrum_mae_cm1": 502.95828089444666,
+      "imaginary_modes": 1
+    },
+    "hydrogen peroxide": {
+      "force_rms_eV_A": 0.20114548039163854,
+      "spectrum_mae_cm1": 342.0839938374476,
+      "imaginary_modes": 0
+    },
+    "dimethyl ether": {
+      "force_rms_eV_A": 0.23220743345098227,
+      "spectrum_mae_cm1": 161.80066546367362,
+      "imaginary_modes": 2
+    },
+    "ethane": {
+      "force_rms_eV_A": 0.13325996133729834,
+      "spectrum_mae_cm1": 79.5250859168047,
+      "imaginary_modes": 1
+    },
+    "ethylene": {
+      "force_rms_eV_A": 0.03476349718144288,
+      "spectrum_mae_cm1": 117.76895630057687,
+      "imaginary_modes": 0
+    },
+    "formaldehyde": {
+      "force_rms_eV_A": 0.3730733790541958,
+      "spectrum_mae_cm1": 125.04199995976428,
+      "imaginary_modes": 0
+    },
+    "ethanol": {
+      "force_rms_eV_A": 0.2731003924563809,
+      "spectrum_mae_cm1": 98.82527544546896,
+      "imaginary_modes": 1
+    }
+  },
+  "clusters": {
+    "source": "qcell_ions_water.h5",
+    "structure_ids": {
+      "train": [
+        "mol_026256",
+        "mol_025502",
+        "mol_026137",
+        "mol_025594",
+        "mol_026497",
+        "mol_026186",
+        "mol_026204",
+        "mol_025430",
+        "mol_025337",
+        "mol_025519",
+        "mol_026293",
+        "mol_025475",
+        "mol_026226",
+        "mol_026355",
+        "mol_026118",
+        "mol_025266",
+        "mol_026286",
+        "mol_026427",
+        "mol_025286",
+        "mol_026207",
+        "mol_025609",
+        "mol_025730",
+        "mol_026491",
+        "mol_025274",
+        "mol_026201",
+        "mol_025413",
+        "mol_025510",
+        "mol_026004",
+        "mol_026444",
+        "mol_025484",
+        "mol_025729",
+        "mol_025703",
+        "mol_026213",
+        "mol_026198",
+        "mol_026384",
+        "mol_026430",
+        "mol_026130",
+        "mol_026448",
+        "mol_026267",
+        "mol_026260",
+        "mol_025465",
+        "mol_026347",
+        "mol_026083",
+        "mol_025301",
+        "mol_025454",
+        "mol_025679",
+        "mol_025305",
+        "mol_026111",
+        "mol_025496",
+        "mol_026196",
+        "mol_026249",
+        "mol_026013",
+        "mol_026356",
+        "mol_026005",
+        "mol_026234",
+        "mol_026121",
+        "mol_025508",
+        "mol_025626",
+        "mol_026098",
+        "mol_025457",
+        "mol_026455",
+        "mol_025374",
+        "mol_025304",
+        "mol_026025",
+        "mol_025284",
+        "mol_025638",
+        "mol_026200",
+        "mol_026225",
+        "mol_026183",
+        "mol_025633",
+        "mol_026017",
+        "mol_025732",
+        "mol_025372",
+        "mol_025676",
+        "mol_026261",
+        "mol_025338",
+        "mol_026392",
+        "mol_026167",
+        "mol_026113",
+        "mol_026031",
+        "mol_025311",
+        "mol_025608",
+        "mol_025629",
+        "mol_026500",
+        "mol_025435",
+        "mol_025371",
+        "mol_026477",
+        "mol_025490",
+        "mol_026333",
+        "mol_025620",
+        "mol_026223",
+        "mol_026047",
+        "mol_026278",
+        "mol_026114",
+        "mol_025625",
+        "mol_026459",
+        "mol_025685",
+        "mol_026124",
+        "mol_026494",
+        "mol_026474",
+        "mol_026126",
+        "mol_026328",
+        "mol_026040",
+        "mol_026373",
+        "mol_026247",
+        "mol_026456",
+        "mol_025417",
+        "mol_025300",
+        "mol_025605",
+        "mol_026287",
+        "mol_025392",
+        "mol_025694",
+        "mol_026276",
+        "mol_026377",
+        "mol_025437",
+        "mol_026488",
+        "mol_025379",
+        "mol_025593",
+        "mol_025686",
+        "mol_026431",
+        "mol_026389",
+        "mol_025554",
+        "mol_025342",
+        "mol_025419",
+        "mol_025555",
+        "mol_025659",
+        "mol_025398",
+        "mol_026264",
+        "mol_025742",
+        "mol_025347",
+        "mol_025330",
+        "mol_025281",
+        "mol_025557",
+        "mol_025701",
+        "mol_025427",
+        "mol_025539",
+        "mol_025674",
+        "mol_025649",
+        "mol_025658",
+        "mol_025736"
+      ],
+      "dev": [
+        "mol_025751",
+        "mol_025844",
+        "mol_025780",
+        "mol_025944",
+        "mol_025893",
+        "mol_025984",
+        "mol_025814",
+        "mol_025882",
+        "mol_025895",
+        "mol_025850",
+        "mol_025922",
+        "mol_025801",
+        "mol_025951",
+        "mol_025783",
+        "mol_025811",
+        "mol_025905",
+        "mol_025960",
+        "mol_025816",
+        "mol_025786",
+        "mol_025779",
+        "mol_025860",
+        "mol_025841",
+        "mol_025927",
+        "mol_025883",
+        "mol_025945",
+        "mol_025848",
+        "mol_025768",
+        "mol_025923",
+        "mol_025863",
+        "mol_025813",
+        "mol_025756",
+        "mol_025955",
+        "mol_025930",
+        "mol_025799",
+        "mol_025904"
+      ]
+    },
+    "angle_percentiles_deg": {
+      "train": [
+        98.15861239194633,
+        105.30507816583491,
+        112.94790459723139
+      ],
+      "dev": [
+        98.38307825983364,
+        105.5512390842264,
+        113.49871745150634
+      ]
+    },
+    "train_projected_force_rmse_eV_A": {
+      "previous": 1.203616631822256,
+      "refit": 0.44970028534869905
+    },
+    "dev_projected_force_rmse_eV_A": {
+      "previous": 1.2032578238491434,
+      "refit": 0.4388701765154997
+    }
+  }
+}

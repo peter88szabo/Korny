@@ -14,7 +14,7 @@ from pathlib import Path
 import h5py
 import numpy as np
 
-from experiments.des15k.run import ATOMIC, DATA, OUT as DES_OUT, ROOT, SEED, Sample, fit, read_des, split
+from experiments.des15k.run import ATOMIC, DATA, OUT as DES_OUT, ROOT, SEED, Sample, electronic_labels, fit, read_des, split
 from experiments.reactivity.thermochemistry import EV_TO_KCAL, assess, score
 from src.forcefield import ForceField
 
@@ -26,8 +26,9 @@ def sample(group, name, parent, *, weight=1.):
     """Convert both collections to the common atom-referenced bare-PBE0 convention."""
     z = group["atNUM"][:]
     e = float(group["ePBE0"][0])-sum(ATOMIC[i] for i in z)
-    return Sample(name, str(parent), z, group["atXYZ"][:], round(float(group["hCHG"][:].sum())),
-                  e, group["pbe0FOR"][:], weight)
+    charge, multiplicity = electronic_labels(group)
+    return Sample(name, str(parent), z, group["atXYZ"][:], charge, e, group["pbe0FOR"][:],
+                  weight, multiplicity=multiplicity)
 
 
 def qm_partition():

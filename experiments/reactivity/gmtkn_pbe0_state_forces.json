@@ -1,0 +1,3015 @@
+{
+  "checkpoint": "pbe0-electronic-b2ee98c0a8884731.npz",
+  "backbone": "pbe0-core-9325855e31063235.npz",
+  "source": "https://tccl.yonsei.ac.kr/data/database",
+  "calctype": "PBE0",
+  "basis": "def2-QZVPPD",
+  "states": [
+    [
+      -1,
+      1
+    ],
+    [
+      -1,
+      2
+    ],
+    [
+      -1,
+      3
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ]
+  ],
+  "counts": {
+    "train": 238,
+    "test": 67,
+    "development": 39
+  },
+  "excluded": {
+    "protected_singlet_formula": 119,
+    "size_element_or_state": 115,
+    "omitted_proton": 21,
+    "other_omitted_nuclei": 4,
+    "shared_validation_geometry": 162
+  },
+  "shape_constraints": 2124,
+  "force_sources": {
+    "DES": 384,
+    "QM7X": 192,
+    "QCell_force_projections": 2100,
+    "QM7X_force_secants": 64
+  },
+  "metrics": {
+    "AHB21": {
+      "n": 8,
+      "mae_kcal_mol": 8.348860809476646,
+      "rmsd_kcal_mol": 9.779587165844363
+    },
+    "BH76": {
+      "n": 53,
+      "mae_kcal_mol": 27.309232988212024,
+      "rmsd_kcal_mol": 33.143806409668436
+    },
+    "BH76RC": {
+      "n": 14,
+      "mae_kcal_mol": 35.265206174217056,
+      "rmsd_kcal_mol": 41.4677943939983
+    },
+    "BHDIV10": {
+      "n": 5,
+      "mae_kcal_mol": 31.63645001005753,
+      "rmsd_kcal_mol": 34.093161427650294
+    },
+    "BHPERI": {
+      "n": 7,
+      "mae_kcal_mol": 30.90561612517576,
+      "rmsd_kcal_mol": 45.484959103062174
+    },
+    "BHROT27": {
+      "n": 22,
+      "mae_kcal_mol": 9.404125556985264,
+      "rmsd_kcal_mol": 11.58542189140179
+    },
+    "CDIE20": {
+      "n": 20,
+      "mae_kcal_mol": 10.121144487875574,
+      "rmsd_kcal_mol": 14.282973755181029
+    },
+    "DARC": {
+      "n": 5,
+      "mae_kcal_mol": 22.584852258360012,
+      "rmsd_kcal_mol": 24.16326531252208
+    },
+    "DC13": {
+      "n": 8,
+      "mae_kcal_mol": 37.85129537135926,
+      "rmsd_kcal_mol": 43.88509622044003
+    },
+    "FH51": {
+      "n": 13,
+      "mae_kcal_mol": 12.302138391493148,
+      "rmsd_kcal_mol": 15.276079659433062
+    },
+    "G21EA": {
+      "n": 15,
+      "mae_kcal_mol": 9.700124728085664,
+      "rmsd_kcal_mol": 13.37866740338484
+    },
+    "G21IP": {
+      "n": 12,
+      "mae_kcal_mol": 33.19636978651069,
+      "rmsd_kcal_mol": 52.88296384821399
+    },
+    "ISO34": {
+      "n": 34,
+      "mae_kcal_mol": 16.499183082242226,
+      "rmsd_kcal_mol": 22.72992594718712
+    },
+    "ISOL24": {
+      "n": 10,
+      "mae_kcal_mol": 14.643705411007213,
+      "rmsd_kcal_mol": 21.280371265283105
+    },
+    "PArel": {
+      "n": 20,
+      "mae_kcal_mol": 9.181454694214024,
+      "rmsd_kcal_mol": 10.825718195004518
+    },
+    "PX13": {
+      "n": 13,
+      "mae_kcal_mol": 7.643626918970436,
+      "rmsd_kcal_mol": 11.895065750757645
+    },
+    "RC21": {
+      "n": 9,
+      "mae_kcal_mol": 2.8955624313173143,
+      "rmsd_kcal_mol": 4.257335769004679
+    },
+    "TAUT15": {
+      "n": 12,
+      "mae_kcal_mol": 14.135488810657238,
+      "rmsd_kcal_mol": 16.29824802362786
+    },
+    "W4-11": {
+      "n": 56,
+      "mae_kcal_mol": 15.257432716741281,
+      "rmsd_kcal_mol": 21.89720436558518
+    },
+    "WCPT18": {
+      "n": 8,
+      "mae_kcal_mol": 17.06420681119596,
+      "rmsd_kcal_mol": 21.867663165910468
+    }
+  },
+  "ridge": 3.0,
+  "state_feature_scale": 0.75,
+  "fit_seconds": 22.72508074399957,
+  "fixed_panel_high_level": {
+    "reaction": {
+      "n": 5,
+      "mae_kcal_mol": 53.42453380624985,
+      "rmsd_kcal_mol": 61.72993827612706
+    },
+    "barrier": {
+      "n": 5,
+      "mae_kcal_mol": 40.0581777337203,
+      "rmsd_kcal_mol": 47.820656620021246
+    },
+    "rows": [
+      {
+        "name": "G2RC subset index 1",
+        "category": "reaction",
+        "reference": -7.1,
+        "prediction": -42.96866501045054,
+        "error": -35.86866501045054,
+        "archived_PBE0_cc_pVTZ": -16.003783407669914,
+        "error_vs_archived_PBE0": -26.96488160278063
+      },
+      {
+        "name": "G2RC subset index 4",
+        "category": "reaction",
+        "reference": -39.43,
+        "prediction": -141.2807578436831,
+        "error": -101.85075784368308,
+        "archived_PBE0_cc_pVTZ": -48.52669359405811,
+        "error_vs_archived_PBE0": -92.75406424962497
+      },
+      {
+        "name": "G2RC subset index 7",
+        "category": "reaction",
+        "reference": -61.67,
+        "prediction": -74.78356282364653,
+        "error": -13.113562823646532,
+        "archived_PBE0_cc_pVTZ": -73.29537737005046,
+        "error_vs_archived_PBE0": -1.4881854535960741
+      },
+      {
+        "name": "G2RC subset index 9",
+        "category": "reaction",
+        "reference": -81.21,
+        "prediction": -7.912969739548987,
+        "error": 73.29703026045101,
+        "archived_PBE0_cc_pVTZ": -69.25812574794905,
+        "error_vs_archived_PBE0": 61.34515600840007
+      },
+      {
+        "name": "bh76_hcn",
+        "category": "barrier",
+        "reference": 48.1,
+        "prediction": 33.405153791756746,
+        "error": -14.694846208243256
+      },
+      {
+        "name": "bh76_hnc",
+        "category": "barrier",
+        "reference": 33.0,
+        "prediction": -24.687499301261337,
+        "error": -57.68749930126134
+      },
+      {
+        "name": "inv24_h2o",
+        "category": "barrier",
+        "reference": 31.7,
+        "prediction": 34.28158602247788,
+        "error": 2.5815860224778824
+      },
+      {
+        "name": "inv24_h2s",
+        "category": "barrier",
+        "reference": 69.3,
+        "prediction": 2.750505594130261,
+        "error": -66.54949440586974
+      },
+      {
+        "name": "inv24_so2",
+        "category": "barrier",
+        "reference": 60.6,
+        "prediction": 1.8225372692507393,
+        "error": -58.777462730749264
+      },
+      {
+        "name": "HCN -> HNC",
+        "category": "reaction",
+        "reference": 15.100000000000001,
+        "prediction": 58.09265309301808,
+        "error": 42.99265309301808
+      }
+    ]
+  },
+  "rows": [
+    {
+      "family": "AHB21",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": -67.5424,
+      "prior_kcal_mol": -1.0124695478128536,
+      "error_kcal_mol": 10.406210709872772
+    },
+    {
+      "family": "AHB21",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": -26.4068,
+      "prior_kcal_mol": 5.4840616054821565,
+      "error_kcal_mol": 3.1031335110670124
+    },
+    {
+      "family": "AHB21",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": -44.4607,
+      "prior_kcal_mol": 7.689414182522982,
+      "error_kcal_mol": 18.16197431636505
+    },
+    {
+      "family": "AHB21",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": -28.0951,
+      "prior_kcal_mol": 9.86876837786026,
+      "error_kcal_mol": -0.35612007171026405
+    },
+    {
+      "family": "AHB21",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": -27.5618,
+      "prior_kcal_mol": 5.321614635073053,
+      "error_kcal_mol": 8.000438659803596
+    },
+    {
+      "family": "AHB21",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": -11.5095,
+      "prior_kcal_mol": -12.926291438084732,
+      "error_kcal_mol": -8.157796981098654
+    },
+    {
+      "family": "AHB21",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": -20.1339,
+      "prior_kcal_mol": -5.407872849400471,
+      "error_kcal_mol": 6.696250586948841
+    },
+    {
+      "family": "AHB21",
+      "idx": 21,
+      "split": "train",
+      "reference_pbe0": -32.6042,
+      "prior_kcal_mol": -15.095212614194814,
+      "error_kcal_mol": -11.90896163894698
+    },
+    {
+      "family": "BH76",
+      "idx": 3,
+      "split": "test",
+      "reference_pbe0": 33.8935,
+      "prior_kcal_mol": -1.2339634422211077,
+      "error_kcal_mol": -42.740863723085845
+    },
+    {
+      "family": "BH76",
+      "idx": 4,
+      "split": "test",
+      "reference_pbe0": 33.8935,
+      "prior_kcal_mol": -1.2339634422211077,
+      "error_kcal_mol": -42.740863723085845
+    },
+    {
+      "family": "BH76",
+      "idx": 5,
+      "split": "test",
+      "reference_pbe0": 13.3606,
+      "prior_kcal_mol": 2.7858424409827807,
+      "error_kcal_mol": -18.3030030716345
+    },
+    {
+      "family": "BH76",
+      "idx": 6,
+      "split": "test",
+      "reference_pbe0": 13.3606,
+      "prior_kcal_mol": 2.7858424409827807,
+      "error_kcal_mol": -18.3030030716345
+    },
+    {
+      "family": "BH76",
+      "idx": 7,
+      "split": "test",
+      "reference_pbe0": 25.5579,
+      "prior_kcal_mol": 9.4357181778467,
+      "error_kcal_mol": 19.593971529006563
+    },
+    {
+      "family": "BH76",
+      "idx": 8,
+      "split": "test",
+      "reference_pbe0": 49.9843,
+      "prior_kcal_mol": 15.597196244022784,
+      "error_kcal_mol": -62.89319537153981
+    },
+    {
+      "family": "BH76",
+      "idx": 9,
+      "split": "test",
+      "reference_pbe0": -4.0626,
+      "prior_kcal_mol": -1.9235616044111208,
+      "error_kcal_mol": -10.128220164690772
+    },
+    {
+      "family": "BH76",
+      "idx": 10,
+      "split": "test",
+      "reference_pbe0": 97.9345,
+      "prior_kcal_mol": 15.22399554057336,
+      "error_kcal_mol": -78.86282820504803
+    },
+    {
+      "family": "BH76",
+      "idx": 11,
+      "split": "test",
+      "reference_pbe0": 1.8827,
+      "prior_kcal_mol": 10.29552231092781,
+      "error_kcal_mol": -4.2872869540122815
+    },
+    {
+      "family": "BH76",
+      "idx": 12,
+      "split": "test",
+      "reference_pbe0": 53.2337,
+      "prior_kcal_mol": 19.422168613371756,
+      "error_kcal_mol": 15.37940816333442
+    },
+    {
+      "family": "BH76",
+      "idx": 13,
+      "split": "test",
+      "reference_pbe0": -0.8166,
+      "prior_kcal_mol": 19.659044477727953,
+      "error_kcal_mol": 28.725432148113175
+    },
+    {
+      "family": "BH76",
+      "idx": 14,
+      "split": "test",
+      "reference_pbe0": -0.8166,
+      "prior_kcal_mol": 19.659044477727953,
+      "error_kcal_mol": 28.725432148113175
+    },
+    {
+      "family": "BH76",
+      "idx": 15,
+      "split": "test",
+      "reference_pbe0": 11.9432,
+      "prior_kcal_mol": 30.115595172490536,
+      "error_kcal_mol": 3.9165610824977346
+    },
+    {
+      "family": "BH76",
+      "idx": 16,
+      "split": "test",
+      "reference_pbe0": 11.9432,
+      "prior_kcal_mol": 30.115595172490536,
+      "error_kcal_mol": 3.9165610824977346
+    },
+    {
+      "family": "BH76",
+      "idx": 17,
+      "split": "test",
+      "reference_pbe0": 1.6071,
+      "prior_kcal_mol": 40.48188780393265,
+      "error_kcal_mol": 56.42196223231589
+    },
+    {
+      "family": "BH76",
+      "idx": 18,
+      "split": "test",
+      "reference_pbe0": 1.6071,
+      "prior_kcal_mol": 40.48188780393265,
+      "error_kcal_mol": 56.42196223231589
+    },
+    {
+      "family": "BH76",
+      "idx": 19,
+      "split": "test",
+      "reference_pbe0": 11.351,
+      "prior_kcal_mol": 36.681642750549514,
+      "error_kcal_mol": 31.449080812851527
+    },
+    {
+      "family": "BH76",
+      "idx": 20,
+      "split": "test",
+      "reference_pbe0": 11.351,
+      "prior_kcal_mol": 36.681642750549514,
+      "error_kcal_mol": 31.449080812851527
+    },
+    {
+      "family": "BH76",
+      "idx": 21,
+      "split": "test",
+      "reference_pbe0": -13.2983,
+      "prior_kcal_mol": 19.207522934253497,
+      "error_kcal_mol": 36.329252350024554
+    },
+    {
+      "family": "BH76",
+      "idx": 22,
+      "split": "test",
+      "reference_pbe0": 19.8566,
+      "prior_kcal_mol": 30.97679266406016,
+      "error_kcal_mol": 54.37921705576879
+    },
+    {
+      "family": "BH76",
+      "idx": 23,
+      "split": "test",
+      "reference_pbe0": 1.9713,
+      "prior_kcal_mol": 17.107751154607623,
+      "error_kcal_mol": 8.18829683723167
+    },
+    {
+      "family": "BH76",
+      "idx": 24,
+      "split": "test",
+      "reference_pbe0": 28.1167,
+      "prior_kcal_mol": 38.34193276499182,
+      "error_kcal_mol": 30.04325170048956
+    },
+    {
+      "family": "BH76",
+      "idx": 25,
+      "split": "test",
+      "reference_pbe0": -3.0339,
+      "prior_kcal_mol": 30.256017441319038,
+      "error_kcal_mol": 48.916894508051904
+    },
+    {
+      "family": "BH76",
+      "idx": 26,
+      "split": "test",
+      "reference_pbe0": 17.8062,
+      "prior_kcal_mol": 22.250579795462432,
+      "error_kcal_mol": -1.7354842866937874
+    },
+    {
+      "family": "BH76",
+      "idx": 27,
+      "split": "test",
+      "reference_pbe0": 9.241,
+      "prior_kcal_mol": 33.866581850778545,
+      "error_kcal_mol": 20.181846624925164
+    },
+    {
+      "family": "BH76",
+      "idx": 28,
+      "split": "test",
+      "reference_pbe0": 48.6704,
+      "prior_kcal_mol": 28.349814270854147,
+      "error_kcal_mol": -9.852454975829936
+    },
+    {
+      "family": "BH76",
+      "idx": 30,
+      "split": "test",
+      "reference_pbe0": 11.518,
+      "prior_kcal_mol": 27.753768600208193,
+      "error_kcal_mol": 14.547626319316905
+    },
+    {
+      "family": "BH76",
+      "idx": 32,
+      "split": "test",
+      "reference_pbe0": 25.3687,
+      "prior_kcal_mol": 55.68868956606918,
+      "error_kcal_mol": 13.175577192001086
+    },
+    {
+      "family": "BH76",
+      "idx": 33,
+      "split": "test",
+      "reference_pbe0": 0.707,
+      "prior_kcal_mol": 2.756649320440546,
+      "error_kcal_mol": -13.680586161884072
+    },
+    {
+      "family": "BH76",
+      "idx": 34,
+      "split": "test",
+      "reference_pbe0": 44.1728,
+      "prior_kcal_mol": 19.572185567773584,
+      "error_kcal_mol": -23.223289440206067
+    },
+    {
+      "family": "BH76",
+      "idx": 35,
+      "split": "test",
+      "reference_pbe0": 4.1821,
+      "prior_kcal_mol": 3.4048892217066284,
+      "error_kcal_mol": -7.58208248249428
+    },
+    {
+      "family": "BH76",
+      "idx": 36,
+      "split": "test",
+      "reference_pbe0": 34.3957,
+      "prior_kcal_mol": -3.496084386928989,
+      "error_kcal_mol": 34.322406840487744
+    },
+    {
+      "family": "BH76",
+      "idx": 39,
+      "split": "test",
+      "reference_pbe0": 2.926,
+      "prior_kcal_mol": -29.073031581761438,
+      "error_kcal_mol": -34.14459033333944
+    },
+    {
+      "family": "BH76",
+      "idx": 44,
+      "split": "test",
+      "reference_pbe0": 11.9309,
+      "prior_kcal_mol": 1.1332758616778393,
+      "error_kcal_mol": 17.063420745008415
+    },
+    {
+      "family": "BH76",
+      "idx": 45,
+      "split": "test",
+      "reference_pbe0": 2.1259,
+      "prior_kcal_mol": 0.6578605476564953,
+      "error_kcal_mol": 36.83350940347202
+    },
+    {
+      "family": "BH76",
+      "idx": 51,
+      "split": "test",
+      "reference_pbe0": -2.0369,
+      "prior_kcal_mol": -26.55781737253683,
+      "error_kcal_mol": -44.691694851507144
+    },
+    {
+      "family": "BH76",
+      "idx": 52,
+      "split": "test",
+      "reference_pbe0": 2.2637,
+      "prior_kcal_mol": -17.712944317214152,
+      "error_kcal_mol": 0.8030624116934711
+    },
+    {
+      "family": "BH76",
+      "idx": 53,
+      "split": "test",
+      "reference_pbe0": -0.6942,
+      "prior_kcal_mol": -0.10947279413559138,
+      "error_kcal_mol": 13.036854224092426
+    },
+    {
+      "family": "BH76",
+      "idx": 56,
+      "split": "test",
+      "reference_pbe0": 28.0412,
+      "prior_kcal_mol": -19.25089927375167,
+      "error_kcal_mol": -40.736677212900474
+    },
+    {
+      "family": "BH76",
+      "idx": 57,
+      "split": "test",
+      "reference_pbe0": 7.9219,
+      "prior_kcal_mol": 3.9777264640276186,
+      "error_kcal_mol": -11.369615386872841
+    },
+    {
+      "family": "BH76",
+      "idx": 58,
+      "split": "test",
+      "reference_pbe0": 4.2714,
+      "prior_kcal_mol": 13.36434883020002,
+      "error_kcal_mol": -56.10446480078558
+    },
+    {
+      "family": "BH76",
+      "idx": 59,
+      "split": "test",
+      "reference_pbe0": 0.4862,
+      "prior_kcal_mol": 20.34191040401616,
+      "error_kcal_mol": -52.51603468095178
+    },
+    {
+      "family": "BH76",
+      "idx": 61,
+      "split": "test",
+      "reference_pbe0": 7.1262,
+      "prior_kcal_mol": 3.961408680312994,
+      "error_kcal_mol": -33.716477531640656
+    },
+    {
+      "family": "BH76",
+      "idx": 65,
+      "split": "test",
+      "reference_pbe0": 2.739,
+      "prior_kcal_mol": 17.98671867202328,
+      "error_kcal_mol": -12.508277752526178
+    },
+    {
+      "family": "BH76",
+      "idx": 66,
+      "split": "test",
+      "reference_pbe0": 3.3892,
+      "prior_kcal_mol": 36.21821409351836,
+      "error_kcal_mol": -11.748469903238302
+    },
+    {
+      "family": "BH76",
+      "idx": 67,
+      "split": "test",
+      "reference_pbe0": 5.2951,
+      "prior_kcal_mol": 10.68864965569765,
+      "error_kcal_mol": -61.75490788963455
+    },
+    {
+      "family": "BH76",
+      "idx": 68,
+      "split": "test",
+      "reference_pbe0": 16.7131,
+      "prior_kcal_mol": -9.068594361959954,
+      "error_kcal_mol": -22.338141814843816
+    },
+    {
+      "family": "BH76",
+      "idx": 69,
+      "split": "test",
+      "reference_pbe0": 7.2005,
+      "prior_kcal_mol": 13.867746621437407,
+      "error_kcal_mol": -50.432018314546866
+    },
+    {
+      "family": "BH76",
+      "idx": 70,
+      "split": "test",
+      "reference_pbe0": 14.0301,
+      "prior_kcal_mol": -5.352803755700719,
+      "error_kcal_mol": -30.05217510075741
+    },
+    {
+      "family": "BH76",
+      "idx": 71,
+      "split": "test",
+      "reference_pbe0": 7.5905,
+      "prior_kcal_mol": -6.33650242650962,
+      "error_kcal_mol": -11.50893364152195
+    },
+    {
+      "family": "BH76",
+      "idx": 73,
+      "split": "test",
+      "reference_pbe0": 10.1636,
+      "prior_kcal_mol": -9.98080259286822,
+      "error_kcal_mol": 6.737604243850564
+    },
+    {
+      "family": "BH76",
+      "idx": 75,
+      "split": "test",
+      "reference_pbe0": 35.6634,
+      "prior_kcal_mol": 26.754962130885914,
+      "error_kcal_mol": -14.437717414009226
+    },
+    {
+      "family": "BH76",
+      "idx": 76,
+      "split": "test",
+      "reference_pbe0": 35.6634,
+      "prior_kcal_mol": 26.754962130885914,
+      "error_kcal_mol": -14.437717414009226
+    },
+    {
+      "family": "BH76RC",
+      "idx": 2,
+      "split": "test",
+      "reference_pbe0": -24.4264,
+      "prior_kcal_mol": -6.161478066176083,
+      "error_kcal_mol": 82.48716690054637
+    },
+    {
+      "family": "BH76RC",
+      "idx": 3,
+      "split": "test",
+      "reference_pbe0": -101.9971,
+      "prior_kcal_mol": -17.147557144984482,
+      "error_kcal_mol": 68.73460804035723
+    },
+    {
+      "family": "BH76RC",
+      "idx": 4,
+      "split": "test",
+      "reference_pbe0": -51.351,
+      "prior_kcal_mol": -9.126646302443948,
+      "error_kcal_mol": -19.66669511734665
+    },
+    {
+      "family": "BH76RC",
+      "idx": 5,
+      "split": "test",
+      "reference_pbe0": -33.155,
+      "prior_kcal_mol": -11.76926972980666,
+      "error_kcal_mol": -18.049864705744255
+    },
+    {
+      "family": "BH76RC",
+      "idx": 6,
+      "split": "test",
+      "reference_pbe0": -26.1454,
+      "prior_kcal_mol": -21.234181610384194,
+      "error_kcal_mol": -21.85495486325789
+    },
+    {
+      "family": "BH76RC",
+      "idx": 7,
+      "split": "test",
+      "reference_pbe0": -20.84,
+      "prior_kcal_mol": 8.005437645856608,
+      "error_kcal_mol": 50.652278794745705
+    },
+    {
+      "family": "BH76RC",
+      "idx": 8,
+      "split": "test",
+      "reference_pbe0": -39.4293,
+      "prior_kcal_mol": 5.516767579924398,
+      "error_kcal_mol": 30.03420160075511
+    },
+    {
+      "family": "BH76RC",
+      "idx": 11,
+      "split": "test",
+      "reference_pbe0": -43.4658,
+      "prior_kcal_mol": -16.81553624733304,
+      "error_kcal_mol": 9.542703278321971
+    },
+    {
+      "family": "BH76RC",
+      "idx": 12,
+      "split": "test",
+      "reference_pbe0": -30.2136,
+      "prior_kcal_mol": 6.900973608635617,
+      "error_kcal_mol": -41.90448932298203
+    },
+    {
+      "family": "BH76RC",
+      "idx": 19,
+      "split": "test",
+      "reference_pbe0": -4.3007,
+      "prior_kcal_mol": -8.844873055322681,
+      "error_kcal_mol": -45.494657263200615
+    },
+    {
+      "family": "BH76RC",
+      "idx": 22,
+      "split": "test",
+      "reference_pbe0": 3.6508,
+      "prior_kcal_mol": -9.386622366172402,
+      "error_kcal_mol": 44.734549413912745
+    },
+    {
+      "family": "BH76RC",
+      "idx": 26,
+      "split": "test",
+      "reference_pbe0": -0.6499,
+      "prior_kcal_mol": -18.231495421495083,
+      "error_kcal_mol": -0.7601078492878562
+    },
+    {
+      "family": "BH76RC",
+      "idx": 27,
+      "split": "test",
+      "reference_pbe0": -11.418,
+      "prior_kcal_mol": 19.757244017657605,
+      "error_kcal_mol": -39.41676607479075
+    },
+    {
+      "family": "BH76RC",
+      "idx": 28,
+      "split": "test",
+      "reference_pbe0": -6.8296,
+      "prior_kcal_mol": 19.220550377138125,
+      "error_kcal_mol": -20.3798432137895
+    },
+    {
+      "family": "BHDIV10",
+      "idx": 1,
+      "split": "development",
+      "reference_pbe0": 22.7,
+      "prior_kcal_mol": 24.5676517180473,
+      "error_kcal_mol": 21.022961985819975
+    },
+    {
+      "family": "BHDIV10",
+      "idx": 3,
+      "split": "development",
+      "reference_pbe0": 31.6456,
+      "prior_kcal_mol": 37.2372647056913,
+      "error_kcal_mol": 30.834059326474915
+    },
+    {
+      "family": "BHDIV10",
+      "idx": 4,
+      "split": "development",
+      "reference_pbe0": 89.1586,
+      "prior_kcal_mol": 57.14282237808077,
+      "error_kcal_mol": -55.75624063498434
+    },
+    {
+      "family": "BHDIV10",
+      "idx": 8,
+      "split": "development",
+      "reference_pbe0": 44.0731,
+      "prior_kcal_mol": 9.56003906583312,
+      "error_kcal_mol": -21.30677568377621
+    },
+    {
+      "family": "BHDIV10",
+      "idx": 10,
+      "split": "development",
+      "reference_pbe0": 64.2033,
+      "prior_kcal_mol": 113.65026658785246,
+      "error_kcal_mol": 29.262212419232213
+    },
+    {
+      "family": "BHPERI",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 28.5741,
+      "prior_kcal_mol": 9.385543608410138,
+      "error_kcal_mol": -19.547134403761696
+    },
+    {
+      "family": "BHPERI",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 26.0109,
+      "prior_kcal_mol": 17.65008806705513,
+      "error_kcal_mol": -12.722482416193667
+    },
+    {
+      "family": "BHPERI",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 35.8185,
+      "prior_kcal_mol": 25.68908099595434,
+      "error_kcal_mol": -15.034174654088101
+    },
+    {
+      "family": "BHPERI",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 24.342,
+      "prior_kcal_mol": 50.765750527971306,
+      "error_kcal_mol": 9.322667146274584
+    },
+    {
+      "family": "BHPERI",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 33.7471,
+      "prior_kcal_mol": 90.27600663940632,
+      "error_kcal_mol": 44.93851111024583
+    },
+    {
+      "family": "BHPERI",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 16.3615,
+      "prior_kcal_mol": 44.13229388958977,
+      "error_kcal_mol": -7.291087510770795
+    },
+    {
+      "family": "BHPERI",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 27.9606,
+      "prior_kcal_mol": 94.40311800743162,
+      "error_kcal_mol": 107.48325563489567
+    },
+    {
+      "family": "BHROT27",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 6.9341,
+      "prior_kcal_mol": -3.8009905583914967,
+      "error_kcal_mol": -14.660839502615737
+    },
+    {
+      "family": "BHROT27",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 3.2298,
+      "prior_kcal_mol": -8.017949217904194,
+      "error_kcal_mol": -10.085749521580807
+    },
+    {
+      "family": "BHROT27",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 3.5302,
+      "prior_kcal_mol": -1.0859249979807235,
+      "error_kcal_mol": -5.59608081384621
+    },
+    {
+      "family": "BHROT27",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 2.5103,
+      "prior_kcal_mol": -0.4778411917696422,
+      "error_kcal_mol": -3.20202613542952
+    },
+    {
+      "family": "BHROT27",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 6.1589,
+      "prior_kcal_mol": 1.4580879427258402,
+      "error_kcal_mol": -3.5235576616285593
+    },
+    {
+      "family": "BHROT27",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 8.4909,
+      "prior_kcal_mol": 0.5219874534425976,
+      "error_kcal_mol": -8.206404638787012
+    },
+    {
+      "family": "BHROT27",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": 1.7304,
+      "prior_kcal_mol": 0.7580034040829987,
+      "error_kcal_mol": -0.9622435130852771
+    },
+    {
+      "family": "BHROT27",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": 8.9967,
+      "prior_kcal_mol": 0.08993867777330339,
+      "error_kcal_mol": -9.652282128641257
+    },
+    {
+      "family": "BHROT27",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 7.0525,
+      "prior_kcal_mol": -1.9757828949249592,
+      "error_kcal_mol": -9.288607968039711
+    },
+    {
+      "family": "BHROT27",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": 2.9903,
+      "prior_kcal_mol": 1.2788887082602898,
+      "error_kcal_mol": -2.2174375247300206
+    },
+    {
+      "family": "BHROT27",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": 18.7024,
+      "prior_kcal_mol": -7.63916769455972,
+      "error_kcal_mol": -26.583747277362885
+    },
+    {
+      "family": "BHROT27",
+      "idx": 16,
+      "split": "train",
+      "reference_pbe0": 15.9454,
+      "prior_kcal_mol": -4.219768770565036,
+      "error_kcal_mol": -21.563276667574883
+    },
+    {
+      "family": "BHROT27",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 1.9818,
+      "prior_kcal_mol": 6.239586608848724,
+      "error_kcal_mol": 3.3253457652777225
+    },
+    {
+      "family": "BHROT27",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": 5.0513,
+      "prior_kcal_mol": -5.978409847628542,
+      "error_kcal_mol": -11.40115882291364
+    },
+    {
+      "family": "BHROT27",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": 3.4859,
+      "prior_kcal_mol": -1.5922226558048538,
+      "error_kcal_mol": -9.339467736004208
+    },
+    {
+      "family": "BHROT27",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 2.2323,
+      "prior_kcal_mol": -7.331724312337315,
+      "error_kcal_mol": -10.103146067157544
+    },
+    {
+      "family": "BHROT27",
+      "idx": 21,
+      "split": "train",
+      "reference_pbe0": 1.815,
+      "prior_kcal_mol": -0.5708457985152177,
+      "error_kcal_mol": -3.3913087342730863
+    },
+    {
+      "family": "BHROT27",
+      "idx": 23,
+      "split": "train",
+      "reference_pbe0": 3.6012,
+      "prior_kcal_mol": 1.0484778253357239,
+      "error_kcal_mol": -3.0558087981260402
+    },
+    {
+      "family": "BHROT27",
+      "idx": 24,
+      "split": "train",
+      "reference_pbe0": 11.5603,
+      "prior_kcal_mol": 5.379863677966606,
+      "error_kcal_mol": -5.9508531922343355
+    },
+    {
+      "family": "BHROT27",
+      "idx": 25,
+      "split": "train",
+      "reference_pbe0": 11.7841,
+      "prior_kcal_mol": 9.202307299613276,
+      "error_kcal_mol": -6.655431197313181
+    },
+    {
+      "family": "BHROT27",
+      "idx": 26,
+      "split": "train",
+      "reference_pbe0": 18.2484,
+      "prior_kcal_mol": -0.9653211493063297,
+      "error_kcal_mol": -18.710755290987652
+    },
+    {
+      "family": "BHROT27",
+      "idx": 27,
+      "split": "train",
+      "reference_pbe0": 18.4721,
+      "prior_kcal_mol": 2.85712247234034,
+      "error_kcal_mol": -19.4152332960665
+    },
+    {
+      "family": "CDIE20",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": -0.4628,
+      "prior_kcal_mol": -8.83472087553375,
+      "error_kcal_mol": 3.848986154649494
+    },
+    {
+      "family": "CDIE20",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 5.6145,
+      "prior_kcal_mol": 5.826967438839064,
+      "error_kcal_mol": 6.99196000313743
+    },
+    {
+      "family": "CDIE20",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": -4.8345,
+      "prior_kcal_mol": -14.051726352415589,
+      "error_kcal_mol": 4.013587208022208
+    },
+    {
+      "family": "CDIE20",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": -1.7027,
+      "prior_kcal_mol": -10.393067878822476,
+      "error_kcal_mol": 3.5188309405021587
+    },
+    {
+      "family": "CDIE20",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 0.4547,
+      "prior_kcal_mol": -8.962774558652416,
+      "error_kcal_mol": 3.151873170518912
+    },
+    {
+      "family": "CDIE20",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 5.2657,
+      "prior_kcal_mol": 4.648616736352051,
+      "error_kcal_mol": 6.304899675864158
+    },
+    {
+      "family": "CDIE20",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 5.942,
+      "prior_kcal_mol": 5.0255356391099015,
+      "error_kcal_mol": 5.369517330362356
+    },
+    {
+      "family": "CDIE20",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 1.8428,
+      "prior_kcal_mol": 6.414971648679737,
+      "error_kcal_mol": 4.72922118101693
+    },
+    {
+      "family": "CDIE20",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 2.8981,
+      "prior_kcal_mol": 16.119692130871837,
+      "error_kcal_mol": 12.188833605469949
+    },
+    {
+      "family": "CDIE20",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 5.5548,
+      "prior_kcal_mol": -40.9627884978579,
+      "error_kcal_mol": -26.821762600661778
+    },
+    {
+      "family": "CDIE20",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": 2.0723,
+      "prior_kcal_mol": -38.045343783264826,
+      "error_kcal_mol": -24.28159555728099
+    },
+    {
+      "family": "CDIE20",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": 5.4512,
+      "prior_kcal_mol": -43.209745703069146,
+      "error_kcal_mol": -28.85413800078925
+    },
+    {
+      "family": "CDIE20",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 5.8183,
+      "prior_kcal_mol": -41.196487555281905,
+      "error_kcal_mol": -26.861486116329672
+    },
+    {
+      "family": "CDIE20",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": 6.3727,
+      "prior_kcal_mol": -41.10039153761375,
+      "error_kcal_mol": -28.492467942674296
+    },
+    {
+      "family": "CDIE20",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": 4.8555,
+      "prior_kcal_mol": 4.270190582512894,
+      "error_kcal_mol": -0.03781876607497033
+    },
+    {
+      "family": "CDIE20",
+      "idx": 16,
+      "split": "train",
+      "reference_pbe0": 1.2168,
+      "prior_kcal_mol": 2.849201820551906,
+      "error_kcal_mol": -3.904623832703899
+    },
+    {
+      "family": "CDIE20",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 4.9051,
+      "prior_kcal_mol": 2.3279322135524714,
+      "error_kcal_mol": -2.0002309702152554
+    },
+    {
+      "family": "CDIE20",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": 7.1086,
+      "prior_kcal_mol": 5.104240193785018,
+      "error_kcal_mol": 3.212424860910586
+    },
+    {
+      "family": "CDIE20",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": 6.5381,
+      "prior_kcal_mol": -3.2288077951646077,
+      "error_kcal_mol": 2.652807352449144
+    },
+    {
+      "family": "CDIE20",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 9.9277,
+      "prior_kcal_mol": 6.720326248419543,
+      "error_kcal_mol": 5.185824487878043
+    },
+    {
+      "family": "DARC",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": -52.6092,
+      "prior_kcal_mol": 21.10561304949056,
+      "error_kcal_mol": -22.69083252671736
+    },
+    {
+      "family": "DARC",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": -13.0781,
+      "prior_kcal_mol": 57.4676890770941,
+      "error_kcal_mol": -19.79667395638237
+    },
+    {
+      "family": "DARC",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": -15.5189,
+      "prior_kcal_mol": 61.22759860539842,
+      "error_kcal_mol": -8.092676692685663
+    },
+    {
+      "family": "DARC",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": -31.3558,
+      "prior_kcal_mol": 43.85846424018352,
+      "error_kcal_mol": -32.52320858948994
+    },
+    {
+      "family": "DARC",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": -32.0403,
+      "prior_kcal_mol": 42.64370254039005,
+      "error_kcal_mol": -29.820869526524724
+    },
+    {
+      "family": "DC13",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": -0.0163,
+      "prior_kcal_mol": 9.19082900264756,
+      "error_kcal_mol": -2.613655310632852
+    },
+    {
+      "family": "DC13",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": -4.0122,
+      "prior_kcal_mol": -364.51923395471346,
+      "error_kcal_mol": -64.39914711785522
+    },
+    {
+      "family": "DC13",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": -7.0878,
+      "prior_kcal_mol": 25.516720269079816,
+      "error_kcal_mol": 28.817192927148028
+    },
+    {
+      "family": "DC13",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": -8.8052,
+      "prior_kcal_mol": 114.89408015816429,
+      "error_kcal_mol": -45.64976579636258
+    },
+    {
+      "family": "DC13",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": -30.5924,
+      "prior_kcal_mol": 314.2652796434011,
+      "error_kcal_mol": 66.09133459686488
+    },
+    {
+      "family": "DC13",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": -3.4745,
+      "prior_kcal_mol": -251.7405996856869,
+      "error_kcal_mol": -40.585615750242276
+    },
+    {
+      "family": "DC13",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": -96.879,
+      "prior_kcal_mol": 127.12324286037833,
+      "error_kcal_mol": 6.954874811325667
+    },
+    {
+      "family": "DC13",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": -73.1978,
+      "prior_kcal_mol": -93.52456138461471,
+      "error_kcal_mol": -47.6987766604426
+    },
+    {
+      "family": "FH51",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": -57.716,
+      "prior_kcal_mol": 86.65282450472498,
+      "error_kcal_mol": 6.843959895153237
+    },
+    {
+      "family": "FH51",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": -55.851,
+      "prior_kcal_mol": -56.18252574160412,
+      "error_kcal_mol": -2.721036732437693
+    },
+    {
+      "family": "FH51",
+      "idx": 31,
+      "split": "train",
+      "reference_pbe0": -16.9627,
+      "prior_kcal_mol": 26.60673203201879,
+      "error_kcal_mol": -8.925427615507452
+    },
+    {
+      "family": "FH51",
+      "idx": 32,
+      "split": "train",
+      "reference_pbe0": -6.7169,
+      "prior_kcal_mol": 23.39802657763277,
+      "error_kcal_mol": 26.473896899601254
+    },
+    {
+      "family": "FH51",
+      "idx": 33,
+      "split": "train",
+      "reference_pbe0": -12.4269,
+      "prior_kcal_mol": -5.738209201013313,
+      "error_kcal_mol": -21.937436000004766
+    },
+    {
+      "family": "FH51",
+      "idx": 40,
+      "split": "train",
+      "reference_pbe0": -7.3646,
+      "prior_kcal_mol": 12.454705849228525,
+      "error_kcal_mol": -22.15121057298088
+    },
+    {
+      "family": "FH51",
+      "idx": 42,
+      "split": "train",
+      "reference_pbe0": -6.9422,
+      "prior_kcal_mol": 29.245478321093763,
+      "error_kcal_mol": 12.133915548144653
+    },
+    {
+      "family": "FH51",
+      "idx": 43,
+      "split": "train",
+      "reference_pbe0": 0.147,
+      "prior_kcal_mol": 12.834320234707329,
+      "error_kcal_mol": -13.479666481914863
+    },
+    {
+      "family": "FH51",
+      "idx": 44,
+      "split": "train",
+      "reference_pbe0": -3.402,
+      "prior_kcal_mol": 4.523995375606406,
+      "error_kcal_mol": 5.270127422515619
+    },
+    {
+      "family": "FH51",
+      "idx": 45,
+      "split": "train",
+      "reference_pbe0": -3.027,
+      "prior_kcal_mol": -1.165853362904807,
+      "error_kcal_mol": -2.263194574934344
+    },
+    {
+      "family": "FH51",
+      "idx": 47,
+      "split": "train",
+      "reference_pbe0": -1.2524,
+      "prior_kcal_mol": -1.0697617897044063,
+      "error_kcal_mol": 2.1295536487892655
+    },
+    {
+      "family": "FH51",
+      "idx": 48,
+      "split": "train",
+      "reference_pbe0": 0.0944,
+      "prior_kcal_mol": 0.36659260083250506,
+      "error_kcal_mol": -7.146166519767213
+    },
+    {
+      "family": "FH51",
+      "idx": 50,
+      "split": "train",
+      "reference_pbe0": 6.9125,
+      "prior_kcal_mol": 31.701099325440143,
+      "error_kcal_mol": -28.4522071776597
+    },
+    {
+      "family": "G21EA",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 32.0707,
+      "prior_kcal_mol": 31.376176835844742,
+      "error_kcal_mol": 2.2501749536648283
+    },
+    {
+      "family": "G21EA",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 74.716,
+      "prior_kcal_mol": 31.376176835844742,
+      "error_kcal_mol": -25.703771484892766
+    },
+    {
+      "family": "G21EA",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 47.6236,
+      "prior_kcal_mol": 31.376176835844742,
+      "error_kcal_mol": 1.4770302468020777
+    },
+    {
+      "family": "G21EA",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 82.4677,
+      "prior_kcal_mol": 31.37617683584473,
+      "error_kcal_mol": -20.431022967509573
+    },
+    {
+      "family": "G21EA",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 29.4685,
+      "prior_kcal_mol": 30.27125211973963,
+      "error_kcal_mol": 0.6445594965389938
+    },
+    {
+      "family": "G21EA",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 9.4351,
+      "prior_kcal_mol": 12.982943356650127,
+      "error_kcal_mol": 1.326336700708052
+    },
+    {
+      "family": "G21EA",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 19.06,
+      "prior_kcal_mol": 29.6813158277509,
+      "error_kcal_mol": -2.5655549240405837
+    },
+    {
+      "family": "G21EA",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": 23.9158,
+      "prior_kcal_mol": 28.56646415998249,
+      "error_kcal_mol": -1.5263278394921378
+    },
+    {
+      "family": "G21EA",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": 51.6828,
+      "prior_kcal_mol": 31.372871923028946,
+      "error_kcal_mol": -6.744408792077159
+    },
+    {
+      "family": "G21EA",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 4.9691,
+      "prior_kcal_mol": 76.89920300856907,
+      "error_kcal_mol": 13.170915073513118
+    },
+    {
+      "family": "G21EA",
+      "idx": 21,
+      "split": "train",
+      "reference_pbe0": 2.1001,
+      "prior_kcal_mol": 81.46417461547401,
+      "error_kcal_mol": 20.36870686513986
+    },
+    {
+      "family": "G21EA",
+      "idx": 22,
+      "split": "train",
+      "reference_pbe0": 89.5057,
+      "prior_kcal_mol": 31.067060937922548,
+      "error_kcal_mol": -17.24506666115585
+    },
+    {
+      "family": "G21EA",
+      "idx": 23,
+      "split": "train",
+      "reference_pbe0": 27.1118,
+      "prior_kcal_mol": 28.594475521350144,
+      "error_kcal_mol": -6.722255926049842
+    },
+    {
+      "family": "G21EA",
+      "idx": 24,
+      "split": "train",
+      "reference_pbe0": 35.6804,
+      "prior_kcal_mol": 33.666687870172126,
+      "error_kcal_mol": -0.5949901419841911
+    },
+    {
+      "family": "G21EA",
+      "idx": 25,
+      "split": "train",
+      "reference_pbe0": 58.3758,
+      "prior_kcal_mol": 16.3866882986859,
+      "error_kcal_mol": -24.730748847715933
+    },
+    {
+      "family": "G21IP",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 265.4755,
+      "prior_kcal_mol": 142.29217319053703,
+      "error_kcal_mol": -75.25911880483622
+    },
+    {
+      "family": "G21IP",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 402.172,
+      "prior_kcal_mol": 142.29217319053703,
+      "error_kcal_mol": -142.21143079861525
+    },
+    {
+      "family": "G21IP",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": 298.6928,
+      "prior_kcal_mol": 142.29217319053703,
+      "error_kcal_mol": -78.6493616131404
+    },
+    {
+      "family": "G21IP",
+      "idx": 22,
+      "split": "train",
+      "reference_pbe0": 237.0647,
+      "prior_kcal_mol": 142.9686467534437,
+      "error_kcal_mol": -20.69873069124715
+    },
+    {
+      "family": "G21IP",
+      "idx": 23,
+      "split": "train",
+      "reference_pbe0": 230.6972,
+      "prior_kcal_mol": 143.28249622081327,
+      "error_kcal_mol": -10.759845889604017
+    },
+    {
+      "family": "G21IP",
+      "idx": 25,
+      "split": "train",
+      "reference_pbe0": 238.7842,
+      "prior_kcal_mol": 142.45259384319274,
+      "error_kcal_mol": -16.46140050833314
+    },
+    {
+      "family": "G21IP",
+      "idx": 27,
+      "split": "train",
+      "reference_pbe0": 257.9507,
+      "prior_kcal_mol": 142.85310977111973,
+      "error_kcal_mol": -7.630917069619275
+    },
+    {
+      "family": "G21IP",
+      "idx": 31,
+      "split": "train",
+      "reference_pbe0": 285.3018,
+      "prior_kcal_mol": 175.1238591259621,
+      "error_kcal_mol": -15.563212877952699
+    },
+    {
+      "family": "G21IP",
+      "idx": 32,
+      "split": "train",
+      "reference_pbe0": 240.5002,
+      "prior_kcal_mol": 142.29221601306264,
+      "error_kcal_mol": -3.223296290492282
+    },
+    {
+      "family": "G21IP",
+      "idx": 33,
+      "split": "train",
+      "reference_pbe0": 220.6306,
+      "prior_kcal_mol": 147.2548183360591,
+      "error_kcal_mol": -12.911701401652053
+    },
+    {
+      "family": "G21IP",
+      "idx": 34,
+      "split": "train",
+      "reference_pbe0": 260.6665,
+      "prior_kcal_mol": 145.43904673483348,
+      "error_kcal_mol": -13.837971253763202
+    },
+    {
+      "family": "G21IP",
+      "idx": 36,
+      "split": "train",
+      "reference_pbe0": 259.9847,
+      "prior_kcal_mol": 149.54268250440498,
+      "error_kcal_mol": -1.1494502388725314
+    },
+    {
+      "family": "ISO34",
+      "idx": 1,
+      "split": "development",
+      "reference_pbe0": -1.6201,
+      "prior_kcal_mol": -20.886068983604375,
+      "error_kcal_mol": -15.910353929367904
+    },
+    {
+      "family": "ISO34",
+      "idx": 2,
+      "split": "development",
+      "reference_pbe0": 19.0687,
+      "prior_kcal_mol": 72.96753302522565,
+      "error_kcal_mol": 12.249156407091544
+    },
+    {
+      "family": "ISO34",
+      "idx": 3,
+      "split": "development",
+      "reference_pbe0": 3.8292,
+      "prior_kcal_mol": 80.24430656144875,
+      "error_kcal_mol": 31.800007658480766
+    },
+    {
+      "family": "ISO34",
+      "idx": 4,
+      "split": "development",
+      "reference_pbe0": 1.1343,
+      "prior_kcal_mol": 0.9469999964003942,
+      "error_kcal_mol": -2.6605048285501227
+    },
+    {
+      "family": "ISO34",
+      "idx": 5,
+      "split": "development",
+      "reference_pbe0": 0.4998,
+      "prior_kcal_mol": 1.5720836261137958,
+      "error_kcal_mol": 10.265403035475945
+    },
+    {
+      "family": "ISO34",
+      "idx": 6,
+      "split": "development",
+      "reference_pbe0": 3.3958,
+      "prior_kcal_mol": -0.6571483868260642,
+      "error_kcal_mol": -0.4856024217394196
+    },
+    {
+      "family": "ISO34",
+      "idx": 7,
+      "split": "development",
+      "reference_pbe0": 8.5433,
+      "prior_kcal_mol": 159.78050474201552,
+      "error_kcal_mol": 60.73266993638749
+    },
+    {
+      "family": "ISO34",
+      "idx": 8,
+      "split": "development",
+      "reference_pbe0": 21.4782,
+      "prior_kcal_mol": 51.56309391025317,
+      "error_kcal_mol": 15.554150731770026
+    },
+    {
+      "family": "ISO34",
+      "idx": 9,
+      "split": "development",
+      "reference_pbe0": 8.185,
+      "prior_kcal_mol": 2.296647790113855,
+      "error_kcal_mol": -3.4658818190362957
+    },
+    {
+      "family": "ISO34",
+      "idx": 10,
+      "split": "development",
+      "reference_pbe0": 1.5812,
+      "prior_kcal_mol": -10.791598239974759,
+      "error_kcal_mol": 11.219354366126675
+    },
+    {
+      "family": "ISO34",
+      "idx": 11,
+      "split": "development",
+      "reference_pbe0": -5.1129,
+      "prior_kcal_mol": -31.482414885670696,
+      "error_kcal_mol": 26.632008053173866
+    },
+    {
+      "family": "ISO34",
+      "idx": 12,
+      "split": "development",
+      "reference_pbe0": 49.5562,
+      "prior_kcal_mol": 96.87110739119755,
+      "error_kcal_mol": 1.0243682580107372
+    },
+    {
+      "family": "ISO34",
+      "idx": 13,
+      "split": "development",
+      "reference_pbe0": 39.8812,
+      "prior_kcal_mol": 1.1474739894813963,
+      "error_kcal_mol": -37.794409474303244
+    },
+    {
+      "family": "ISO34",
+      "idx": 14,
+      "split": "development",
+      "reference_pbe0": 24.1465,
+      "prior_kcal_mol": 57.53437862255229,
+      "error_kcal_mol": 66.12784348944571
+    },
+    {
+      "family": "ISO34",
+      "idx": 15,
+      "split": "development",
+      "reference_pbe0": 7.924,
+      "prior_kcal_mol": 4.054676184151333,
+      "error_kcal_mol": 13.058879454198724
+    },
+    {
+      "family": "ISO34",
+      "idx": 16,
+      "split": "development",
+      "reference_pbe0": 6.7325,
+      "prior_kcal_mol": 50.48482759720933,
+      "error_kcal_mol": -28.833084367163877
+    },
+    {
+      "family": "ISO34",
+      "idx": 17,
+      "split": "development",
+      "reference_pbe0": 26.9968,
+      "prior_kcal_mol": 6.10675191176603,
+      "error_kcal_mol": -11.011877440591295
+    },
+    {
+      "family": "ISO34",
+      "idx": 18,
+      "split": "development",
+      "reference_pbe0": 11.2901,
+      "prior_kcal_mol": 57.5379790150485,
+      "error_kcal_mol": -1.182567495951576
+    },
+    {
+      "family": "ISO34",
+      "idx": 19,
+      "split": "development",
+      "reference_pbe0": 4.397,
+      "prior_kcal_mol": 2.53398680577513,
+      "error_kcal_mol": 7.70143798518735
+    },
+    {
+      "family": "ISO34",
+      "idx": 20,
+      "split": "development",
+      "reference_pbe0": 18.1996,
+      "prior_kcal_mol": 11.205133232392935,
+      "error_kcal_mol": -0.5116718196761927
+    },
+    {
+      "family": "ISO34",
+      "idx": 21,
+      "split": "development",
+      "reference_pbe0": 1.1335,
+      "prior_kcal_mol": -2.8290071827004053,
+      "error_kcal_mol": 7.109208705354448
+    },
+    {
+      "family": "ISO34",
+      "idx": 22,
+      "split": "development",
+      "reference_pbe0": 4.8101,
+      "prior_kcal_mol": 27.40851128609131,
+      "error_kcal_mol": 12.21072146085862
+    },
+    {
+      "family": "ISO34",
+      "idx": 23,
+      "split": "development",
+      "reference_pbe0": 5.3002,
+      "prior_kcal_mol": 2.8262694915819315,
+      "error_kcal_mol": -7.0702847215085445
+    },
+    {
+      "family": "ISO34",
+      "idx": 24,
+      "split": "development",
+      "reference_pbe0": 12.0363,
+      "prior_kcal_mol": 12.522100598509093,
+      "error_kcal_mol": -12.222121824876627
+    },
+    {
+      "family": "ISO34",
+      "idx": 25,
+      "split": "development",
+      "reference_pbe0": 24.0127,
+      "prior_kcal_mol": 79.12103191155536,
+      "error_kcal_mol": 24.31705387021332
+    },
+    {
+      "family": "ISO34",
+      "idx": 26,
+      "split": "development",
+      "reference_pbe0": 17.7804,
+      "prior_kcal_mol": 17.54332224796942,
+      "error_kcal_mol": -10.647295179581072
+    },
+    {
+      "family": "ISO34",
+      "idx": 27,
+      "split": "development",
+      "reference_pbe0": 65.0701,
+      "prior_kcal_mol": -95.74225768871206,
+      "error_kcal_mol": -44.74744678816287
+    },
+    {
+      "family": "ISO34",
+      "idx": 28,
+      "split": "development",
+      "reference_pbe0": 29.6171,
+      "prior_kcal_mol": 95.38704115091937,
+      "error_kcal_mol": 14.813602298604637
+    },
+    {
+      "family": "ISO34",
+      "idx": 29,
+      "split": "development",
+      "reference_pbe0": 14.7847,
+      "prior_kcal_mol": -11.933404589388292,
+      "error_kcal_mol": 11.088331431741793
+    },
+    {
+      "family": "ISO34",
+      "idx": 30,
+      "split": "development",
+      "reference_pbe0": 10.161,
+      "prior_kcal_mol": 11.906032077545134,
+      "error_kcal_mol": 17.139253211883442
+    },
+    {
+      "family": "ISO34",
+      "idx": 31,
+      "split": "development",
+      "reference_pbe0": 17.3029,
+      "prior_kcal_mol": -15.330178376623609,
+      "error_kcal_mol": 8.05579024196535
+    },
+    {
+      "family": "ISO34",
+      "idx": 32,
+      "split": "development",
+      "reference_pbe0": 8.5526,
+      "prior_kcal_mol": -16.94733307877911,
+      "error_kcal_mol": 6.208667811584629
+    },
+    {
+      "family": "ISO34",
+      "idx": 33,
+      "split": "development",
+      "reference_pbe0": 11.372,
+      "prior_kcal_mol": 19.05109217258989,
+      "error_kcal_mol": -19.108422021436883
+    },
+    {
+      "family": "ISO34",
+      "idx": 34,
+      "split": "development",
+      "reference_pbe0": 8.0522,
+      "prior_kcal_mol": -2.95946878988859,
+      "error_kcal_mol": -8.012792256734633
+    },
+    {
+      "family": "ISOL24",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 11.5323,
+      "prior_kcal_mol": -14.804312293664484,
+      "error_kcal_mol": 10.14888070480668
+    },
+    {
+      "family": "ISOL24",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 35.9099,
+      "prior_kcal_mol": -42.62375128319441,
+      "error_kcal_mol": 24.655533062681886
+    },
+    {
+      "family": "ISOL24",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 18.589,
+      "prior_kcal_mol": -10.66886447705102,
+      "error_kcal_mol": -2.6073693319956974
+    },
+    {
+      "family": "ISOL24",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 5.9555,
+      "prior_kcal_mol": 19.79326989574021,
+      "error_kcal_mol": 53.18477121625736
+    },
+    {
+      "family": "ISOL24",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": 35.3114,
+      "prior_kcal_mol": 73.7766538554215,
+      "error_kcal_mol": -8.160136962092528
+    },
+    {
+      "family": "ISOL24",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 31.6599,
+      "prior_kcal_mol": 17.724048990515218,
+      "error_kcal_mol": -1.22980139513611
+    },
+    {
+      "family": "ISOL24",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": 5.7636,
+      "prior_kcal_mol": -3.1514272673184403,
+      "error_kcal_mol": -2.9257319363216556
+    },
+    {
+      "family": "ISOL24",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": 15.5902,
+      "prior_kcal_mol": 66.76219434891527,
+      "error_kcal_mol": -19.97591337783899
+    },
+    {
+      "family": "ISOL24",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 5.5667,
+      "prior_kcal_mol": -1.7140427265436051,
+      "error_kcal_mol": 22.48089684666
+    },
+    {
+      "family": "ISOL24",
+      "idx": 21,
+      "split": "train",
+      "reference_pbe0": 8.3158,
+      "prior_kcal_mol": -89.51806136881491,
+      "error_kcal_mol": 1.0680192762812446
+    },
+    {
+      "family": "PArel",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": 1.3189,
+      "prior_kcal_mol": -8.23259378785708,
+      "error_kcal_mol": -1.9596970109556076
+    },
+    {
+      "family": "PArel",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 8.1981,
+      "prior_kcal_mol": -35.73027542880177,
+      "error_kcal_mol": -24.91945739890927
+    },
+    {
+      "family": "PArel",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 3.0181,
+      "prior_kcal_mol": 0.29272206815234497,
+      "error_kcal_mol": -5.290248988427447
+    },
+    {
+      "family": "PArel",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 7.9237,
+      "prior_kcal_mol": -3.884422809902224,
+      "error_kcal_mol": -14.057745531817005
+    },
+    {
+      "family": "PArel",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 8.9753,
+      "prior_kcal_mol": -3.549507115871266,
+      "error_kcal_mol": -14.881728447602704
+    },
+    {
+      "family": "PArel",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 3.2927,
+      "prior_kcal_mol": -7.740929524879463,
+      "error_kcal_mol": -15.325072840471373
+    },
+    {
+      "family": "PArel",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": -0.7291,
+      "prior_kcal_mol": 1.2011457557486205,
+      "error_kcal_mol": -5.827376786661123
+    },
+    {
+      "family": "PArel",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 1.0558,
+      "prior_kcal_mol": -0.959802193926715,
+      "error_kcal_mol": -2.8223916420762976
+    },
+    {
+      "family": "PArel",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 7.2653,
+      "prior_kcal_mol": 4.664075583820916,
+      "error_kcal_mol": -3.4309051796237053
+    },
+    {
+      "family": "PArel",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 3.816,
+      "prior_kcal_mol": -4.241687220909868,
+      "error_kcal_mol": -9.504710545778995
+    },
+    {
+      "family": "PArel",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": 4.1248,
+      "prior_kcal_mol": -5.245307295904602,
+      "error_kcal_mol": -10.840836358075702
+    },
+    {
+      "family": "PArel",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": 4.0052,
+      "prior_kcal_mol": 1.7262127189513876,
+      "error_kcal_mol": -5.346516786446304
+    },
+    {
+      "family": "PArel",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 6.2585,
+      "prior_kcal_mol": -21.647179728519077,
+      "error_kcal_mol": -13.649003395414988
+    },
+    {
+      "family": "PArel",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": 10.5881,
+      "prior_kcal_mol": -2.1969153200831304,
+      "error_kcal_mol": -16.961425226309107
+    },
+    {
+      "family": "PArel",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": 3.0297,
+      "prior_kcal_mol": -16.761766889372396,
+      "error_kcal_mol": -8.7227819157978
+    },
+    {
+      "family": "PArel",
+      "idx": 16,
+      "split": "train",
+      "reference_pbe0": 17.6525,
+      "prior_kcal_mol": 12.49410873777066,
+      "error_kcal_mol": 5.432557231312947
+    },
+    {
+      "family": "PArel",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 11.7115,
+      "prior_kcal_mol": -24.243013926057177,
+      "error_kcal_mol": -8.988362494926655
+    },
+    {
+      "family": "PArel",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": -0.7882,
+      "prior_kcal_mol": -8.189831608406447,
+      "error_kcal_mol": -5.064815400583276
+    },
+    {
+      "family": "PArel",
+      "idx": 19,
+      "split": "train",
+      "reference_pbe0": 4.3221,
+      "prior_kcal_mol": 7.334492665016108,
+      "error_kcal_mol": 3.7550068250973947
+    },
+    {
+      "family": "PArel",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 1.8605,
+      "prior_kcal_mol": 11.218342498985884,
+      "error_kcal_mol": 6.848453877992777
+    },
+    {
+      "family": "PX13",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": 55.4531,
+      "prior_kcal_mol": 49.45322072545006,
+      "error_kcal_mol": -6.2340455255796225
+    },
+    {
+      "family": "PX13",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 40.3048,
+      "prior_kcal_mol": 35.53050406479412,
+      "error_kcal_mol": -0.7784356381416807
+    },
+    {
+      "family": "PX13",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 42.1568,
+      "prior_kcal_mol": 16.173533993812388,
+      "error_kcal_mol": -15.614854671225277
+    },
+    {
+      "family": "PX13",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 44.152,
+      "prior_kcal_mol": 65.04129142793252,
+      "error_kcal_mol": 31.189454231432602
+    },
+    {
+      "family": "PX13",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 24.0583,
+      "prior_kcal_mol": 29.041008887626372,
+      "error_kcal_mol": 20.733360865215467
+    },
+    {
+      "family": "PX13",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 20.1451,
+      "prior_kcal_mol": -0.36532946060302324,
+      "error_kcal_mol": -1.7431561148134385
+    },
+    {
+      "family": "PX13",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 22.2204,
+      "prior_kcal_mol": 0.061506893790354795,
+      "error_kcal_mol": 0.3891988199812299
+    },
+    {
+      "family": "PX13",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 25.7102,
+      "prior_kcal_mol": 9.094006361793559,
+      "error_kcal_mol": 8.961357801643992
+    },
+    {
+      "family": "PX13",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 37.6847,
+      "prior_kcal_mol": -3.9143186438411472,
+      "error_kcal_mol": -6.7232789995635995
+    },
+    {
+      "family": "PX13",
+      "idx": 10,
+      "split": "train",
+      "reference_pbe0": 15.3319,
+      "prior_kcal_mol": -8.73741022337066,
+      "error_kcal_mol": 1.1529648733295133
+    },
+    {
+      "family": "PX13",
+      "idx": 11,
+      "split": "train",
+      "reference_pbe0": 9.3459,
+      "prior_kcal_mol": -6.148661404477344,
+      "error_kcal_mol": 0.3783973610435455
+    },
+    {
+      "family": "PX13",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": 8.5927,
+      "prior_kcal_mol": 0.6143888453939687,
+      "error_kcal_mol": 4.775442890973525
+    },
+    {
+      "family": "PX13",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 9.563,
+      "prior_kcal_mol": -3.8154248423147674,
+      "error_kcal_mol": -0.6932021536721944
+    },
+    {
+      "family": "RC21",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 62.8681,
+      "prior_kcal_mol": 29.033537312251116,
+      "error_kcal_mol": -2.352575507686086
+    },
+    {
+      "family": "RC21",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 59.9079,
+      "prior_kcal_mol": 18.4392538503036,
+      "error_kcal_mol": -2.473046977232759
+    },
+    {
+      "family": "RC21",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": 35.4425,
+      "prior_kcal_mol": 16.352493975180188,
+      "error_kcal_mol": -4.491135451386389
+    },
+    {
+      "family": "RC21",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 15.8695,
+      "prior_kcal_mol": 76.14921429397512,
+      "error_kcal_mol": -0.4578037320212041
+    },
+    {
+      "family": "RC21",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 14.98,
+      "prior_kcal_mol": 7.8221080563455185,
+      "error_kcal_mol": -2.148444838269824
+    },
+    {
+      "family": "RC21",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 51.0622,
+      "prior_kcal_mol": 20.827217727772563,
+      "error_kcal_mol": 1.6703142939476263
+    },
+    {
+      "family": "RC21",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": -6.5066,
+      "prior_kcal_mol": 14.091622414120096,
+      "error_kcal_mol": 11.03058040430097
+    },
+    {
+      "family": "RC21",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": 32.9127,
+      "prior_kcal_mol": 14.479840166349465,
+      "error_kcal_mol": -0.017021134441959747
+    },
+    {
+      "family": "RC21",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 54.5942,
+      "prior_kcal_mol": 42.719815385282885,
+      "error_kcal_mol": 1.4191395425690112
+    },
+    {
+      "family": "TAUT15",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": 7.4646,
+      "prior_kcal_mol": 5.3766501684754875,
+      "error_kcal_mol": -10.468796099799178
+    },
+    {
+      "family": "TAUT15",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 10.0443,
+      "prior_kcal_mol": -12.108969512901309,
+      "error_kcal_mol": -30.565891864225307
+    },
+    {
+      "family": "TAUT15",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": -6.5033,
+      "prior_kcal_mol": -15.27053368494095,
+      "error_kcal_mol": -4.754747769594665
+    },
+    {
+      "family": "TAUT15",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 8.8026,
+      "prior_kcal_mol": -3.7432188002043127,
+      "error_kcal_mol": -22.76242518806733
+    },
+    {
+      "family": "TAUT15",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 13.5018,
+      "prior_kcal_mol": -18.053129742316898,
+      "error_kcal_mol": -23.05332701264609
+    },
+    {
+      "family": "TAUT15",
+      "idx": 6,
+      "split": "train",
+      "reference_pbe0": -0.0306,
+      "prior_kcal_mol": -9.068573678740632,
+      "error_kcal_mol": 3.3273497332168103
+    },
+    {
+      "family": "TAUT15",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": -0.2784,
+      "prior_kcal_mol": -1.9392399986944724,
+      "error_kcal_mol": 17.64447776927126
+    },
+    {
+      "family": "TAUT15",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 1.6476,
+      "prior_kcal_mol": -4.170850925577181,
+      "error_kcal_mol": 13.743902443228802
+    },
+    {
+      "family": "TAUT15",
+      "idx": 12,
+      "split": "train",
+      "reference_pbe0": 2.6585,
+      "prior_kcal_mol": -31.410690806928624,
+      "error_kcal_mol": -18.830539066161418
+    },
+    {
+      "family": "TAUT15",
+      "idx": 13,
+      "split": "train",
+      "reference_pbe0": 0.4661,
+      "prior_kcal_mol": 7.505688108747185,
+      "error_kcal_mol": 6.19523661497215
+    },
+    {
+      "family": "TAUT15",
+      "idx": 14,
+      "split": "train",
+      "reference_pbe0": 1.318,
+      "prior_kcal_mol": -6.341565458435594,
+      "error_kcal_mol": -8.818820483105645
+    },
+    {
+      "family": "TAUT15",
+      "idx": 15,
+      "split": "train",
+      "reference_pbe0": -2.1457,
+      "prior_kcal_mol": -21.446951037458795,
+      "error_kcal_mol": -9.460351683598224
+    },
+    {
+      "family": "W4-11",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 193.7295,
+      "prior_kcal_mol": 99.18958843381921,
+      "error_kcal_mol": 2.0087166801444156
+    },
+    {
+      "family": "W4-11",
+      "idx": 16,
+      "split": "train",
+      "reference_pbe0": 1007.9082,
+      "prior_kcal_mol": 424.12963226931987,
+      "error_kcal_mol": -0.052684936489285406
+    },
+    {
+      "family": "W4-11",
+      "idx": 17,
+      "split": "train",
+      "reference_pbe0": 176.3573,
+      "prior_kcal_mol": 83.837645086189,
+      "error_kcal_mol": 47.603262593458616
+    },
+    {
+      "family": "W4-11",
+      "idx": 18,
+      "split": "train",
+      "reference_pbe0": 82.9479,
+      "prior_kcal_mol": 43.37512542036718,
+      "error_kcal_mol": 16.212515507425632
+    },
+    {
+      "family": "W4-11",
+      "idx": 20,
+      "split": "train",
+      "reference_pbe0": 86.8379,
+      "prior_kcal_mol": 7.932881147335105,
+      "error_kcal_mol": 7.996864015703973
+    },
+    {
+      "family": "W4-11",
+      "idx": 21,
+      "split": "train",
+      "reference_pbe0": 720.9485,
+      "prior_kcal_mol": 278.5908195440661,
+      "error_kcal_mol": -13.547442482905758
+    },
+    {
+      "family": "W4-11",
+      "idx": 24,
+      "split": "train",
+      "reference_pbe0": 863.2953,
+      "prior_kcal_mol": 386.1564567780579,
+      "error_kcal_mol": 8.598260583264468
+    },
+    {
+      "family": "W4-11",
+      "idx": 37,
+      "split": "train",
+      "reference_pbe0": 449.7659,
+      "prior_kcal_mol": 209.60833372342864,
+      "error_kcal_mol": -7.701681515022622
+    },
+    {
+      "family": "W4-11",
+      "idx": 44,
+      "split": "train",
+      "reference_pbe0": 575.3959,
+      "prior_kcal_mol": 237.82733352941415,
+      "error_kcal_mol": -13.273795174654191
+    },
+    {
+      "family": "W4-11",
+      "idx": 46,
+      "split": "train",
+      "reference_pbe0": 436.3058,
+      "prior_kcal_mol": 132.91942344397188,
+      "error_kcal_mol": -0.25824064721890866
+    },
+    {
+      "family": "W4-11",
+      "idx": 49,
+      "split": "train",
+      "reference_pbe0": 359.961,
+      "prior_kcal_mol": 154.43863478999165,
+      "error_kcal_mol": 13.568185040256928
+    },
+    {
+      "family": "W4-11",
+      "idx": 54,
+      "split": "train",
+      "reference_pbe0": 404.3307,
+      "prior_kcal_mol": 181.4463109290859,
+      "error_kcal_mol": -11.959587834708222
+    },
+    {
+      "family": "W4-11",
+      "idx": 55,
+      "split": "train",
+      "reference_pbe0": 372.3985,
+      "prior_kcal_mol": 138.2802029152286,
+      "error_kcal_mol": -1.636518159237728
+    },
+    {
+      "family": "W4-11",
+      "idx": 59,
+      "split": "train",
+      "reference_pbe0": 319.5929,
+      "prior_kcal_mol": 88.03166491919163,
+      "error_kcal_mol": 2.792504876778414
+    },
+    {
+      "family": "W4-11",
+      "idx": 61,
+      "split": "train",
+      "reference_pbe0": 314.764,
+      "prior_kcal_mol": 91.86752554820549,
+      "error_kcal_mol": 10.783471030941351
+    },
+    {
+      "family": "W4-11",
+      "idx": 63,
+      "split": "train",
+      "reference_pbe0": 538.0406,
+      "prior_kcal_mol": 210.53072837469773,
+      "error_kcal_mol": -21.612875803337882
+    },
+    {
+      "family": "W4-11",
+      "idx": 65,
+      "split": "train",
+      "reference_pbe0": 500.5033,
+      "prior_kcal_mol": 144.47348214565557,
+      "error_kcal_mol": -28.917392694869935
+    },
+    {
+      "family": "W4-11",
+      "idx": 67,
+      "split": "train",
+      "reference_pbe0": 635.1575,
+      "prior_kcal_mol": 222.9896690419383,
+      "error_kcal_mol": -19.896062448695773
+    },
+    {
+      "family": "W4-11",
+      "idx": 68,
+      "split": "train",
+      "reference_pbe0": 403.3847,
+      "prior_kcal_mol": 113.49239581327657,
+      "error_kcal_mol": -11.636813473932095
+    },
+    {
+      "family": "W4-11",
+      "idx": 70,
+      "split": "train",
+      "reference_pbe0": 478.4979,
+      "prior_kcal_mol": 102.05218674248954,
+      "error_kcal_mol": -1.4330267687092961
+    },
+    {
+      "family": "W4-11",
+      "idx": 71,
+      "split": "train",
+      "reference_pbe0": 400.867,
+      "prior_kcal_mol": 167.0188358046659,
+      "error_kcal_mol": -9.17215013318875
+    },
+    {
+      "family": "W4-11",
+      "idx": 74,
+      "split": "train",
+      "reference_pbe0": 266.6111,
+      "prior_kcal_mol": 120.26198387781724,
+      "error_kcal_mol": 0.6424626299112287
+    },
+    {
+      "family": "W4-11",
+      "idx": 77,
+      "split": "train",
+      "reference_pbe0": 457.9765,
+      "prior_kcal_mol": 99.80886691358063,
+      "error_kcal_mol": -16.383764707440527
+    },
+    {
+      "family": "W4-11",
+      "idx": 78,
+      "split": "train",
+      "reference_pbe0": 422.2755,
+      "prior_kcal_mol": 97.144902916955,
+      "error_kcal_mol": 2.4266245366040082
+    },
+    {
+      "family": "W4-11",
+      "idx": 80,
+      "split": "train",
+      "reference_pbe0": 263.2144,
+      "prior_kcal_mol": 176.8276863794904,
+      "error_kcal_mol": 71.07804984903582
+    },
+    {
+      "family": "W4-11",
+      "idx": 84,
+      "split": "train",
+      "reference_pbe0": 258.3708,
+      "prior_kcal_mol": 49.56707580278862,
+      "error_kcal_mol": -17.496598392102946
+    },
+    {
+      "family": "W4-11",
+      "idx": 86,
+      "split": "train",
+      "reference_pbe0": 391.5751,
+      "prior_kcal_mol": 162.3933412531451,
+      "error_kcal_mol": 9.58421561831674
+    },
+    {
+      "family": "W4-11",
+      "idx": 87,
+      "split": "train",
+      "reference_pbe0": 408.1692,
+      "prior_kcal_mol": 170.77663784395386,
+      "error_kcal_mol": -5.675783931206041
+    },
+    {
+      "family": "W4-11",
+      "idx": 88,
+      "split": "train",
+      "reference_pbe0": 134.7305,
+      "prior_kcal_mol": 23.78200376871012,
+      "error_kcal_mol": -16.809441361012386
+    },
+    {
+      "family": "W4-11",
+      "idx": 89,
+      "split": "train",
+      "reference_pbe0": 166.3339,
+      "prior_kcal_mol": -11.152998867573386,
+      "error_kcal_mol": -5.568442494532751
+    },
+    {
+      "family": "W4-11",
+      "idx": 90,
+      "split": "train",
+      "reference_pbe0": 163.0401,
+      "prior_kcal_mol": -66.17317109443832,
+      "error_kcal_mol": -18.846219123906472
+    },
+    {
+      "family": "W4-11",
+      "idx": 94,
+      "split": "train",
+      "reference_pbe0": 338.399,
+      "prior_kcal_mol": 33.32399840618267,
+      "error_kcal_mol": -56.67450542225559
+    },
+    {
+      "family": "W4-11",
+      "idx": 101,
+      "split": "train",
+      "reference_pbe0": 153.9373,
+      "prior_kcal_mol": -2.873321707006475,
+      "error_kcal_mol": -5.5436414149045365
+    },
+    {
+      "family": "W4-11",
+      "idx": 104,
+      "split": "train",
+      "reference_pbe0": 283.7874,
+      "prior_kcal_mol": 11.594881926501163,
+      "error_kcal_mol": 1.1297702867845185
+    },
+    {
+      "family": "W4-11",
+      "idx": 106,
+      "split": "train",
+      "reference_pbe0": 168.0372,
+      "prior_kcal_mol": 3.6277631376026944,
+      "error_kcal_mol": -4.952762859115982
+    },
+    {
+      "family": "W4-11",
+      "idx": 108,
+      "split": "train",
+      "reference_pbe0": 340.5381,
+      "prior_kcal_mol": -37.0288416009923,
+      "error_kcal_mol": -30.906020854125465
+    },
+    {
+      "family": "W4-11",
+      "idx": 109,
+      "split": "train",
+      "reference_pbe0": 180.3749,
+      "prior_kcal_mol": 2.3769992201354295,
+      "error_kcal_mol": -5.68265502015711
+    },
+    {
+      "family": "W4-11",
+      "idx": 113,
+      "split": "train",
+      "reference_pbe0": 127.1919,
+      "prior_kcal_mol": -24.080294969605742,
+      "error_kcal_mol": -10.764045411036939
+    },
+    {
+      "family": "W4-11",
+      "idx": 115,
+      "split": "train",
+      "reference_pbe0": 232.3699,
+      "prior_kcal_mol": 218.39907147825232,
+      "error_kcal_mol": 16.57355018796269
+    },
+    {
+      "family": "W4-11",
+      "idx": 116,
+      "split": "train",
+      "reference_pbe0": 107.0795,
+      "prior_kcal_mol": -28.698256527060977,
+      "error_kcal_mol": -23.45212356110236
+    },
+    {
+      "family": "W4-11",
+      "idx": 118,
+      "split": "train",
+      "reference_pbe0": 59.8217,
+      "prior_kcal_mol": -1.9459792761166765,
+      "error_kcal_mol": -8.153383105975362
+    },
+    {
+      "family": "W4-11",
+      "idx": 119,
+      "split": "train",
+      "reference_pbe0": 124.3279,
+      "prior_kcal_mol": 68.4759283955168,
+      "error_kcal_mol": 12.300298971327852
+    },
+    {
+      "family": "W4-11",
+      "idx": 121,
+      "split": "train",
+      "reference_pbe0": 231.7378,
+      "prior_kcal_mol": 189.96744925438398,
+      "error_kcal_mol": 13.532325308841985
+    },
+    {
+      "family": "W4-11",
+      "idx": 122,
+      "split": "train",
+      "reference_pbe0": 204.8161,
+      "prior_kcal_mol": -56.97438739318444,
+      "error_kcal_mol": 4.616732203883363
+    },
+    {
+      "family": "W4-11",
+      "idx": 126,
+      "split": "train",
+      "reference_pbe0": 67.4268,
+      "prior_kcal_mol": -65.38240829834457,
+      "error_kcal_mol": -8.421139028859654
+    },
+    {
+      "family": "W4-11",
+      "idx": 127,
+      "split": "train",
+      "reference_pbe0": 166.5796,
+      "prior_kcal_mol": -57.805054876744194,
+      "error_kcal_mol": 24.870435913451637
+    },
+    {
+      "family": "W4-11",
+      "idx": 128,
+      "split": "train",
+      "reference_pbe0": 99.9393,
+      "prior_kcal_mol": -209.8748197080847,
+      "error_kcal_mol": -5.543938436383734
+    },
+    {
+      "family": "W4-11",
+      "idx": 129,
+      "split": "train",
+      "reference_pbe0": 231.1201,
+      "prior_kcal_mol": -97.53136770698205,
+      "error_kcal_mol": 5.686593378396154
+    },
+    {
+      "family": "W4-11",
+      "idx": 130,
+      "split": "train",
+      "reference_pbe0": 54.0951,
+      "prior_kcal_mol": -18.858915648437744,
+      "error_kcal_mol": 10.986913095053277
+    },
+    {
+      "family": "W4-11",
+      "idx": 131,
+      "split": "train",
+      "reference_pbe0": 120.51,
+      "prior_kcal_mol": 58.44151999886653,
+      "error_kcal_mol": 69.00855151969041
+    },
+    {
+      "family": "W4-11",
+      "idx": 132,
+      "split": "train",
+      "reference_pbe0": 130.7229,
+      "prior_kcal_mol": -73.92849134876163,
+      "error_kcal_mol": 6.78550876738264
+    },
+    {
+      "family": "W4-11",
+      "idx": 133,
+      "split": "train",
+      "reference_pbe0": 91.4738,
+      "prior_kcal_mol": -52.602914323429374,
+      "error_kcal_mol": 6.628137246747375
+    },
+    {
+      "family": "W4-11",
+      "idx": 135,
+      "split": "train",
+      "reference_pbe0": 133.9665,
+      "prior_kcal_mol": -12.750235146917499,
+      "error_kcal_mol": -19.217386321982094
+    },
+    {
+      "family": "W4-11",
+      "idx": 136,
+      "split": "train",
+      "reference_pbe0": 127.4852,
+      "prior_kcal_mol": -52.42103252110301,
+      "error_kcal_mol": -33.73420360837075
+    },
+    {
+      "family": "W4-11",
+      "idx": 137,
+      "split": "train",
+      "reference_pbe0": 150.1191,
+      "prior_kcal_mol": -38.76793706438333,
+      "error_kcal_mol": -9.049559845423335
+    },
+    {
+      "family": "W4-11",
+      "idx": 138,
+      "split": "train",
+      "reference_pbe0": 138.9867,
+      "prior_kcal_mol": 170.3601810149229,
+      "error_kcal_mol": 45.028395323283796
+    },
+    {
+      "family": "WCPT18",
+      "idx": 1,
+      "split": "train",
+      "reference_pbe0": 35.534,
+      "prior_kcal_mol": 27.531572684449433,
+      "error_kcal_mol": -10.548246126980757
+    },
+    {
+      "family": "WCPT18",
+      "idx": 2,
+      "split": "train",
+      "reference_pbe0": 33.9617,
+      "prior_kcal_mol": 39.700310882812666,
+      "error_kcal_mol": 6.413386759564759
+    },
+    {
+      "family": "WCPT18",
+      "idx": 3,
+      "split": "train",
+      "reference_pbe0": 57.6769,
+      "prior_kcal_mol": 28.92843389812145,
+      "error_kcal_mol": -42.95971221685721
+    },
+    {
+      "family": "WCPT18",
+      "idx": 4,
+      "split": "train",
+      "reference_pbe0": 45.6003,
+      "prior_kcal_mol": 52.354803246581724,
+      "error_kcal_mol": 9.484746460703837
+    },
+    {
+      "family": "WCPT18",
+      "idx": 5,
+      "split": "train",
+      "reference_pbe0": 63.3139,
+      "prior_kcal_mol": 60.01012543939362,
+      "error_kcal_mol": -11.800089584180698
+    },
+    {
+      "family": "WCPT18",
+      "idx": 7,
+      "split": "train",
+      "reference_pbe0": 30.872,
+      "prior_kcal_mol": 16.566622463422032,
+      "error_kcal_mol": -19.62602561849568
+    },
+    {
+      "family": "WCPT18",
+      "idx": 8,
+      "split": "train",
+      "reference_pbe0": 26.6948,
+      "prior_kcal_mol": 18.87545672531909,
+      "error_kcal_mol": -0.8604798721243951
+    },
+    {
+      "family": "WCPT18",
+      "idx": 9,
+      "split": "train",
+      "reference_pbe0": 55.0577,
+      "prior_kcal_mol": 22.8786267123844,
+      "error_kcal_mol": -34.82096785066033
+    }
+  ]
+}

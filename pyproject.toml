@@ -10,7 +10,7 @@ requires-python = ">=3.10"
 dependencies = ["numpy>=1.24"]
 
 [project.optional-dependencies]
-training = ["scipy", "h5py"]
+training = ["scipy", "h5py", "rdkit", "threadpoolctl"]
 d3 = ["dftd3"]
 
 [tool.setuptools]

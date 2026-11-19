@@ -1,0 +1,11 @@
+{
+  "checkpoint": "rdb7-f648919471a98b1e.npz",
+  "charge": 0,
+  "multiplicity": 2,
+  "n_atoms": 17,
+  "dt_fs": 0.05,
+  "steps": 60,
+  "maximum_FD_force_error_eV_A": 2.295081680259159e-08,
+  "hessian_asymmetry_Eh_bohr2": 0.0,
+  "final_minus_initial_kcal_mol": -0.0010796376045036033
+}

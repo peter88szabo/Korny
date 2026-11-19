@@ -1,0 +1,303 @@
+{
+  "checkpoints": {
+    "PBE0": "pbe0-osos-0e39316e7e768c58.npz",
+    "CCSD(T)/CBS": "cc-osos-bc251cfe55fe6917.npz"
+  },
+  "source": "10.1021/acs.jpca.6c03915",
+  "states": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "splits": {
+    "train": 1648,
+    "development": 1026,
+    "excluded": 1047,
+    "test": 697
+  },
+  "split_method": "complete heavy-element composition; nested parent subsets; common isolated H",
+  "inconsistent_parents_excluded": [
+    "dsgdb9nsd_001505"
+  ],
+  "reg": 0.03,
+  "targets": [
+    "bare PBE0",
+    "W1-F12 CCSD(T)/CBS"
+  ],
+  "kernel": "double_matern52",
+  "curve": [
+    {
+      "fraction": 0.25,
+      "train_parents": 114,
+      "train_geometries": 414,
+      "metrics": {
+        "development": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 468,
+              "mae_kcal_mol": 8.700058079315388,
+              "rmsd_kcal_mol": 12.762131186081888
+            },
+            "CCSD(T)/CBS": {
+              "n": 468,
+              "mae_kcal_mol": 8.880021717286704,
+              "rmsd_kcal_mol": 12.966272109866631
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 537,
+              "mae_kcal_mol": 12.916938034493036,
+              "rmsd_kcal_mol": 28.81113050699518
+            },
+            "CCSD(T)/CBS": {
+              "n": 537,
+              "mae_kcal_mol": 12.935924767229691,
+              "rmsd_kcal_mol": 28.948106988641143
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 224,
+              "mae_kcal_mol": 18.784174964668996,
+              "rmsd_kcal_mol": 37.28044003379822
+            },
+            "CCSD(T)/CBS": {
+              "n": 224,
+              "mae_kcal_mol": 18.887446040205695,
+              "rmsd_kcal_mol": 37.67303113579882
+            }
+          }
+        },
+        "test": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 530,
+              "mae_kcal_mol": 9.685436978490653,
+              "rmsd_kcal_mol": 19.78004692672787
+            },
+            "CCSD(T)/CBS": {
+              "n": 530,
+              "mae_kcal_mol": 9.807234402119898,
+              "rmsd_kcal_mol": 19.813288133755595
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 363,
+              "mae_kcal_mol": 11.769173712922015,
+              "rmsd_kcal_mol": 24.432206033251212
+            },
+            "CCSD(T)/CBS": {
+              "n": 363,
+              "mae_kcal_mol": 11.689351510403817,
+              "rmsd_kcal_mol": 24.34948603832371
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 141,
+              "mae_kcal_mol": 18.68087853430398,
+              "rmsd_kcal_mol": 35.258260695195666
+            },
+            "CCSD(T)/CBS": {
+              "n": 141,
+              "mae_kcal_mol": 19.107034700481293,
+              "rmsd_kcal_mol": 36.14855631932316
+            }
+          }
+        }
+      }
+    },
+    {
+      "fraction": 0.5,
+      "train_parents": 228,
+      "train_geometries": 801,
+      "metrics": {
+        "development": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 468,
+              "mae_kcal_mol": 8.034726596536657,
+              "rmsd_kcal_mol": 10.606977239486314
+            },
+            "CCSD(T)/CBS": {
+              "n": 468,
+              "mae_kcal_mol": 8.124530279396142,
+              "rmsd_kcal_mol": 10.653264751593802
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 537,
+              "mae_kcal_mol": 13.625326641158296,
+              "rmsd_kcal_mol": 25.26290526742213
+            },
+            "CCSD(T)/CBS": {
+              "n": 537,
+              "mae_kcal_mol": 13.463800014564264,
+              "rmsd_kcal_mol": 25.102844224045768
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 224,
+              "mae_kcal_mol": 27.169191606232612,
+              "rmsd_kcal_mol": 39.70242533897343
+            },
+            "CCSD(T)/CBS": {
+              "n": 224,
+              "mae_kcal_mol": 26.49265706336691,
+              "rmsd_kcal_mol": 38.276796613667166
+            }
+          }
+        },
+        "test": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 530,
+              "mae_kcal_mol": 12.171301878215072,
+              "rmsd_kcal_mol": 19.766534935441197
+            },
+            "CCSD(T)/CBS": {
+              "n": 530,
+              "mae_kcal_mol": 11.660352835877914,
+              "rmsd_kcal_mol": 19.010613445941992
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 363,
+              "mae_kcal_mol": 13.18936909667361,
+              "rmsd_kcal_mol": 24.516013751876795
+            },
+            "CCSD(T)/CBS": {
+              "n": 363,
+              "mae_kcal_mol": 12.97924711119049,
+              "rmsd_kcal_mol": 24.130525366073527
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 141,
+              "mae_kcal_mol": 19.672084838781085,
+              "rmsd_kcal_mol": 32.277980349004224
+            },
+            "CCSD(T)/CBS": {
+              "n": 141,
+              "mae_kcal_mol": 19.951010742820035,
+              "rmsd_kcal_mol": 32.032575235114095
+            }
+          }
+        }
+      }
+    },
+    {
+      "fraction": 1.0,
+      "train_parents": 456,
+      "train_geometries": 1648,
+      "metrics": {
+        "development": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 468,
+              "mae_kcal_mol": 8.173395450225478,
+              "rmsd_kcal_mol": 10.59354907233174
+            },
+            "CCSD(T)/CBS": {
+              "n": 468,
+              "mae_kcal_mol": 8.28029544098679,
+              "rmsd_kcal_mol": 10.687600870309709
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 537,
+              "mae_kcal_mol": 13.374379648871516,
+              "rmsd_kcal_mol": 23.519563598686354
+            },
+            "CCSD(T)/CBS": {
+              "n": 537,
+              "mae_kcal_mol": 13.338556414778365,
+              "rmsd_kcal_mol": 23.413510050380868
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 224,
+              "mae_kcal_mol": 18.689632331732753,
+              "rmsd_kcal_mol": 24.80280977382473
+            },
+            "CCSD(T)/CBS": {
+              "n": 224,
+              "mae_kcal_mol": 18.56026866365684,
+              "rmsd_kcal_mol": 24.79206972923534
+            }
+          }
+        },
+        "test": {
+          "H_abstraction": {
+            "PBE0": {
+              "n": 530,
+              "mae_kcal_mol": 9.269563716334476,
+              "rmsd_kcal_mol": 14.733076595226688
+            },
+            "CCSD(T)/CBS": {
+              "n": 530,
+              "mae_kcal_mol": 9.176536706992032,
+              "rmsd_kcal_mol": 14.683397650317366
+            }
+          },
+          "H_shift": {
+            "PBE0": {
+              "n": 363,
+              "mae_kcal_mol": 11.512893182365227,
+              "rmsd_kcal_mol": 19.70099913729093
+            },
+            "CCSD(T)/CBS": {
+              "n": 363,
+              "mae_kcal_mol": 11.471582133447255,
+              "rmsd_kcal_mol": 19.664861733862278
+            }
+          },
+          "isomerization": {
+            "PBE0": {
+              "n": 141,
+              "mae_kcal_mol": 16.5686953688446,
+              "rmsd_kcal_mol": 27.052900749830012
+            },
+            "CCSD(T)/CBS": {
+              "n": 141,
+              "mae_kcal_mol": 16.542045006423994,
+              "rmsd_kcal_mol": 27.384904877026447
+            }
+          }
+        }
+      }
+    }
+  ],
+  "seconds": 14.279232470000352,
+  "reference_PBE0_minus_W1_test": {
+    "H_abstraction": {
+      "n": 530,
+      "mae_kcal_mol": 4.892667802575933,
+      "rmsd_kcal_mol": 5.156250173082667
+    },
+    "H_shift": {
+      "n": 363,
+      "mae_kcal_mol": 1.6148486488759755,
+      "rmsd_kcal_mol": 2.3295648746058366
+    },
+    "isomerization": {
+      "n": 141,
+      "mae_kcal_mol": 2.465166647052366,
+      "rmsd_kcal_mol": 3.3721746909093535
+    }
+  },
+  "functional_group_schema": "smooth-oxygen-groups/1"
+}
