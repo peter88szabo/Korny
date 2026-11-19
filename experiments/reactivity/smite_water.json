@@ -1,0 +1,59 @@
+{
+  "molecule": "neutral singlet H2O",
+  "reference_harmonic_cm1": [
+    1649,
+    3832,
+    3943
+  ],
+  "frequency_reference": "https://cccbdb.nist.gov/compvibs3x.asp?basis=13&casno=7732185&charge=0&method=6",
+  "DES": {
+    "off": {
+      "scan_points": 4,
+      "optimization_steps": 19,
+      "frequencies_cm1": [
+        482.39000657,
+        1989.71446699,
+        2560.1961646
+      ],
+      "verlet_steps": 100,
+      "timestep_fs": 0.1,
+      "final_minus_initial_hartree": 5.0014825114796935e-08
+    },
+    "ts": {
+      "scan_points": 4,
+      "optimization_steps": 19,
+      "frequencies_cm1": [
+        482.40657113,
+        1989.70624477,
+        2560.16760664
+      ],
+      "verlet_steps": 100,
+      "timestep_fs": 0.1,
+      "final_minus_initial_hartree": 5.0014228591965804e-08
+    },
+    "d3": {
+      "scan_points": 4,
+      "optimization_steps": 19,
+      "frequencies_cm1": [
+        482.38836998,
+        1989.71512059,
+        2560.22553992
+      ],
+      "verlet_steps": 100,
+      "timestep_fs": 0.1,
+      "final_minus_initial_hartree": 5.001546699023862e-08
+    }
+  },
+  "augmented_TS": {
+    "scan_points": 4,
+    "optimization_steps": 18,
+    "frequencies_cm1": [
+      421.15759676,
+      3832.83188441,
+      3869.91984257
+    ],
+    "verlet_steps": 100,
+    "timestep_fs": 0.1,
+    "final_minus_initial_hartree": 6.83353821306909e-08
+  }
+}

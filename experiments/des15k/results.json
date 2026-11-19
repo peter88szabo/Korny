@@ -1,0 +1,36 @@
+{
+  "seed": 15107,
+  "training": {
+    "structures": 10139,
+    "parents": 3558,
+    "charges": {
+      "-1": 862,
+      "0": 7712,
+      "1": 1565
+    }
+  },
+  "test": {
+    "structures": 2575,
+    "parents": 890,
+    "charges": {
+      "-1": 318,
+      "0": 1850,
+      "1": 407
+    }
+  },
+  "fit_seconds": 115.76707039299981,
+  "coefficients_per_surface": 1092,
+  "checkpoint": "pbe0-9eadec7b86f7feaa.npz",
+  "energy_target": "ePBE0",
+  "force_target": "pbe0FOR",
+  "dispersion": "off",
+  "metrics": {
+    "geometries": 2575,
+    "force_components": 149334,
+    "energy_mae_eV": 0.2749027992545316,
+    "energy_rmse_eV": 0.4102891762269497,
+    "energy_per_atom_mae_eV": 0.016722517525208945,
+    "force_mae_eV_A": 0.16949083194570133,
+    "force_rmse_eV_A": 0.30931662520270675
+  }
+}

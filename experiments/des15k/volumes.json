@@ -1,0 +1,23 @@
+{
+  "checkpoint": "volumes-860632c12e0a861e.npz",
+  "target": "log(hRAT)",
+  "training": 10139,
+  "heldout_parents": 890,
+  "spec": {
+    "species": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      15,
+      16,
+      17
+    ],
+    "nr": 2,
+    "lmax": 2,
+    "ron": 2.0,
+    "rc": 3.8
+  },
+  "fit_seconds": 16.528381703999912
+}

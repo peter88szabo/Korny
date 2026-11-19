@@ -1,0 +1,7 @@
+{
+  "checkpoint": "pbe0-4bbc373a85b6345a.npz",
+  "reference": "PBE0",
+  "n": 500,
+  "mae_kcal_mol": 4.294048389627935,
+  "rmsd_kcal_mol": 5.615131320851963
+}

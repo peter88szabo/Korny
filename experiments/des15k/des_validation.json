@@ -1,0 +1,37 @@
+{
+  "checkpoint": "pbe0-9eadec7b86f7feaa.npz",
+  "volumes": "volumes-860632c12e0a861e.npz",
+  "reference": "PBE0+MBD",
+  "elapsed_seconds": 38.98232817000007,
+  "volume_ratio_mae": 0.020802441403278325,
+  "volume_ratio_rmse": 0.03950302895754032,
+  "models": {
+    "off": {
+      "geometries": 2575,
+      "force_components": 149334,
+      "energy_mae_eV": 0.4404645913096604,
+      "energy_rmse_eV": 0.5408399329910424,
+      "energy_per_atom_mae_eV": 0.023995253217354476,
+      "force_mae_eV_A": 0.16955823492594602,
+      "force_rmse_eV_A": 0.30911702368506233
+    },
+    "ts": {
+      "geometries": 2575,
+      "force_components": 149334,
+      "energy_mae_eV": 0.32572065664010463,
+      "energy_rmse_eV": 0.43854489232449534,
+      "energy_per_atom_mae_eV": 0.018962518335671315,
+      "force_mae_eV_A": 0.16981459958760642,
+      "force_rmse_eV_A": 0.30929568804047686
+    },
+    "d3": {
+      "geometries": 2575,
+      "force_components": 149334,
+      "energy_mae_eV": 0.28186391929693666,
+      "energy_rmse_eV": 0.41949797455982346,
+      "energy_per_atom_mae_eV": 0.01713210450421534,
+      "force_mae_eV_A": 0.16947327192813255,
+      "force_rmse_eV_A": 0.30919867505192317
+    }
+  }
+}

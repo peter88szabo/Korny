@@ -1,0 +1,80 @@
+{
+  "pymbd": "0.0.0.post1.dev0+77d7ab4",
+  "dftd3": "1.7.0",
+  "geometries": 150,
+  "molecule_ids": 30,
+  "TS": {
+    "sR": 0.96,
+    "d": 20.0,
+    "volumes": "reference hRAT"
+  },
+  "MBD_rsSCS": {
+    "beta": 0.85,
+    "volumes": "reference hRAT"
+  },
+  "D3": {
+    "functional": "pbe0",
+    "damping": "BJ",
+    "ATM": true
+  },
+  "predicted_minus_reference_volume_ratio": {
+    "mean_abs": 0.01210695004897926,
+    "max_abs": 0.18552579725351526
+  },
+  "geometry_only_TS_minus_QM7X_eTS_eV": {
+    "mean_abs": 0.0004459201737539383,
+    "max_abs": 0.0019041833377786768
+  },
+  "geometry_only_TS_directional_force_FD_eV_A": {
+    "mean_abs": 1.2085322488903081e-12,
+    "max_abs": 4.648108287153008e-12
+  },
+  "libmbd_TS_minus_QM7X_eTS_eV": {
+    "mean_abs": 0.00031634465643039944,
+    "max_abs": 0.0014857417929713124
+  },
+  "libmbd_rsSCS_minus_QM7X_eMBD_eV": {
+    "mean_abs": 2.493652695404839e-07,
+    "max_abs": 5.099353839466136e-07
+  },
+  "behemoth_TS_minus_libmbd_energy_eV": {
+    "mean_abs": 1.6088775240606836e-17,
+    "max_abs": 8.260740343587862e-17
+  },
+  "behemoth_TS_minus_libmbd_fixed_volume_gradient_Ha_bohr": {
+    "mean_abs": 7.58311560646268e-20,
+    "max_abs": 8.538092108323347e-19
+  },
+  "korny_TS_minus_libmbd_energy_eV": {
+    "mean_abs": 1.7229544145197543e-17,
+    "max_abs": 9.440846106957556e-17
+  },
+  "korny_TS_minus_libmbd_directional_gradient_Ha_bohr": {
+    "mean_abs": 1.3637653967267862e-19,
+    "max_abs": 5.149960319306146e-19
+  },
+  "behemoth_D3_minus_dftd3_energy_eV": {
+    "mean_abs": 8.245005600076267e-17,
+    "max_abs": 2.832253832087267e-16
+  },
+  "behemoth_D3_minus_dftd3_gradient_Ha_bohr": {
+    "mean_abs": 2.934222681806362e-19,
+    "max_abs": 1.3715157481941631e-17
+  },
+  "D3_minus_QM7X_MBD_energy_eV": {
+    "mean_abs": 0.09556593012968635,
+    "max_abs": 0.14271000875679535
+  },
+  "D3_minus_QM7X_MBD_force_eV_A": {
+    "mean_abs": 0.005366822977948884,
+    "max_abs": 0.08538968317352454
+  },
+  "pair_gaussian_plus_D3_minus_QM7X_total_energy_eV": {
+    "mean_abs": 1.0598554527583857,
+    "max_abs": 3.3614078799578806
+  },
+  "pair_gaussian_plus_D3_minus_QM7X_total_force_eV_A": {
+    "mean_abs": 0.6398319676340923,
+    "max_abs": 11.503886101601577
+  }
+}

@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "korny-forcefield"
+version = "0.1.0"
+description = "Local molecular energy and force models"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24"]
+
+[project.optional-dependencies]
+training = ["scipy", "h5py"]
+d3 = ["dftd3"]
+
+[tool.setuptools]
+packages = ["korny", "korny.dispersion"]
+package-dir = {korny = "src"}

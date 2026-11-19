@@ -1,0 +1,12 @@
+{
+  "dataset": "so3lr_test/qm7x_10k_testset.extxyz",
+  "structures": 10000,
+  "components": 504648,
+  "checkpoint": "so3lr",
+  "local_software_git": "900a0f0",
+  "force_mae_eV_A": 0.04237,
+  "force_rmse_eV_A": 0.06765,
+  "command": "so3lr eval --model so3lr --datafile qm7x_10k_testset.extxyz --lr-cutoff 100 --engine standard --batch-size 16 --targets forces,energy",
+  "published_force_rmse_eV_A": 0.069,
+  "publication": "https://doi.org/10.1021/jacs.5c09558"
+}

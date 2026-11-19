@@ -1,0 +1,324 @@
+{
+  "inventory": {
+    "molecules": 203,
+    "geometries": 43430,
+    "stereoisomer_ids": 215,
+    "conformer_ids": 430,
+    "molecules_per_element": {
+      "16": 192,
+      "1": 203,
+      "6": 203,
+      "7": 148,
+      "8": 118,
+      "17": 14
+    },
+    "properties": [
+      "DIP",
+      "HLgap",
+      "KSE",
+      "atC6",
+      "atNUM",
+      "atPOL",
+      "atXYZ",
+      "eAT",
+      "eC",
+      "eDFTB+MBD",
+      "eEE",
+      "eH",
+      "eKIN",
+      "eKSE",
+      "eL",
+      "eMBD",
+      "eNE",
+      "eNN",
+      "ePBE0",
+      "ePBE0+MBD",
+      "eTS",
+      "eX",
+      "eXC",
+      "eXX",
+      "hCHG",
+      "hDIP",
+      "hRAT",
+      "hVDIP",
+      "hVOL",
+      "mC6",
+      "mPOL",
+      "mTPOL",
+      "pbe0FOR",
+      "sMIT",
+      "sRMSD",
+      "totFOR",
+      "vDIP",
+      "vEQ",
+      "vIQ",
+      "vTQ",
+      "vdwFOR",
+      "vdwR"
+    ],
+    "sampled_energy_closure_max_eV": 1.000003976514563e-06,
+    "sampled_force_closure_max_eV_A": 0.0004009999999999847,
+    "sampled_atomic_reference_drift_max_eV": 1.000003976514563e-06
+  },
+  "config": {
+    "seed": 7108,
+    "specification": {
+      "species": [
+        1,
+        6,
+        7,
+        8,
+        16,
+        17
+      ],
+      "nr": 3,
+      "lmax": 2,
+      "ron": 1.6,
+      "rc": 3.6
+    },
+    "sparse_settings": {
+      "M": 64,
+      "ell": 6.0,
+      "scale_floor": 0.1
+    },
+    "ridge": 1e-05,
+    "force_weight_A": 4.0,
+    "target": "-eAT",
+    "force_target": "pbe0FOR",
+    "composition_offsets_eV": [
+      -2.900907196274957,
+      -8.083248753564536,
+      -3.8660351697738244,
+      -5.155394391686816,
+      -2.7877275105089057,
+      -3.1025844169654517
+    ],
+    "python": "3.14.4",
+    "numpy": "2.5.4",
+    "h5py": "3.16.0",
+    "pair": {
+      "centers_A": [
+        0.8,
+        0.9500000000000001,
+        1.1,
+        1.25,
+        1.4000000000000001,
+        1.5500000000000003,
+        1.7000000000000002,
+        1.8500000000000003,
+        2.0,
+        2.1500000000000004,
+        2.3000000000000003,
+        2.45,
+        2.6000000000000005,
+        2.75,
+        2.9000000000000004,
+        3.0500000000000007,
+        3.2,
+        3.3500000000000005,
+        3.5
+      ],
+      "width_A": 0.18,
+      "ron_A": 2.8,
+      "rc_A": 3.6,
+      "ridge": 0.05
+    }
+  },
+  "split_molecules": {
+    "test": 30,
+    "validation": 30,
+    "train": 143
+  },
+  "split_geometries": {
+    "train": 715,
+    "validation": 150,
+    "test": 150
+  },
+  "models": {
+    "composition": {
+      "training_s": 0.0,
+      "checkpoint_bytes": 0,
+      "median_force_call_ms": 0.005745000180468196,
+      "train": {
+        "energy_MAE_eV": 1.8006259357027312,
+        "displacement_energy_MAE_eV": 2.5639933356643363,
+        "force_MAE_eV_A": 1.0906268865114561,
+        "force_RMSE_eV_A": 1.6214712034451852
+      },
+      "validation": {
+        "energy_MAE_eV": 1.7636400513229675,
+        "displacement_energy_MAE_eV": 2.470256783333333,
+        "force_MAE_eV_A": 1.0525459406462585,
+        "force_RMSE_eV_A": 1.56284978028988
+      },
+      "test": {
+        "energy_MAE_eV": 1.9322401558438036,
+        "displacement_energy_MAE_eV": 2.9737132333333336,
+        "force_MAE_eV_A": 1.1863579482479785,
+        "force_RMSE_eV_A": 1.7534439146720044
+      }
+    },
+    "gaussian": {
+      "training_s": 4.8851073720002205,
+      "checkpoint_bytes": 1128450,
+      "options": {},
+      "build_s": 0.7219531639998422,
+      "regression_s": 4.163154208000378,
+      "median_force_call_ms": 4.545064499779983,
+      "train": {
+        "energy_MAE_eV": 1.1162484890462412,
+        "displacement_energy_MAE_eV": 1.3684566345302058,
+        "force_MAE_eV_A": 0.9322734304181967,
+        "force_RMSE_eV_A": 1.3643814762124542
+      },
+      "validation": {
+        "energy_MAE_eV": 1.3837221792022758,
+        "displacement_energy_MAE_eV": 1.5175557817722294,
+        "force_MAE_eV_A": 0.9779068094053797,
+        "force_RMSE_eV_A": 1.4075803392851995
+      },
+      "test": {
+        "energy_MAE_eV": 1.5012729183396558,
+        "displacement_energy_MAE_eV": 1.8282704846839437,
+        "force_MAE_eV_A": 1.0558072260200992,
+        "force_RMSE_eV_A": 1.5485878116860012
+      }
+    },
+    "tt12": {
+      "training_s": 11.779079837999689,
+      "checkpoint_bytes": 14188778,
+      "options": {
+        "order": 2,
+        "cap": 12
+      },
+      "build_s": 1.3009738819996528,
+      "regression_s": 10.478105956000036,
+      "median_force_call_ms": 14.317978000008225,
+      "train": {
+        "energy_MAE_eV": 1.4958325861793995,
+        "displacement_energy_MAE_eV": 2.0155375414107075,
+        "force_MAE_eV_A": 1.0136462551257506,
+        "force_RMSE_eV_A": 1.5038404145800295
+      },
+      "validation": {
+        "energy_MAE_eV": 1.3742383974962105,
+        "displacement_energy_MAE_eV": 1.9863859344901191,
+        "force_MAE_eV_A": 0.9803555469641526,
+        "force_RMSE_eV_A": 1.445978304699523
+      },
+      "test": {
+        "energy_MAE_eV": 1.649269733050052,
+        "displacement_energy_MAE_eV": 2.3314182983295018,
+        "force_MAE_eV_A": 1.1036701001296492,
+        "force_RMSE_eV_A": 1.6322922870817465
+      }
+    },
+    "tt32": {
+      "training_s": 20.431247828999858,
+      "checkpoint_bytes": 99863978,
+      "options": {
+        "order": 2,
+        "cap": 32
+      },
+      "build_s": 1.7008801160000075,
+      "regression_s": 18.73036771299985,
+      "median_force_call_ms": 26.117358500187038,
+      "train": {
+        "energy_MAE_eV": 1.3149631370219987,
+        "displacement_energy_MAE_eV": 1.6612378383163617,
+        "force_MAE_eV_A": 0.973028890958843,
+        "force_RMSE_eV_A": 1.428146161454206
+      },
+      "validation": {
+        "energy_MAE_eV": 1.3453711214326616,
+        "displacement_energy_MAE_eV": 1.680214902039704,
+        "force_MAE_eV_A": 0.9906625352900509,
+        "force_RMSE_eV_A": 1.4380167224182476
+      },
+      "test": {
+        "energy_MAE_eV": 1.5988221336285593,
+        "displacement_energy_MAE_eV": 2.087472814914554,
+        "force_MAE_eV_A": 1.0620645591362674,
+        "force_RMSE_eV_A": 1.5766338833165607
+      }
+    },
+    "pair": {
+      "training_s": 0.4849096410002858,
+      "checkpoint_bytes": 4892,
+      "median_force_call_ms": 0.13827499992657977,
+      "train": {
+        "energy_MAE_eV": 1.0567200344763774,
+        "displacement_energy_MAE_eV": 0.6564512991984528,
+        "force_MAE_eV_A": 0.5831525893749315,
+        "force_RMSE_eV_A": 0.9519430737274307
+      },
+      "validation": {
+        "energy_MAE_eV": 1.234935042627022,
+        "displacement_energy_MAE_eV": 0.6906440120855917,
+        "force_MAE_eV_A": 0.5953995153409619,
+        "force_RMSE_eV_A": 0.9293239481002904
+      },
+      "test": {
+        "energy_MAE_eV": 1.3285039482788428,
+        "displacement_energy_MAE_eV": 0.7722731625478104,
+        "force_MAE_eV_A": 0.660832135735909,
+        "force_RMSE_eV_A": 1.100719064958521
+      }
+    },
+    "pair_gaussian": {
+      "training_s": 5.527730682000765,
+      "checkpoint_bytes": 1133342,
+      "options": {},
+      "build_s": 0.7151520520001213,
+      "regression_s": 4.237750428000254,
+      "median_force_call_ms": 4.842258500048047,
+      "train": {
+        "energy_MAE_eV": 0.7279595940648087,
+        "displacement_energy_MAE_eV": 0.5617392285640472,
+        "force_MAE_eV_A": 0.5476560888491133,
+        "force_RMSE_eV_A": 0.8738989868707199
+      },
+      "validation": {
+        "energy_MAE_eV": 0.9479541569649488,
+        "displacement_energy_MAE_eV": 0.6364952203248511,
+        "force_MAE_eV_A": 0.5678406789253271,
+        "force_RMSE_eV_A": 0.8700425208008081
+      },
+      "test": {
+        "energy_MAE_eV": 1.069658543125585,
+        "displacement_energy_MAE_eV": 0.697057592011164,
+        "force_MAE_eV_A": 0.6390401165907923,
+        "force_RMSE_eV_A": 1.037207688047324
+      }
+    },
+    "pair_tt12": {
+      "training_s": 12.514856014000543,
+      "checkpoint_bytes": 14193670,
+      "options": {
+        "order": 2,
+        "cap": 12
+      },
+      "build_s": 1.3217450060001283,
+      "regression_s": 10.618282806000025,
+      "median_force_call_ms": 14.829747000021598,
+      "train": {
+        "energy_MAE_eV": 0.9750487698809153,
+        "displacement_energy_MAE_eV": 0.682585973353275,
+        "force_MAE_eV_A": 0.5734615753333859,
+        "force_RMSE_eV_A": 0.9305423196227719
+      },
+      "validation": {
+        "energy_MAE_eV": 1.0845856352345389,
+        "displacement_energy_MAE_eV": 0.6933260901996324,
+        "force_MAE_eV_A": 0.586591171103582,
+        "force_RMSE_eV_A": 0.9035699078192531
+      },
+      "test": {
+        "energy_MAE_eV": 1.1477915714169038,
+        "displacement_energy_MAE_eV": 0.7837376199162581,
+        "force_MAE_eV_A": 0.6604970359076655,
+        "force_RMSE_eV_A": 1.0915679991364846
+      }
+    }
+  }
+}
