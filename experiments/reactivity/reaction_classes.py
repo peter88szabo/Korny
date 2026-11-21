@@ -40,7 +40,7 @@ def hydrogen_migration(row):
     return False
 
 
-def lookup():
+def lookup(*, include_trip50=False):
     labels={}
     with (DATA/'RDB7/ccsdtf12_dz.csv').open() as f:
         for row in csv.DictReader(f):
@@ -58,10 +58,11 @@ def lookup():
             if line.startswith('|'):
                 _,_,sub,tag,*_=[s.strip() for s in line.strip('|').split('|')]
                 labels['BH9/'+tag]='KinBot/Diels_alder_addition' if sub=='Diels-Alder' else 'BH9/'+sub
-    with (DATA/'TRIP50/ct6c00144_si_001.csv').open(encoding='utf-8-sig') as f:
-        for row in csv.DictReader(f):
-            if row['Theory']=='Reference':
-                labels['TRIP50/'+row['Rxn Name']]='TRIP50/'+row['Rxn Type']
+    if include_trip50:
+        with (DATA/'TRIP50/ct6c00144_si_001.csv').open(encoding='utf-8-sig') as f:
+            for row in csv.DictReader(f):
+                if row['Theory']=='Reference':
+                    labels['TRIP50/'+row['Rxn Name']]='TRIP50/'+row['Rxn Type']
     return labels
 
 

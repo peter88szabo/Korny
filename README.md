@@ -70,9 +70,10 @@ The [bare PBE0 fit](experiments/reactivity/gmtkn_pbe0_states.json),
 [constrained fit](experiments/reactivity/electronic_fit.json) give the
 checkpoint names, distinct targets and held-out errors.
 
-To share a hard 26 GB RAM budget across experiment processes on this
-workstation, use `experiments/run_limited.sh python -m experiments.reactivity.spin_fit`.
-This uses a transient user systemd slice and disables swap for those jobs.
+To share an 8 GB RAM limit across experiment processes on this workstation,
+use `experiments/run_limited.sh python -m experiments.reactivity.spin_fit`.
+The user systemd slice starts reclaiming memory at 6 GB, counts cached training
+files and child workers, and disables swap for those jobs.
 
 ### Functional groups on a reactive potential
 
@@ -327,3 +328,26 @@ rustc --edition=2021 -O -C panic=abort experiments/qm7x_pilot/behemoth_probe.rs 
 OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 RAYON_NUM_THREADS=1 \
   python -m experiments.qm7x_pilot.dispersion /tmp/korny-native-dispersion
 ```
+
+### Selecting an eigenfunction kernel
+
+The public reaction experiment accepts an operator name. Its `--help` output lists all eleven families, including Chebyshev, Krawtchouk, Hahn, Hermite, Laguerre, Legendre, Jacobi, both interval-Laplacian bases, Bessel, and graph diffusion. The `tensor` step selects the extended Legendre basis. The conventional radial profiles retain their existing comparison entry point. Each saved force field restores its own basis when loaded.
+
+```bash
+python -m experiments.full_public.trial_operator_kernels --help
+experiments/run_limited.sh python -m experiments.full_public.trial_operator_kernels fit-family --family chebyshev
+experiments/run_limited.sh python -m experiments.full_public.trial_operator_kernels fit-family --family krawtchouk
+```
+
+With the archived input caches present, the expanded-source H-transfer experiments use the following sequence. The `rdb19` and `papers` steps evaluate the frozen parents once on the new data. Append `--angular` to each of the six commands to reproduce the angular-window controls after the unrestricted runs. The resulting general checkpoints use Korny's standard `ForceField.load(path, dispersion="d3")` interface.
+
+```bash
+experiments/run_limited.sh python -m experiments.full_public.trial_h_transfer prepare
+experiments/run_limited.sh python -m experiments.full_public.h_transfer_sources rdb19
+experiments/run_limited.sh python -m experiments.full_public.h_transfer_sources papers
+experiments/run_limited.sh python -m experiments.full_public.h_transfer_reoptimized
+experiments/run_limited.sh python -m experiments.full_public.trial_h_transfer chebyshev
+experiments/run_limited.sh python -m experiments.full_public.trial_h_transfer krawtchouk
+```
+
+The dedicated neutral-doublet fit runs with `python -m experiments.full_public.trial_native_h_transfer` inside the same memory wrapper. It saves both native potentials alongside the validation results. The native loader is `NativeRadicalPotential.load(path)` in `experiments.full_public.native_irc_pes`. [Expanded-source benchmarks and training coverage](report/hydrogen-transfer-kernels.md)

@@ -25,6 +25,15 @@ class ReactionSurface:
         self.chem = ChemicalEnvironment(schema="smooth-organic-groups/1")
         self.correction = None
         self.extension_core = None
+        self.reactive_basis = None
+        self.additional_bases = []
+        # A spin-specific readout shares the same descriptors and PBE0 prior.
+        self.spin_readouts = {}
+        # A fixed number of unpaired electrons can occupy a molecule of any
+        # size. These optional coefficients scale an extensive local feature
+        # sum by a heavy-atom count. The factor is constant under Cartesian
+        # displacements, so the same coefficients give the analytic forces.
+        self.spin_size_readouts = {}
         self.pair = base.pair
         self.local = base.local
 
@@ -156,9 +165,31 @@ class ReactionSurface:
         validate_electrons(z, q, m)
         e, f = self.prior(z, r, q, m, forces)
         v, j = self.design(z, r, q, m, forces)
-        e += v @ self.weights
+        weights, extra = self.spin_readouts.get(m, (self.weights, {}))
+        if m in self.spin_size_readouts:
+            scale, correction = self.spin_size_readouts[m]
+            weights = weights + correction * (scale / (scale + np.count_nonzero(z > 1)))
+        e += v @ weights
         if forces:
-            f += (j @ self.weights).reshape(r.shape)
+            f += (j @ weights).reshape(r.shape)
+        if self.reactive_basis is not None:
+            extension, jac = self.reactive_basis.design(z, r, forces)
+            e += extension @ self.reactive_basis.weights
+            if forces:
+                f += (jac @ self.reactive_basis.weights).reshape(r.shape)
+        for index, basis in enumerate(self.additional_bases):
+            weights = extra.get(index, basis.weights)
+            if not np.any(weights):
+                continue
+            # Each resolution describes the same Cartesian potential. Taking
+            # the derivative of its energy readout preserves conservative MD.
+            if hasattr(basis, "design_state"):
+                extension, jac = basis.design_state(z, r, q, m, forces)
+            else:
+                extension, jac = basis.design(z, r, forces)
+            e += extension @ weights
+            if forces:
+                f += (jac @ weights).reshape(r.shape)
         if self.correction is not None:
             de, df = self.correction(z, r)
             e += de
@@ -186,6 +217,24 @@ class ReactionSurface:
         )
         if self.extension_core is not None:
             fields["rx_extension_core"] = self.extension_core.coefficients
+        if self.reactive_basis is not None:
+            fields.update({"rx_" + k: v for k, v in self.reactive_basis.fields().items()})
+        if self.additional_bases:
+            fields["rx_additional_count"] = len(self.additional_bases)
+            for i, basis in enumerate(self.additional_bases):
+                fields.update({f"rx_additional_{i}_" + k: v for k, v in basis.fields().items()})
+        if self.spin_readouts:
+            fields["rx_readout_spins"] = sorted(self.spin_readouts)
+            for m, (weights, extra) in self.spin_readouts.items():
+                fields[f"rx_readout_{m}_weights"] = weights
+                fields[f"rx_readout_{m}_indices"] = sorted(extra)
+                for index, coef in extra.items():
+                    fields[f"rx_readout_{m}_extra_{index}"] = coef
+        if self.spin_size_readouts:
+            fields["rx_size_spins"] = sorted(self.spin_size_readouts)
+            for m, (scale, coef) in self.spin_size_readouts.items():
+                fields[f"rx_size_{m}_scale"] = scale
+                fields[f"rx_size_{m}_weights"] = coef
         np.savez_compressed(path, **fields)
 
     @classmethod
@@ -205,4 +254,88 @@ class ReactionSurface:
             model.extension_core = NuclearRepulsion(
                 model.elements, d["extension_core"], model.radii
             )
+        if "rb_spec" in d:
+            from .reactive_basis import ReactiveBasis
+            model.reactive_basis = ReactiveBasis.load(d)
+        for i in range(int(d.get("additional_count", 0))):
+            from .reactive_basis import ReactiveBasis
+            prefix = f"additional_{i}_"
+            fields = {k[len(prefix):]: v for k, v in d.items() if k.startswith(prefix)}
+            if "path_family_weights" in fields:
+                from .path_family import PathFamilyKernel
+                model.additional_bases.append(PathFamilyKernel.load(fields))
+            elif "path_hermite" in fields:
+                from .path_hermite import PathHermiteKernel
+                model.additional_bases.append(PathHermiteKernel.load(fields))
+            elif "htransfer_family" in fields:
+                from .hydrogen_transfer import HydrogenTransferKernel
+                model.additional_bases.append(HydrogenTransferKernel.load(fields))
+            elif "operator_family" in fields:
+                from .operator_kernel import OperatorKernel
+                model.additional_bases.append(OperatorKernel.load(fields))
+            elif "morse_weights" in fields:
+                from .morse_bends import MorseBendBasis
+                model.additional_bases.append(MorseBendBasis.load(fields))
+            elif "split_charge_weights" in fields:
+                from .split_charge import SplitChargeResponse
+                model.additional_bases.append(SplitChargeResponse.load(fields))
+            elif "spinexchange_weights" in fields:
+                from .spin_exchange import SpinExchangeKernel
+                model.additional_bases.append(SpinExchangeKernel.load(fields))
+            elif "redox_scores" in fields:
+                from .redox_environment import RedoxEnvironmentKernel
+                model.additional_bases.append(RedoxEnvironmentKernel.load(fields))
+            elif "spinlocal_logits" in fields:
+                from .spin_local import SpinLocalKernel
+                model.additional_bases.append(SpinLocalKernel.load(fields))
+            elif "stretch_keys" in fields:
+                from .local_stretch import StretchKernel
+                model.additional_bases.append(StretchKernel.load(fields))
+            elif "compact_keys" in fields:
+                from .compact_kernel import CompactKernel
+                model.additional_bases.append(CompactKernel.load(fields))
+            elif "spectral_keys" in fields:
+                from .adaptive_spectrum import SpectralKernel
+                model.additional_bases.append(SpectralKernel.load(fields))
+            elif "occupied_groups" in fields:
+                from .occupied_orbitals import OccupationKernel
+                model.additional_bases.append(OccupationKernel.load(fields))
+            elif "competition_groups" in fields:
+                from .valence_competition import CompetitionKernel
+                model.additional_bases.append(CompetitionKernel.load(fields))
+            elif "state_periodic_groups" in fields:
+                from .atomic_states import AtomicStateKernel
+                model.additional_bases.append(AtomicStateKernel.load(fields))
+            elif "orbital_groups" in fields:
+                from .orbital_moments import OrbitalMomentKernel
+                model.additional_bases.append(OrbitalMomentKernel.load(fields))
+            elif "periodic_groups" in fields:
+                from .periodic_kernel import PeriodicKernel
+                model.additional_bases.append(PeriodicKernel.load(fields))
+            elif "message_seeds" in fields:
+                from .message_kernel import MessageKernel
+                model.additional_bases.append(MessageKernel.load(fields))
+            elif "order_centers" in fields:
+                from .bond_order_kernel import BondOrderKernel
+                model.additional_bases.append(BondOrderKernel.load(fields))
+            else:
+                model.additional_bases.append(ReactiveBasis.load(fields))
+        for spin in d.get("readout_spins", []):
+            m = int(spin)
+            weights = d[f"readout_{m}_weights"]
+            extra = {int(i): d[f"readout_{m}_extra_{i}"] for i in d[f"readout_{m}_indices"]}
+            if weights.shape != model.weights.shape or any(
+                i < 0 or i >= len(model.additional_bases) or v.shape != model.additional_bases[i].weights.shape
+                for i, v in extra.items()
+            ):
+                raise ValueError("Invalid spin-specific energy coefficients")
+            model.spin_readouts[m] = weights, extra
+        for value in d.get("size_spins", []):
+            m = int(value)
+            scale = float(d[f"size_{m}_scale"])
+            coef = d[f"size_{m}_weights"]
+            if (coef.shape != model.weights.shape or not np.isfinite(coef).all()
+                    or not np.isfinite(scale) or scale <= 0):
+                raise ValueError("Invalid size-dependent spin coefficients")
+            model.spin_size_readouts[m] = scale, coef
         return model

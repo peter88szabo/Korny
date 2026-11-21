@@ -9,18 +9,17 @@ from collections import defaultdict
 import csv
 import json
 from pathlib import Path
-import pickle
 import shlex
 import subprocess
 
 import numpy as np
 from rdkit import Chem
 
-from experiments.full_public.data import OUT, fingerprint
+from experiments.full_public.data import COMMON_REACTIONS, OUT, fingerprint, load_reaction_data
 from experiments.reactivity.thermochemistry import EV_TO_KCAL
 from src.forcefield import ForceField
 
-PANELS = ("RDB7", "BH9", "TRIP50", "Grambow")
+PANELS = tuple(COMMON_REACTIONS)
 WORK = OUT / "so3lr-original-matched"
 OLD = OUT.parent / "comparison"
 # Element domain of the original (pre-Tauri) SO3LR checkpoint.
@@ -65,8 +64,7 @@ def write_inputs(path, keys, geoms):
 
 def run(executable):
     WORK.mkdir(exist_ok=True)
-    with (OUT / "reaction-data.pkl").open("rb") as stream:
-        geoms, all_rows, _ = pickle.load(stream)
+    geoms, all_rows, _ = load_reaction_data(preserve_geometry_index=True)
     original = json.loads((OUT / "joint-reaction-validation.json").read_text())["validation"]
     meta = json.loads((OLD / "metadata.json").read_text())
     old = read_results(OLD / "so3lr.extxyz", meta["keys"], meta["geometries"])

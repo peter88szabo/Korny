@@ -22,6 +22,24 @@ class ZeroLocalKernel:
 
 
 class ReactionSurfaceTest(unittest.TestCase):
+    def test_spin_size_readout_depends_on_heavy_atoms_and_preserves_forces(self):
+        """A triplet correction uses the same composition factor in energy and force."""
+        z = np.array([6, 8, 1, 1])
+        r = np.array([[0., 0., 0.], [1.3, .1, 0.], [-.5, .8, 0.], [-.4, -.9, .1]])
+        groups = np.arange(9)
+        radii = np.ones(9)
+        model = ReactionSurface(SimpleNamespace(pair=None, local=None), ZeroLocalKernel(),
+                                [1, 6, 8], radii, groups, [(0, 1), (0, 3)], [], "test")
+        model.prior = lambda z, r, q, m, forces: (0., np.zeros_like(r) if forces else None)
+        x, jac = model.design(z, r, 0, 3, True)
+        model.weights = np.zeros(x.size)
+        w = np.random.default_rng(291).normal(size=x.size)
+        model.spin_size_readouts[3] = 6., w
+        e, force = model.predict(z, r, 0, 3)
+        np.testing.assert_allclose(e, (6. / 8.) * (x @ w))
+        np.testing.assert_allclose(force.ravel(), (6. / 8.) * (jac @ w))
+        self.assertEqual(model.energy(z, r, 0, 1), 0.)
+
     def test_heavy_atom_forces_and_spin_follow_atom_order(self):
         z = np.array([6, 35, 8, 1])
         r = np.array(

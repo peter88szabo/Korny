@@ -95,7 +95,7 @@ def descriptor_layout(nspecies, nr, lmax):
 
 
 def descriptor_array(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
-                     species=(1, 6, 7, 8), *, gradient=False, inverse_radius=False):
+                     species=(1, 6, 7, 8), *, gradient=False, inverse_radius=False, gaussian_shells=None, atom_radii=None):
     """Return the packed descriptor and optionally its Cartesian Jacobian.
 
     The Jacobian axes are (feature, atom, xyz) and coordinates are in Å. Each
@@ -106,24 +106,45 @@ def descriptor_array(R, Z, center, nr=4, lmax=3, ron=4., rc=5.5,
     widths, groups = descriptor_layout(len(species), nr, lmax)
     rel = R - R[center]
     distance = np.linalg.norm(rel, axis=1)
-    neighbors = np.flatnonzero((np.arange(len(Z)) != center) & (distance < rc))
+    if gaussian_shells is None:
+        scaled = distance
+    else:
+        # Distances in covalent-radius units put hydrogen and heavy-atom
+        # stretch coordinates on a comparable scale for reactive environments.
+        from .four_body import RADII
+        # Grouped descriptors can share a chemical channel between C and Si,
+        # for example, while retaining the physical radius of each nucleus.
+        radii = np.array([RADII[int(a)] for a in Z]) if atom_radii is None else atom_radii
+        scales = radii[center] + radii
+        scaled = distance/scales
+    neighbors = np.flatnonzero((np.arange(len(Z)) != center) & (scaled < rc))
     r = distance[neighbors]
     if np.any(r < 1e-10):
         raise ValueError("Coincident nuclei")
     direction = rel[neighbors] / r[:, None]
-    t = np.clip((r - ron) / (rc - ron), 0., 1.)
+    t = np.clip((scaled[neighbors] - ron) / (rc - ron), 0., 1.)
     cutoff = 1. + t**4 * (-35. + t*(84. + t*(-70. + 20.*t)))
     slope = -140. * t**3 * (1.-t)**3 / (rc-ron)
-    # The inverse-distance radial coordinate follows the sGDML metric, with r in Å.
-    x = 1./r - 1. if inverse_radius else 2.*r/rc - 1.
-    dx = -1./r**2 if inverse_radius else np.full_like(r, 2./rc)
-    cheb = np.polynomial.chebyshev.chebvander(x, nr-1).reshape(len(r), nr)
-    # dT_n(x)/dx from differentiating the same Chebyshev recurrence.
-    dcheb = np.zeros_like(cheb)
-    if nr > 1:
-        dcheb[:, 1] = 1.
-    for n in range(2, nr):
-        dcheb[:, n] = 2.*(cheb[:, n-1] + x*dcheb[:, n-1]) - dcheb[:, n-2]
+    if gaussian_shells is not None:
+        centers, shell_widths = gaussian_shells
+        if len(centers) != nr or len(shell_widths) != nr:
+            raise ValueError("Gaussian radial channel count mismatch")
+        dx = 1./scales[neighbors]
+        slope = slope*dx
+        u = (scaled[neighbors,None]-centers)/shell_widths
+        cheb = np.exp(-.5*u*u)
+        dcheb = -cheb*u/shell_widths
+    else:
+        # The inverse-distance radial coordinate follows the sGDML metric, with r in Å.
+        x = 1./r - 1. if inverse_radius else 2.*r/rc - 1.
+        dx = -1./r**2 if inverse_radius else np.full_like(r, 2./rc)
+        cheb = np.polynomial.chebyshev.chebvander(x, nr-1).reshape(len(r), nr)
+        # dT_n(x)/dx from differentiating the same Chebyshev recurrence.
+        dcheb = np.zeros_like(cheb)
+        if nr > 1:
+            dcheb[:, 1] = 1.
+        for n in range(2, nr):
+            dcheb[:, n] = 2.*(cheb[:, n-1] + x*dcheb[:, n-1]) - dcheb[:, n-2]
 
     channels = len(species)*nr
     U = np.zeros((len(r), channels))

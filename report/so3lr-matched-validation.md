@@ -1,10 +1,12 @@
 # Original SO3LR and Korny on the 595-reaction Korny validation split
 
+The newer Korny candidates and both SO3LR Tauri checkpoints are scored together on the exact common IDs, with forward and reverse barriers in the [reactive kernel experiment report](reactive-kernel-experiments.md).
+
 Every ID comes from the saved split for the joint Korny checkpoints. Original SO3LR covers 591 of the 595 reactions. Across those 591, SO3LR gives a reaction-energy MAE of 13.97 kcal/mol and a two-direction barrier MAE of 13.67 kcal/mol. Korny gives 20.82 and 23.91 kcal/mol on the same IDs. Both models exceed the 5 kcal/mol target on both pooled metrics.
 
 ## MAE by dataset
 
-All energies are electronic and all errors are in kcal/mol. Each cell lists **original SO3LR / Korny**. The pooled row gives every reaction equal weight. The all-barriers column counts forward and reverse once each.
+Every Korny value includes PBE0-D3(BJ) with the three-body ATM term on all fragments and transition states. All energies are electronic and all errors are in kcal/mol. Each cell lists **original SO3LR / Korny**. The pooled row gives every reaction equal weight. The all-barriers column counts forward and reverse once each.
 
 | Validation panel | Reactions scored / original | Directional barriers scored / original | Reaction energy | All barriers | Forward | Reverse |
 |---|---:|---:|---:|---:|---:|---:|
@@ -15,6 +17,18 @@ All energies are electronic and all errors are in kcal/mol. Each cell lists **or
 | **Pooled** | **591 / 595** | **1,182 / 1,190** | **13.97 / 20.82** | **13.67 / 23.91** | **13.28 / 25.56** | **14.05 / 22.25** |
 
 SO3LR's largest gain was on RDB7, with an 18.65 kcal/mol reduction in barrier MAE. Korny had the lower reverse-barrier MAE on Grambow and on the two evaluable TRIP50 reactions. Across the pooled panel, 151 of 591 SO3LR reaction energies and 307 of 1,182 SO3LR directional barriers had absolute errors within 5 kcal/mol. The corresponding Korny counts were 114 and 194.
+
+## Reactions used to train Korny
+
+| Dataset | Training reactions | Original validation reactions | Paired SO3LR reactions |
+|---|---:|---:|---:|
+| RDB7 | 11,667 | 259 | 259 |
+| BH9 | 400 | 49 | 47 |
+| TRIP50 | 46 | 4 | 2 |
+| Grambow radicals | 1,084 | 283 | 283 |
+| **Total** | **13,197** | **595** | **591** |
+
+SO3LR used its original pretrained weights, with zero local fine-tuning reactions. The first three datasets supplied the Korny high-level calibration. Grambow supplied its separate radical calibration. The other energy, force, frequency and thermochemistry sources are itemized in the companion report. [Training data and kernel architecture findings](kernel-improvements.md)
 
 ## Coverage and references
 

@@ -173,22 +173,6 @@ def collect():
         add_reaction("BH9", gs, rec, "high")
     allg.update(gs)
     print("BH9", len(recs), flush=True)
-    gs, recs = spin_data.trip50(max_atoms=None)
-    with (DATA / "TRIP50/trip50.extxyz").open() as stream:
-        for line in stream:
-            n = int(line)
-            header = dict(
-                token.split("=", 1) for token in next(stream).split() if "=" in token
-            )
-            gs["TRIP50/" + header["species_id"]] = xyz(
-                [next(stream) for _ in range(n)],
-                int(header["charge"]),
-                int(header["spin_multiplicity"]),
-            )
-    for rec in recs:
-        add_reaction("TRIP50", gs, rec, "high")
-    allg.update(gs)
-    print("TRIP50", len(recs), flush=True)
     gs, data, skip = gmtkn()
     allg.update(gs)
     removed["GMTKN55"] = dict(skip)

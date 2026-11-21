@@ -1,18 +1,16 @@
 """Count unique fitted geometry/state pairs and test validation saddle overlap."""
 
 import json
-import pickle
 import sqlite3
 import numpy as np
 from experiments.full_public.specified import DB, OUT
-from experiments.full_public.data import fingerprint
+from experiments.full_public.data import fingerprint, load_reaction_data
 from experiments.reactivity.stationary_fit import POINTS, MASSES
 from experiments.reactivity.larger_vibrations import references
 
 
 def run():
-    with (OUT / "reaction-data.pkl").open("rb") as f:
-        gs, rows, _ = pickle.load(f)
+    gs, rows, _ = load_reaction_data()
     actual = {k: (fingerprint(g.z, g.r.astype(float)), *g.state) for k, g in gs.items()}
     h5 = {
         (fp, q, m)

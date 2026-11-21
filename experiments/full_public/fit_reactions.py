@@ -11,7 +11,6 @@ from concurrent.futures import ProcessPoolExecutor
 import hashlib
 import json
 import multiprocessing as mp
-import pickle
 from time import monotonic
 
 import numpy as np
@@ -19,7 +18,7 @@ from rdkit import Chem
 from scipy.linalg import cho_factor, cho_solve
 from threadpoolctl import threadpool_limits
 
-from experiments.full_public.data import fingerprint
+from experiments.full_public.data import fingerprint, load_reaction_data
 from experiments.full_public.specified import OUT
 from experiments.reactivity.matern_fit import basis
 from experiments.reactivity.reaction_classes import lookup
@@ -91,10 +90,9 @@ def locks(surface, used):
 def run(joint=False):
     global geoms, unique, surface
     start = monotonic()
-    with (OUT / "reaction-data.pkl").open("rb") as f:
-        geoms, rows, classes = pickle.load(f)
+    geoms, rows, classes = load_reaction_data()
     base = ForceField.load(BASE)
-    classes.update(lookup())
+    classes.update(lookup(include_trip50=False))
     kernel = (
         ForceField.load(OUT / "pbe0-reaction.npz").kernel
         if joint

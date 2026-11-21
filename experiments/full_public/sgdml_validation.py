@@ -9,7 +9,6 @@ import csv
 import hashlib
 import json
 import multiprocessing as mp
-import pickle
 import sqlite3
 from collections import Counter, defaultdict
 from concurrent.futures import ProcessPoolExecutor
@@ -19,7 +18,7 @@ import numpy as np
 from rdkit import Chem
 from scipy.spatial.distance import cdist
 
-from experiments.full_public.data import DB, OUT, fingerprint
+from experiments.full_public.data import DB, OUT, fingerprint, load_reaction_data
 from experiments.reactivity.sgdml_hshift import GDMLPredict, GDMLTrain, connectivity
 from experiments.reactivity.thermochemistry import EV_TO_KCAL as KCAL
 from sgdml.utils.perm import find_perms
@@ -52,8 +51,7 @@ def atom_order(z, r):
 
 def read_inventory():
     """Use Korny's persisted reaction split and reproduce its molecular dedup order."""
-    with (OUT / "reaction-data.pkl").open("rb") as stream:
-        geoms, rows, _ = pickle.load(stream)
+    geoms, rows, _ = load_reaction_data()
     rows = [r for r in rows if r[2] == "validation"]
     keys = sorted({key for row in rows for key, _ in row[4]})
     reaction = defaultdict(list)

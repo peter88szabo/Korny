@@ -84,7 +84,7 @@ def run(preserve_geometry=False,pooled=False):
     ref=ForceField.load(OUT/info['checkpoint'],dispersion='d3')
     gs,sets,_,_,_=public_splits(ref)
     assert info['test_ids']==[r.name for r in sets['RDB7_test']]
-    registry=lookup();labels={r.name:family(r,gs,registry) for rows in sets.values() for r in rows}
+    registry=lookup(include_trip50=True);labels={r.name:family(r,gs,registry) for rows in sets.values() for r in rows}
     target_counts=json.loads((OUT/'reaction_centers.json').read_text())['centers'] if pooled else None
     extra=center_basis(ref.matern,sets['BH9_TRIP50_train']+sets['RDB7_train'],gs,labels,target_counts)
     print('additional centers',{s:len(v) for s,v in extra.centers.items()},flush=True)
